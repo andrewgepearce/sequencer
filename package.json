@@ -1,0 +1,19 @@
+{
+  "name": "sequencer",
+  "version": "0.9.0",
+  "description": "A Node JS tool for building UML sequence diagrams from a JSON or YAML definition",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewgepearce/sequencer.git"
+  },
+  "author": "Andrew Pearce",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/andrewgepearce/sequencer/issues"
+  },
+  "homepage": "https://github.com/andrewgepearce/sequencer#readme"
+}
