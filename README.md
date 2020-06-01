@@ -26,7 +26,10 @@ The main sections of the sequence diagram metadata description are:
   * A **blank** line that just provides a define gap if needed between adjacent lines (may also include an unattached comment).
   * A **fragment** line that itself contains any of the above defined lines, given a form (e.g. "alt" condition flow, "loop", etc.), title and condition/definition. 
    * The fragment may also contain a **condtional** line, that breaks the fragment into sections, with the new section having it's own condition/definitino statetment applied.
-    
+
+## Usage
+TBD
+
 ## Example
 TBD
 
