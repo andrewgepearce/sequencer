@@ -7,7 +7,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"clean": "rm -rf node_modules; rm -f *.yml; rm -f *.yaml; rm -f *.png; rm -f *.pdf; mv package.json package.json.bak; mv package-lock.json package-lock.json.bak; rm -f *.json; mv package.json.bak package.json; mv package-lock.json.bak package-lock.json;",
 		"reinstall": "npm run clean && npm install",
-		"build": " npm install; cd examples; node ../sequencer.js -y -i example1.yml -o -f; cd ..",
+		"examples": "cd examples; node ../sequencer.js -y -i example1.yml -o -f; cd ..",
+		"build": " npm install; npm run examples",
 		"status": "npm run build; npm run clean; git status",
 		"push": "npm install; npm run build; npm run clean; git push"
 	},
