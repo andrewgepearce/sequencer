@@ -23,7 +23,7 @@ The main sections of the sequence diagram metadata description are:
   * A **return** to define the return from one actor to another
   * A **state** that presents a state or constraint on the actors lifeline
   * A **reference** that provides external use case or sequence file references
-  * A **blank** line that just provides a define gap if needed between adjacent lines (may also include an unattached comment).
+  * A **blank** line that just provides a defined gap if needed between adjacent lines (may also include an unattached comment).
   * A **fragment** line that itself contains any of the above defined lines, given a form (e.g. "alt" condition flow, "loop", etc.), title and condition/definition. 
    * The fragment may also contain a **condtional** line, that breaks the fragment into sections, with the new section having it's own condition/definitino statetment applied.
     
@@ -70,6 +70,9 @@ Asssume that the `testFile.yaml` file has `title: "Test Sequence Diagram", versi
 ## Example
 
 ### Example 1 - A sequence diagram with 3 actors but with no flows!
+This sequence diagram:
+![alt text](examples/Example_1.1.0.png "Example 1")
+is produced by the following code:
 ```
 title: "Example 1"
 version: "1.0"
@@ -118,10 +121,11 @@ lines:
     },
   ]
 ```
-Would result in sequence diagram:
-![alt text](examples/Example_1.1.0.png "Example 1")
 
 ### Example 2 - Now we add some calls and a return
+This sequence diagram:
+![alt text](examples/Example_2.1.0.png "Example 2")
+is produced by the following code:
 ```
 title: "Example 2"
 version: "1.0"
@@ -181,12 +185,9 @@ lines:
     {type: return, from: server, to: client, breakToFlow: true, text: [":some return value"], comment: ["Return call type"]},
   ]
 ```
-Would result in sequence diagram:
-![alt text](examples/Example_2.1.0.png "Example 2")
-
 
 ## TODO
 Todo items:
   * Need to add sub-lifeline actions to actors such that parallel flows in the same actor are represented cleanly without having to resort to using 2 actors
   * Need to chase Canvas issues that present external TTF fonts to be deployed
-  * Add schema vaidation on processing. At the moment, failures are normally represented by error boxes in the digram. In very exceptional cases memory or system errors have been encountered that cause crash of the application. This can be mitigated by enforcing validation of the sequencer description document before processing.
+  * Add schema validation on processing. At the moment, failures are normally represented by error boxes in the digram. In very exceptional cases memory or system errors have been encountered that cause crash of the application. This can be mitigated by enforcing validation of the sequencer description document before processing.
