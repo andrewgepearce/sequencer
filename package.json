@@ -1,28 +1,33 @@
 {
-  "name": "sequencer",
-  "version": "0.9.0",
-  "description": "A Node JS tool for building UML sequence diagrams from a JSON or YAML definition",
-  "main": "sequencer.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/markthepage/sequencer.git"
-  },
-  "author": "markthepage",
-  "license": "AGPL-3.0-only",
-  "bugs": {
-    "url": "https://github.com/markthepage/sequencer/issues"
-  },
-  "homepage": "https://github.com/markthepage/sequencer#readme",
-  "dependencies": {
-    "canvas": "^2.6.1",
-    "command-line-args": "^5.1.1",
-    "command-line-usage": "^6.1.0",
-    "js-yaml": "^3.14.0",
-    "node-uuid": "^1.4.8",
-    "readline": "^1.3.0",
-    "sanitize-filename": "^1.6.3"
-  }
+	"name": "sequencer",
+	"version": "0.9.0",
+	"description": "A Node JS tool for building UML sequence diagrams from a JSON or YAML definition",
+	"main": "sequencer.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"clean": "rm -rf node_modules; rm -f *.yml; rm -f *.yaml; rm -f *.png; rm -f *.pdf; mv package.json package.json.bak; mv package-lock.json package-lock.json.bak; rm -f *.json; mv package.json.bak package.json; mv package-lock.json.bak package-lock.json;",
+		"reinstall": "npm run clean && npm install",
+		"build": " npm install; cd examples; node ../sequencer.js -y -i example1.yml -o -f; cd ..",
+		"status": "npm run build; npm run clean; git status",
+		"push": "npm install; npm run build; npm run clean; git push"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/markthepage/sequencer.git"
+	},
+	"author": "markthepage",
+	"license": "AGPL-3.0-only",
+	"bugs": {
+		"url": "https://github.com/markthepage/sequencer/issues"
+	},
+	"homepage": "https://github.com/markthepage/sequencer#readme",
+	"dependencies": {
+		"canvas": "^2.6.1",
+		"command-line-args": "^5.1.1",
+		"command-line-usage": "^6.1.0",
+		"js-yaml": "^3.14.0",
+		"node-uuid": "^1.4.8",
+		"readline": "^1.3.0",
+		"sanitize-filename": "^1.6.3"
+	}
 }

@@ -32,9 +32,9 @@
          "type": "blank",
          "height": 0,
          "comment": [
-            "A blank example sequence diagram with 3 actors and no calls!. However it does define \".params\" object",
+            "A blank example sequence diagram with 3 actors and no calls! However it does define \"<code>.params</code>\" object",
             "to give a default looks and feel for comment boxes. There is also Tag that provides a shortcut to colour",
-            "and font markup into a comment string. For example, the following text is marked up with the \"code\" tag:",
+            "and font markup into a comment string. For example, the following text is marked up with the <code>&lt;code&gt;</code> tag:",
             "",
             "<code>title: \"Example 1\"",
             "<code>version: \"1.0\"",
@@ -43,7 +43,11 @@
             "<code>  {name: \"Server\", alias: server}, ",
             "<code>  {name: \"Database\", alias: db}]",
             "<code>params: ...",
-            "<code> ..."
+            "<code> ...",
+            "",
+            "Note that a parameter defined tag just inserts the alias markup into the specific string of text, and will",
+            "remain in force in that string until otherwise changed. So <code>&lt;code&gt; here will run until the end of the line.",
+            "But <code>&lt;code&gt; and &lt;/code&gt;</code> markup is enclosed to open and close markup parts of the string."
          ]
       }
    ]

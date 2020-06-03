@@ -506,7 +506,7 @@ module.exports = class Utilities {
 						colour: currentColour,
 						height: undefined,
 						startOffset: currentWidth,
-						width: Utilities.getTextPartWidth(ctx, lineparts[i], currentFontSizePx, currentFontFamily, currentBold, currentItalic)
+						width: Utilities.getTextPartWidth(ctx, txtPart, currentFontSizePx, currentFontFamily, currentBold, currentItalic)
 					};
 					currentWidth += md.width;
 					lineMetadata.push(md);
