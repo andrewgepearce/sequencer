@@ -1,0 +1,31 @@
+title: "Example 1"
+version: "1.0"
+actors: [{name: "Client", alias: client, bgColour: "rgb(255,126,121)"}, {name: "Server", alias: server}, {name: "Database", alias: db}]
+params:
+  {
+    comment: {bgColour: "rgb(0,253,144)", spacing: 1.2},
+    globalSpacing: 30,
+    tags: ["<code>=<rgb(0,0,180)><font=monospace>", "</code>=</font></rgb>"],
+  }
+lines:
+  [
+    {
+      type: blank,
+      height: 0,
+      comment:
+        [
+          'A blank example sequence diagram with 3 actors and no calls!. However it does define ".params" object',
+          "to give a default looks and feel for comment boxes. There is also Tag that provides a shortcut to colour",
+          'and font markup into a comment string. For example, the following text is marked up with the "code" tag:',
+          "",
+          '<code>title: "Example 1"',
+          '<code>version: "1.0"',
+          "<code>actors: [",
+          '<code>  {name: "Client", alias: client, bgColour: "rgb(255,126,121)"}, ',
+          '<code>  {name: "Server", alias: server}, ',
+          '<code>  {name: "Database", alias: db}]',
+          "<code>params: ...",
+          "<code> ...",
+        ],
+    },
+  ]
