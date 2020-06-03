@@ -71,8 +71,11 @@ Asssume that the `testFile.yaml` file has `title: "Test Sequence Diagram", versi
 
 ### Example 1 - A sequence diagram with 3 actors but with no flows!
 This sequence diagram:
+
 ![alt text](examples/Example_1.1.0.png "Example 1")
+
 is produced by the following code:
+
 ```
 title: "Example 1"
 version: "1.0"
@@ -124,8 +127,11 @@ lines:
 
 ### Example 2 - Now we add some calls and a return
 This sequence diagram:
+
 ![alt text](examples/Example_2.1.0.png "Example 2")
+
 is produced by the following code:
+
 ```
 title: "Example 2"
 version: "1.0"
