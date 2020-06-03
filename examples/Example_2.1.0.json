@@ -1,0 +1,96 @@
+{
+   "title": "Example 2",
+   "version": "1.0",
+   "actors": [
+      {
+         "name": "Client",
+         "alias": "client",
+         "bgColour": "rgb(255,126,121)"
+      },
+      {
+         "name": "Server",
+         "alias": "server"
+      },
+      {
+         "name": "Database",
+         "alias": "db",
+         "bgColour": "rgb(100,0,255)"
+      }
+   ],
+   "params": {
+      "comment": {
+         "bgColour": "rgb(0,253,144)",
+         "spacing": 1.2
+      },
+      "globalSpacing": 30,
+      "tags": [
+         "<code>=<rgb(0,0,180)><font=monospace>",
+         "</code>=</font></rgb>"
+      ]
+   },
+   "lines": [
+      {
+         "type": "call",
+         "from": "client",
+         "to": "client",
+         "async": true,
+         "text": [
+            "Some async process"
+         ],
+         "comment": "An asyncronous call to from and to the same actor"
+      },
+      {
+         "type": "call",
+         "from": "client",
+         "to": "server",
+         "breakToFlow": false,
+         "text": [
+            "someCall(param1, param2)"
+         ],
+         "comment": [
+            "This is a line of type \"call\" with a \"comment\""
+         ]
+      },
+      {
+         "type": "call",
+         "from": "server",
+         "to": "db",
+         "breakToFlow": true,
+         "text": [
+            "someDbCall() : dbResponse"
+         ],
+         "comment": [
+            "someCall the returns immediately, i.e. breaks",
+            "the lifeline in the called actor"
+         ]
+      },
+      {
+         "type": "call",
+         "from": "server",
+         "to": "server",
+         "text": [
+            "Do some internal processing(dbResponse) :  some return value"
+         ],
+         "lineWidth": 3,
+         "lineColour": "rgb(255,0,0)",
+         "comment": [
+            "... And a call from and to the same actor.",
+            "In this example the author wishes to highlight",
+            "this call by changing the width and colour",
+            "overriding <code>.params</code> defaults or built-in defaults"
+         ]
+      },
+      {
+         "type": "return",
+         "from": "server",
+         "to": "client",
+         "breakToFlow": true,
+         "text": [
+            ":some return value"
+         ],
+         "comment": [
+            "Return call type"
+         ]
+      }
+   ]
+}
