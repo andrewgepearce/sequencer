@@ -1,6 +1,6 @@
 {
 	"name": "sequencer",
-	"version": "0.9.0",
+	"version": "0.9.1",
 	"description": "A Node JS tool for building UML sequence diagrams from a JSON or YAML definition",
 	"main": "sequencer.js",
 	"scripts": {
