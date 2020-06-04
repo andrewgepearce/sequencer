@@ -10,7 +10,7 @@
 		"examples": "cd examples; node ../sequencer.js -y -i example1.yml -o -f; node ../sequencer.js -y -i example2.yml -o -f; node ../sequencer.js -y -i example3.yml -o -f; node ../sequencer.js -y -i example4.yml -o -f;cd ..",
 		"build": " npm install; npm run examples",
 		"status": "npm run build; npm run clean; git status",
-		"push": "npm run build; npm run clean; git push"
+		"push": "npm run build; npm run clean; git push; npm install"
 	},
 	"repository": {
 		"type": "git",
