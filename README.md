@@ -315,6 +315,65 @@ lines:
   ]
 ```
 
+### Example 4 - Error in description document
+This sequence diagram:
+
+![alt text](examples/Example_4.1.0.png "Example 4")
+
+is produced by the following code:
+
+```yml
+title: "Example 4"
+version: "1.0"
+description: Shows a detected error and how presented in the diagram. Extended from example 2.
+actors:
+  [
+    {name: "Client", alias: client, bgColour: "rgb(255,126,121)"},
+    {name: "Server", alias: server},
+    {name: "Database", alias: db, bgColour: "rgb(100,0,255)"},
+  ]
+params:
+  {
+    comment: {bgColour: "rgb(0,253,144)", spacing: 1.2},
+    globalSpacing: 30,
+    tags: ["<code>=<rgb(0,0,180)><font=monospace>", "</code>=</font></rgb>"],
+  }
+lines:
+  [
+    {
+      type: call,
+      from: client,
+      to: client,
+      async: true,
+      text: ["Some async process"],
+      comment: "An asyncronous call to from and to the same actor",
+    },
+    {
+      type: call,
+      from: client,
+      to: server,
+      breakToFlow: false,
+      text: ["someCall(param1, param2)"],
+      comment: ['This is a line of type "call" with a "comment"'],
+    },
+    {
+      type: call,
+      from: server,
+      to: db,
+      breakToFlow: true,
+      text: ["someDbCall() : dbResponse"],
+      comment: ["someCall the returns immediately, i.e. breaks", "the lifeline in the called actor"],
+    },
+    {
+      type: call_error,
+      from: server,
+      to: server,
+      text: ["Do some internal processing(dbResponse) :  some return value"],
+    },
+    {type: return, from: server, to: client, breakToFlow: true, text: [":some return value"], comment: ["Return call type"]},
+  ]
+```
+
 ## TODO
 Todo items:
   * Need to add sub-lifeline actions to actors such that parallel flows in the same actor are represented cleanly without having to resort to using 2 actors
