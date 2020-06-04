@@ -13,7 +13,6 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-
 module.exports = class Utilities {
 	/**
 	 *
@@ -50,7 +49,9 @@ module.exports = class Utilities {
 					let tag = tags[i].substring(0, breakIdx + 1);
 					let rep = tags[i].substring(breakIdx + 2);
 					for (let j = 0; j < lines.length; j++) {
-						if (rep.indexOf(tag) == -1) lines[j] = lines[j].replace(tag, rep);
+						while (lines[j].indexOf(tag) != -1) {
+							lines[j] = lines[j].replace(tag, rep);
+						}
 					}
 				}
 			}
@@ -75,7 +76,23 @@ module.exports = class Utilities {
 	static drawTextRectangleNoBorderOrBg(ctx, lines, textMetaData, top, left, width, height, mimic, previousWH, tags) {
 		let bgCol = textMetaData.bgColour;
 		textMetaData.bgColour = "rgb(0,0,0,0)";
-		let xy = Utilities.drawTextRectangle(ctx, lines, textMetaData, top, left, width, height, 0, false, false, false, false, mimic, previousWH, tags);
+		let xy = Utilities.drawTextRectangle(
+			ctx,
+			lines,
+			textMetaData,
+			top,
+			left,
+			width,
+			height,
+			0,
+			false,
+			false,
+			false,
+			false,
+			mimic,
+			previousWH,
+			tags
+		);
 		textMetaData.bgColour = bgCol;
 		return xy;
 	}
@@ -104,21 +121,41 @@ module.exports = class Utilities {
 	 * @param {Array} tags Array of string in the form "<tag name>=replacement text". The tag can only be 0-9A-Za-z
 	 * @return {object} The max X and Y  position after the draw, or 'undefined' if nothing drawn becuase of error
 	 */
-	static drawTextRectangle(ctx, lines, textMetaData, top, left, width, height, cornerRadius, drawTopBorder, drawRightBorder, drawBottomBorder, drawLeftBorder, mimic, previousWH, tags) {
+	static drawTextRectangle(
+		ctx,
+		lines,
+		textMetaData,
+		top,
+		left,
+		width,
+		height,
+		cornerRadius,
+		drawTopBorder,
+		drawRightBorder,
+		drawBottomBorder,
+		drawLeftBorder,
+		mimic,
+		previousWH,
+		tags
+	) {
 		// Validate parameters
 		if (!Utilities.isObject(textMetaData)) throw new Error("drawTextRectangle: no textMetadata object");
 		if (!Utilities.validColour(textMetaData.fgColour)) throw new Error("drawTextRectangle: no valid FG colour");
 		if (!Utilities.isBoolean(textMetaData.bold)) throw new Error("drawTextRectangle: text has no indication of bold");
 		if (!Utilities.isBoolean(textMetaData.italic)) throw new Error("drawTextRectangle: text has no indication of italic");
-		if (!Utilities.isString(lines) && !Utilities.isAllStrings(lines)) throw new Error("drawTextRectangle: lines must be string or array of strings");
+		if (!Utilities.isString(lines) && !Utilities.isAllStrings(lines))
+			throw new Error("drawTextRectangle: lines must be string or array of strings");
 		if (!Utilities.isNumberGtEq0(top)) throw new Error("drawTextRectangle: value for top not a number >= 0");
 		if (!Utilities.isNumberGtEq0(textMetaData.spacing)) throw new Error("drawTextRectangle: value for spacing not a number >= 0");
 		if (!Utilities.isNumberGtEq0(textMetaData.padding)) throw new Error("drawTextRectangle: value for padding not a number >= 0");
 		// We are allowed a value with a negative LEFT
 		//if (!Utilities.isNumberGtEq0(left)) throw new Error('drawTextRectangle: value for left not a number > 0');
-		if (width != null && width != undefined && !Utilities.isNumberGtEq0(width)) throw new Error("drawTextRectangle: value for width not a number > 0 AND not undefined");
-		if (height != null && height != undefined && !Utilities.isNumberGtEq0(height)) throw new Error("drawTextRectangle: value for height not a number > 0 AND not undefined");
-		if (cornerRadius != null && cornerRadius != undefined && !Utilities.isNumberGtEq0(cornerRadius)) throw new Error("drawTextRectangle: value for cornerRadius not a number > 0 AND not undefined");
+		if (width != null && width != undefined && !Utilities.isNumberGtEq0(width))
+			throw new Error("drawTextRectangle: value for width not a number > 0 AND not undefined");
+		if (height != null && height != undefined && !Utilities.isNumberGtEq0(height))
+			throw new Error("drawTextRectangle: value for height not a number > 0 AND not undefined");
+		if (cornerRadius != null && cornerRadius != undefined && !Utilities.isNumberGtEq0(cornerRadius))
+			throw new Error("drawTextRectangle: value for cornerRadius not a number > 0 AND not undefined");
 		if (!Utilities.isBoolean(drawTopBorder)) throw new Error("drawTextRectangle: drawTopBorder not a boolean");
 		if (!Utilities.isBoolean(drawRightBorder)) throw new Error("drawTextRectangle: drawRightBorder not a boolean");
 		if (!Utilities.isBoolean(drawBottomBorder)) throw new Error("drawTextRectangle: drawBottomBorder not a boolean");
@@ -199,14 +236,24 @@ module.exports = class Utilities {
 				// Align is LEFT
 				// This line is hanging, but is the first after a non hanging line
 				// So place to the right and not underneath the previous line
-				if (lineToWriteMd.hang && !previousLineHadHang && Utilities.isNumberGtEq0(previousLineRightPosition) && Utilities.isNumberGtEq0(previousLineTextBase)) {
+				if (
+					lineToWriteMd.hang &&
+					!previousLineHadHang &&
+					Utilities.isNumberGtEq0(previousLineRightPosition) &&
+					Utilities.isNumberGtEq0(previousLineTextBase)
+				) {
 					textleft = previousLineRightPosition;
 					textBase = previousLineTextBase;
 				}
 				// This line is hanging, and is NOT the first after a non hanging line
 				// So place underneath but at the hanging position (i.e. text left of the
 				// previous hanging line)
-				else if (lineToWriteMd.hang && previousLineHadHang && Utilities.isNumberGtEq0(previousLineLeftPosition) && Utilities.isNumberGtEq0(previousLineTextBase)) {
+				else if (
+					lineToWriteMd.hang &&
+					previousLineHadHang &&
+					Utilities.isNumberGtEq0(previousLineLeftPosition) &&
+					Utilities.isNumberGtEq0(previousLineTextBase)
+				) {
 					textleft = previousLineLeftPosition;
 					textBase += heightOfLine;
 					if (i > 0) textBase += spaceBetweenLines;
@@ -233,7 +280,9 @@ module.exports = class Utilities {
 				let partWidth = lineToWriteMd.metadata[j].width;
 				let partBold = lineToWriteMd.metadata[j].bold === true ? "bold " : "";
 				let partItalic = lineToWriteMd.metadata[j].italic === true ? "italic " : "";
-				let partFontSz = Utilities.isNumberGt0(lineToWriteMd.metadata[j].fontSizePx) ? lineToWriteMd.metadata[j].fontSizePx + "px " : undefined;
+				let partFontSz = Utilities.isNumberGt0(lineToWriteMd.metadata[j].fontSizePx)
+					? lineToWriteMd.metadata[j].fontSizePx + "px "
+					: undefined;
 				let partFontFamily = Utilities.isString(lineToWriteMd.metadata[j].fontFamily) ? lineToWriteMd.metadata[j].fontFamily : undefined;
 				if (partFontSz == undefined || partFontFamily == undefined) {
 					throw new Error("drawTextRectangle: text part must have font size and font family - " + JSON.stringify(lineToWriteMd.metadata));
@@ -258,7 +307,7 @@ module.exports = class Utilities {
 
 		return {
 			x: left + boxw,
-			y: top + boxh
+			y: top + boxh,
 		};
 	}
 
@@ -365,7 +414,7 @@ module.exports = class Utilities {
 			h: calch,
 			lines: linesToWrite,
 			linesMd: linesToWriteMd,
-			sbl: spaceBetweenLines
+			sbl: spaceBetweenLines,
 		};
 	}
 
@@ -506,7 +555,7 @@ module.exports = class Utilities {
 						colour: currentColour,
 						height: undefined,
 						startOffset: currentWidth,
-						width: Utilities.getTextPartWidth(ctx, txtPart, currentFontSizePx, currentFontFamily, currentBold, currentItalic)
+						width: Utilities.getTextPartWidth(ctx, txtPart, currentFontSizePx, currentFontFamily, currentBold, currentItalic),
 					};
 					currentWidth += md.width;
 					lineMetadata.push(md);
@@ -519,7 +568,7 @@ module.exports = class Utilities {
 				width: undefined,
 				height: currentMaxHeight,
 				hang: currentHang,
-				metadata: undefined
+				metadata: undefined,
 			};
 		} else {
 			for (let i = 0; i < lineMetadata.length; i++) {
@@ -529,7 +578,7 @@ module.exports = class Utilities {
 				width: Math.ceil(currentWidth),
 				height: currentMaxHeight,
 				hang: currentHang,
-				metadata: lineMetadata
+				metadata: lineMetadata,
 			};
 		}
 	}
@@ -555,8 +604,32 @@ module.exports = class Utilities {
 	 * @param {*} mimic
 	 * @returns
 	 */
-	static drawRectangle(ctx, borderWidth, borderColour, borderDash, fillColour, top, left, width, height, cornerRadius, drawTopBorder, drawRightBorder, drawBottomBorder, drawLeftBorder, mimic) {
-		if (!Utilities.isNumber(top) || !Utilities.isNumber(left) || !Utilities.isNumber(width) || !Utilities.isNumber(height) || width < 0 || height < 0 || typeof mimic != "boolean") {
+	static drawRectangle(
+		ctx,
+		borderWidth,
+		borderColour,
+		borderDash,
+		fillColour,
+		top,
+		left,
+		width,
+		height,
+		cornerRadius,
+		drawTopBorder,
+		drawRightBorder,
+		drawBottomBorder,
+		drawLeftBorder,
+		mimic
+	) {
+		if (
+			!Utilities.isNumber(top) ||
+			!Utilities.isNumber(left) ||
+			!Utilities.isNumber(width) ||
+			!Utilities.isNumber(height) ||
+			width < 0 ||
+			height < 0 ||
+			typeof mimic != "boolean"
+		) {
 			return "undefined";
 		}
 
@@ -638,7 +711,7 @@ module.exports = class Utilities {
 
 		return {
 			x: left + width,
-			y: top + height
+			y: top + height,
 		};
 	}
 
@@ -872,7 +945,8 @@ module.exports = class Utilities {
 	 */
 	static getRandomColour() {
 		//var letters = '0123456789';
-		var colour = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";
+		var colour =
+			"rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ")";
 		return colour;
 	}
 
@@ -889,7 +963,23 @@ module.exports = class Utilities {
 	static drawActiveFragments(working, ctx, starty, height, mimic) {
 		if (Array.isArray(working.activeFragments)) {
 			working.activeFragments.forEach((frag) => {
-				Utilities.drawRectangle(ctx, frag.borderWidth, frag.borderColour, frag.borderDash, frag.colour, starty, frag.fragmentStartX, frag.fragmentEndX - frag.fragmentStartX, height, 0, false, true, false, true, mimic);
+				Utilities.drawRectangle(
+					ctx,
+					frag.borderWidth,
+					frag.borderColour,
+					frag.borderDash,
+					frag.colour,
+					starty,
+					frag.fragmentStartX,
+					frag.fragmentEndX - frag.fragmentStartX,
+					height,
+					0,
+					false,
+					true,
+					false,
+					true,
+					mimic
+				);
 			});
 		}
 	}

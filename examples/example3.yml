@@ -1,0 +1,111 @@
+title: "Example 3"
+version: "1.0"
+description:
+  [
+    "This sequence diagram is used to represent more complex sequence flows,",
+    "including embedded <redcomment>fragments</redcomment>, <redcomment>states</redcomment>, <redcomment>references</redcomment> and a change in <redcomment>global</redcomment>",
+    "<redcomment>spacing</redcomment> (normally a value of <code>15</code> is too small - <code>30</code> is good)! And of course the",
+    "<redcomment>description</redcomment> ...",
+  ]
+actors: [{name: "Client", alias: client, bgColour: "rgb(255,126,121)"}, {name: "Server", alias: server}, {name: "Database", alias: db}]
+params:
+  {
+    fragment: {bgColours: ["rgb(180,180,180)", "rgb(255,180,190)"]},
+    comment: {bgColour: "rgb(0,250,150)", spacing: 1.2},
+    reference: {fontSizePx: 14},
+    state: {bgColour: "rgb(250,210,150)"},
+    actor: {bgColour: "rgb(100,180,220)"},
+    call: {fontFamily: "monospace", fontSizePx: 15},
+    return: {fontFamily: "monospace", fontSizePx: 15},
+    globalSpacing: 15,
+    tags: ["<code>=<rgb(0,0,180)><font=monospace>", "</code>=</font></rgb>", "<redcomment>=<rgb(255,0,0)><i>", "</redcomment>=</i></rgb>"],
+  }
+lines:
+  [
+    {
+      type: call,
+      from: client,
+      to: client,
+      async: true,
+      text: ["Some async process"],
+      comment: "An asyncronous call to from and to the same actor",
+    },
+    {
+      type: call,
+      from: client,
+      to: server,
+      breakToFlow: false,
+      text: ["someCall(param1, param2)"],
+      comment: ['This is a line of type "<redcomment>call</redcomment>" with a "<redcomment>comment</redcomment>"'],
+    },
+    {
+      type: call,
+      from: server,
+      to: db,
+      breakToFlow: true,
+      text: ["someDbCall() : dbResponse"],
+      comment: ["Call the returns immediately, i.e. breaks", "the lifeline in the called actor"],
+    },
+    {
+      type: state,
+      actor: server,
+      text: ["We now have dbResponse", "available in the server"],
+      comment: "A <redcomment>state</redcomment> line",
+    },
+    {
+      type: fragment,
+      fragmentType: alt,
+      title: "DO SOME CONDITIONAL PROCESSING ON THE RESPONSE",
+      condition: 'IF dbResponse.field1 == "someValue"',
+      comment:
+        [
+          "A <redcomment>fragment</redcomment> line. In this case, defined with a (personally defined)",
+          '"<code>alt</code>" fragmentType label and optional title. This fragmentType label',
+          'can be any string you desire, but generally use "alt", "loop", "info", or anyhing',
+          "else short and punctual. The condition can only be single line and does not support",
+          "markup",
+        ],
+      lines:
+        [
+          {type: call, from: server, to: server, text: ['Do something because field1 is "someValue"']},
+          {type: call, from: server, to: server, text: ["prepare succesful return value to client : successful return value"]},
+          {type: condition, condition: "ELSE"},
+          {
+            type: fragment,
+            fragmentType: loop,
+            title: "LOOP OVER PROCESSING SOMETHING IN FIELD2",
+            condition: "WHILE processing NOT complete",
+            comment: 'A "loop" embedded <redcomment>fragment</redcomment> line',
+            lines: [{type: call, from: server, to: server, text: ["Process field2() : complete | not complete"]}],
+          },
+          {
+            type: reference,
+            from: server,
+            breakFromFlow: false,
+            reference: ["SOME EXTERNAL USE CASE"],
+            comment: ["A <redcomment>reference</redcomment> line. Note that the call text can", "be broken down into multiple lines"],
+            text: ["some external call (processed field2) ", ": external response | error"],
+          },
+          {
+            type: fragment,
+            fragmentType: alt,
+            title: "ERROR WITH EXTERNAL REFERENCE CALL",
+            condition: "IF error with external use case",
+            lines:
+              [
+                {type: return, from: server, to: client, breakToFlow: true, text: [":some error response"]},
+                {type: condition, condition: "ELSE", comment: ["Succesful external use case"]},
+                {type: call, from: server, to: server, text: ["prepare succesful return value to client : successful return value"]},
+              ],
+          },
+        ],
+    },
+    {
+      type: return,
+      from: server,
+      to: client,
+      breakToFlow: true,
+      text: [": successful return value"],
+      comment: ["<redcomment>return</redcomment> line type"],
+    },
+  ]
