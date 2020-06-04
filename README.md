@@ -67,6 +67,8 @@ Asssume that the `testFile.yaml` file has `title: "Test Sequence Diagram", versi
 -rw-r--r--    1 joeblogs  usergroup   11561  2 Jun 17:40 Test_Sequence_Diagram.1.1.yaml
 ```
 
+The `package.json` file shows routines used in publishing this repository, including use of the tool in building examples.
+
 ## Example
 
 ### Example 1 - A sequence diagram with 3 actors but with no flows!
@@ -76,7 +78,7 @@ This sequence diagram:
 
 is produced by the following code:
 
-```
+```yml
 title: "Example 1"
 version: "1.0"
 actors: [{name: "Client", alias: client, bgColour: "rgb(255,126,121)"}, {name: "Server", alias: server}, {name: "Database", alias: db}]
@@ -132,7 +134,7 @@ This sequence diagram:
 
 is produced by the following code:
 
-```
+```yml
 title: "Example 2"
 version: "1.0"
 actors:
@@ -192,14 +194,14 @@ lines:
   ]
 ```
 
-### Example 2 - Now we add some calls and a return
+### Example 3 - Fragments, States, References and Spacing
 This sequence diagram:
 
 ![alt text](examples/Example_3.1.0.png "Example 3")
 
 is produced by the following code:
 
-```
+```yml
 title: "Example 3"
 version: "1.0"
 description:
