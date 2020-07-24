@@ -51,7 +51,7 @@ module.exports = class Call {
 		if (this._line == null || typeof this._line != "object") {
 			return {
 				x: 0,
-				y: starty
+				y: starty,
 			};
 		}
 
@@ -79,7 +79,7 @@ module.exports = class Call {
 		if (typeof this._startx != "number" || typeof this._endx != "number") {
 			return {
 				x: 0,
-				y: starty
+				y: starty,
 			};
 		}
 		if (this._endx != this._startx) {
@@ -163,9 +163,22 @@ module.exports = class Call {
 			callliney = starty + working.globalSpacing;
 		}
 
-		//let xy = Actor.drawTimelines(ctx, starty, (callliney + (2 * lineWidth) + working.globalSpacing + arrowSizeY - starty) + working.globalSpacing, true);
+		///////////////////////////////////
+		// 5. Draw the call line text
+		let textToPrint = null;
+		if (Utilities.isAllStrings(this._line.text)) {
+			textToPrint = this._line.text.slice();
+			let s = textToPrint[0];
+			textToPrint[0] = this._callCount + ". " + s;
+		} else if (Utilities.isString(this._line.text)) {
+			textToPrint = this._callCount + ". " + this._line.text;
+		} else {
+			textToPrint = this._callCount + ". ";
+		}
+		let wh = Utilities.getTextWidthAndHeight(ctx, calltmd, textToPrint, working.tags);
+		const texty = callliney + wh.h;
 		let xy = Actor.drawTimelines(working, ctx, starty, callliney + 2 * lineWidth + working.globalSpacing + arrowSizeY - starty, true);
-		let finalHeightOfAllLine = xy.y - starty;
+		let finalHeightOfAllLine = texty > xy.y ? texty - starty : xy.y - starty;
 
 		///////////////////////////////////
 		// Height now calculated .. not draw the items in order
@@ -258,16 +271,6 @@ module.exports = class Call {
 
 		///////////////////////////////////
 		// 5. Draw the call line text
-		let textToPrint = null;
-		if (Utilities.isAllStrings(this._line.text)) {
-			textToPrint = this._line.text.slice();
-			let s = textToPrint[0];
-			textToPrint[0] = this._callCount + ". " + s;
-		} else if (Utilities.isString(this._line.text)) {
-			textToPrint = this._callCount + ". " + this._line.text;
-		} else {
-			textToPrint = this._callCount + ". ";
-		}
 		let calltextxy = Utilities.drawTextRectangleNoBorderOrBg(
 			ctx,
 			textToPrint,
@@ -538,7 +541,7 @@ module.exports = class Call {
 			align: schema.call.properties.align.default,
 			borderColour: schema.call.properties.borderColour.default,
 			borderWidth: schema.call.properties.borderWidth.default,
-			borderDash: schema.call.properties.borderDash.default
+			borderDash: schema.call.properties.borderDash.default,
 		};
 		return defaultCallTmd;
 	}
@@ -562,7 +565,7 @@ module.exports = class Call {
 			borderColour: schema.call.properties.borderColour.default,
 			borderWidth: schema.call.properties.borderWidth.default,
 			borderDash: schema.call.properties.borderDash.default,
-			vpadding: 0
+			vpadding: 0,
 		};
 		return defaultCallTmd;
 	}
