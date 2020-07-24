@@ -565,7 +565,7 @@ module.exports = class Call {
 			borderColour: schema.call.properties.borderColour.default,
 			borderWidth: schema.call.properties.borderWidth.default,
 			borderDash: schema.call.properties.borderDash.default,
-			vpadding: 0,
+			vpadding: schema.call.properties.fontSizePx.default / 2,
 		};
 		return defaultCallTmd;
 	}
