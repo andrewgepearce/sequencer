@@ -196,7 +196,14 @@ module.exports = class Call {
 		///////////////////////////////////
 		// 2. Time lines
 		this._actorFromClass.flowStartYPos = callliney;
-		if (this._line.breakFromFlow === true || this._line.breakFlow === true || this._line.breakToFlow === true) {
+		if (
+			this._line.breakFromFlow === true ||
+			this._line.breakFlow === true ||
+			this._line.breakToFlow === true ||
+			this._line.bff === true ||
+			this._line.btf === true ||
+			this._line.bf === true
+		) {
 			this._actorFromClass.flowEndYPos = callliney + working.globalSpacing + arrowSizeY;
 		}
 		if (this._line.async != true) {
@@ -418,10 +425,10 @@ module.exports = class Call {
 		// 2. Time lines
 		this._actorFromClass.flowStartYPos = callliney;
 		this._actorToClass.flowStartYPos = callliney;
-		if (this._line.breakFromFlow === true) {
+		if (this._line.breakFromFlow === true || this._line.bff === true) {
 			this._actorFromClass.flowEndYPos = callliney + working.globalSpacing / 3;
 		}
-		if (this._line.breakToFlow === true) {
+		if (this._line.breakToFlow === true || this._line.btf === true) {
 			this._actorToClass.flowEndYPos = callliney + working.globalSpacing / 3;
 		}
 		xy = Actor.drawTimelines(working, ctx, starty, finalHeightOfAllLine, mimic);
