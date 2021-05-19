@@ -56,7 +56,7 @@ module.exports = class Comment {
 	 * @param {*} mimic Mimmic drawing
 	 * @memberof Comment
 	 */
-	draw(working, startx, starty, gapBelow, gapRight, mimic) {
+	draw(working, startx, starty, gapBelow, gapRight, mimic, returnWidth) {
 		if (!working.postdata) {
 			working.postdata = {};
 		}
@@ -69,13 +69,13 @@ module.exports = class Comment {
 		if (!Utilities.isNumber(startx) || !Utilities.isNumber(starty) || startx < 0 || starty < 0) {
 			return {
 				x: startx,
-				y: starty
+				y: starty,
 			};
 		}
 		if (!Utilities.isNumber(gapBelow) || !Utilities.isNumber(gapRight) || gapBelow < 0 || gapRight < 0) {
 			return {
 				x: startx,
-				y: starty
+				y: starty,
 			};
 		}
 
@@ -88,7 +88,7 @@ module.exports = class Comment {
 		if (!Utilities.isObject(this._line) && !Utilities.isString(this._line.text) && !Array.isArray(this._line.text)) {
 			return {
 				x: startx,
-				y: starty
+				y: starty,
 			};
 		}
 
@@ -239,12 +239,12 @@ module.exports = class Comment {
 		if (gapRight > 0 && gapRight < this._lineRadius + 1)
 			return {
 				x: startx,
-				y: starty
+				y: starty,
 			};
 		if (gapBelow < 0)
 			return {
 				x: startx,
-				y: starty
+				y: starty,
 			};
 
 		//////////////////
@@ -360,7 +360,8 @@ module.exports = class Comment {
 			this._ctx.stroke();
 		}
 
-		return working.manageMaxWidth(commentx + width, destinationY);
+		if (mimic && returnWidth) return width;
+		else return working.manageMaxWidth(commentx + width, destinationY);
 	}
 
 	/**
@@ -381,7 +382,7 @@ module.exports = class Comment {
 			align: "left",
 			borderColour: "rgb(0,0,0)",
 			borderWidth: 1,
-			borderDash: []
+			borderDash: [],
 		};
 		return defaultCommentTmd;
 	}

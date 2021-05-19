@@ -71,9 +71,23 @@ module.exports = class Blank {
 		let blankBottom = starty + height;
 		let commentxy = null;
 		let comment = null;
+		let commentwidth = null;
+		let commentleft = null;
 		if (this._line.comment != null) {
 			comment = new Comment(ctx, this._line.comment);
-			commentxy = comment.draw(working, blankleft + 2 * working.globalSpacing, blankTop + working.globalSpacing, 0, 0, true);
+			let commentwidth = comment.draw(working, blankleft + 2 * working.globalSpacing, blankTop + working.globalSpacing, 0, 0, true, true);
+			let amiddle = null;
+			working.postdata.actors.forEach((actor) => {
+				if (this._line.actor == actor.alias) {
+					amiddle = actor.clinstance.middle;
+					commentleft = amiddle - commentwidth / 2;
+				}
+			});
+			if (commentleft == null) {
+				commentleft = blankleft + 2 * working.globalSpacing;
+			}
+			comment = new Comment(ctx, this._line.comment);
+			commentxy = comment.draw(working, commentleft, blankTop + working.globalSpacing, 0, 0, true);
 			blankBottom = commentxy.y + height + 1;
 		}
 		let xy = Actor.drawTimelines(working, ctx, starty, blankBottom - blankTop, true);
@@ -96,7 +110,7 @@ module.exports = class Blank {
 		///////////////////////////////////
 		// 3. Comment
 		if (comment != null) {
-			commentxy = comment.draw(working, blankleft + 2 * working.globalSpacing, blankTop + working.globalSpacing, 0, 0, mimic);
+			commentxy = comment.draw(working, commentleft, blankTop + working.globalSpacing, 0, 0, mimic);
 		}
 
 		working.manageMaxWidth(blankRight, blankBottom);
