@@ -208,13 +208,13 @@ lines:
 
 This sequence diagram:
 
-![alt text](examples/Example_3.1.0.png "Example 3")
+![alt text](examples/Example_3.1.1.png "Example 3")
 
 is produced by the following code:
 
 ```yml
 title: "Example 3"
-version: "1.0"
+version: "1.1"
 description:
   [
     "This sequence diagram is used to represent more complex sequence flows,",
@@ -243,7 +243,7 @@ lines:
       to: client,
       async: true,
       text: ["Some async process"],
-      comment: "An asyncronous call to from and to the same actor",
+      comment: "An asynchronous call to from and to the same actor",
     },
     {
       type: call,
@@ -276,14 +276,14 @@ lines:
         [
           "A <redcomment>fragment</redcomment> line. In this case, defined with a (personally defined)",
           '"<code>alt</code>" fragmentType label and optional title. This fragmentType label',
-          'can be any string you desire, but generally use "alt", "loop", "info", or anyhing',
+          'can be any string you desire, but generally use "alt", "loop", "info", or anything',
           "else short and punctual. The condition can only be single line and does not support",
           "markup",
         ],
       lines:
         [
           {type: call, from: server, to: server, text: ['Do something because field1 is "someValue"']},
-          {type: call, from: server, to: server, text: ["prepare succesful return value to client : successful return value"]},
+          {type: call, from: server, to: server, text: ["prepare successful return value to client : successful return value"]},
           {type: condition, condition: "ELSE"},
           {
             type: fragment,
@@ -308,20 +308,30 @@ lines:
             condition: "IF error with external use case",
             lines:
               [
-                {type: return, from: server, to: client, breakToFlow: true, text: [":some error response"]},
-                {type: condition, condition: "ELSE", comment: ["Succesful external use case"]},
-                {type: call, from: server, to: server, text: ["prepare succesful return value to client : successful return value"]},
+                {
+                  type: reference,
+                  from: server,
+                  breakFromFlow: true,
+                  reference: ["SOME OTHER EXTERNAL USE CASE"],
+                  text: ["The external reference call properties"],
+                  to: client,
+                  rettext: ["The external reference return properties"],
+                  breakToFlow: true,
+                  comment: ["In this case, an external use case processing the error"],
+                },
+                {type: condition, condition: "ELSE", comment: ["Successful external use case"]},
+                {type: call, from: server, to: server, text: ["prepare successful return value to client : successful return value"]},
+                {
+                  type: return,
+                  from: server,
+                  to: client,
+                  breakToFlow: true,
+                  text: [": successful return value"],
+                  comment: ["<redcomment>return</redcomment> line type"],
+                },
               ],
           },
         ],
-    },
-    {
-      type: return,
-      from: server,
-      to: client,
-      breakToFlow: true,
-      text: [": successful return value"],
-      comment: ["<redcomment>return</redcomment> line type"],
     },
   ]
 ```
