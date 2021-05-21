@@ -30,7 +30,9 @@ module.exports = class Reference {
 		this._line = line;
 		this._startx = null;
 		this._endx = null;
+		this._endretx = null;
 		this._actorFromClass = null;
+		this._actorToClass = null;
 		this._callCount = ++working.callCount;
 	}
 
@@ -47,14 +49,14 @@ module.exports = class Reference {
 		if (this._line == null || typeof this._line != "object" || typeof this._line.from != "string") {
 			return {
 				x: 0,
-				y: starty
+				y: starty,
 			};
 		}
 
 		if (!Utilities.isAllStrings(this._line.reference) && !Utilities.isString(this._line.reference)) {
 			return {
 				x: 0,
-				y: starty
+				y: starty,
 			};
 		}
 
@@ -128,33 +130,67 @@ module.exports = class Reference {
 				: 5;
 
 		////////////////////////////////
-		// Should we break the to or from flows
-		const breakFromFlow = this._line.breakFromFlow === true ? true : false;
+		// Get startx and endx for the call
+		working.postdata.actors.forEach((actor) => {
+			if (actor.alias === this._line.from) {
+				this._startx = actor.clinstance.middle;
+				this._actorFromClass = actor.clinstance;
+			}
+			if (actor.alias === this._line.to) {
+				this._endretx = actor.clinstance.middle;
+				this._actorToClass = actor.clinstance;
+			}
+		});
+		if (!Utilities.isNumberGtEq0(this._startx)) {
+			return {
+				x: 0,
+				y: starty,
+			};
+		}
 
 		//////////////////////////
 		// Calculate text size
 		let gapToText = this._line.comment != null ? 2 * working.globalSpacing : working.globalSpacing;
 		let textToPrint = null;
+		let retTextToPrint = null;
+		// Call text
 		if (Utilities.isAllStrings(this._line.text)) {
 			textToPrint = this._line.text.slice();
 			for (let i = 0; i < textToPrint.length; i++) {
 				textToPrint[i] = "<hang>" + textToPrint[i];
 			}
 			textToPrint.unshift("" + this._callCount + ". ");
-			// let s = textToPrint[0];
-			// textToPrint[0] = this._callCount + ". " + s;
 		} else if (Utilities.isString(this._line.text)) {
 			textToPrint = this._callCount + ". " + this._line.text;
 		} else {
 			textToPrint = this._callCount + ". ";
 		}
+		//ret text
+		if (this._actorToClass != null) {
+			if (Utilities.isAllStrings(this._line.rettext)) {
+				retTextToPrint = this._line.rettext.slice();
+				for (let i = 0; i < retTextToPrint.length; i++) {
+					retTextToPrint[i] = "<hang>" + retTextToPrint[i];
+				}
+				retTextToPrint.unshift("" + ++working.callCount + ". ");
+			} else if (Utilities.isString(this._line.rettext)) {
+				retTextToPrint = ++working.callCount + ". " + this._line.rettext;
+			} else {
+				retTextToPrint = ++working.callCount + ". ";
+			}
+		}
 
-		// if (!Utilities.isString(this._line.text))
-		//    this._line.text = "";
-		// let text = this._callCount + ". " + this._line.text;
 		let wh = Utilities.getTextWidthAndHeight(ctx, calltmd, textToPrint, working.tags);
-		const textlen = wh.w; //Utilities.getBoxWidth(ctx, textToPrint, calltmd.fontSizePx, calltmd.fontFamily, false, false, calltmd.padding);
-		const textheight = wh.h; //Utilities.getBoxHeight(textToPrint, calltmd.fontSizePx, calltmd.spacing, calltmd.padding);
+		let textlen = wh.w;
+		let textheight = wh.h;
+		let rettextheight = 0;
+		let rettextlen = 0;
+
+		if (Utilities.isString(retTextToPrint) || Utilities.isAllStrings(retTextToPrint)) {
+			let rettextwh = Utilities.getTextWidthAndHeight(ctx, calltmd, retTextToPrint, working.tags);
+			rettextheight = rettextwh.h;
+			rettextlen = rettextwh.w;
+		}
 
 		let reference = null;
 		if (!Array.isArray(this._line.reference)) {
@@ -166,44 +202,37 @@ module.exports = class Reference {
 		} else {
 			reference = this._line.reference;
 		}
-		//const reflen = referencetmd.getBoxWidth(ctx, reference);
-		//const refheight = referencetmd.getBoxHeight(reference);
 		const extraLines = ["<b>Ref:"];
 
-		////////////////////////////////
-		// Get startx and endx for the call
-		working.postdata.actors.forEach((actor) => {
-			if (actor.alias === this._line.from) {
-				this._startx = actor.clinstance.middle;
-				this._actorFromClass = actor.clinstance;
-			}
-		});
-		if (!Utilities.isNumberGtEq0(this._startx)) {
-			return {
-				x: 0,
-				y: starty
-			};
-			//throw new Error('There is no matching actor "alias" for the string indciated in the "from" field');
-		}
-		this._endx = this._startx + gapToText + textlen + 3 * arrowSizeY;
+		////////////////////////////////////////////////////////////////////////////
+		// Where should the LHS of the ref box be?
+		let refBoxLeftCallText = this._startx + gapToText + textlen + 3 * arrowSizeY;
+		let refBoxLeftRetText = this._endretx + gapToText + rettextlen + 3 * arrowSizeY;
+		let refBoxLeft = refBoxLeftCallText > refBoxLeftRetText ? refBoxLeftCallText : refBoxLeftRetText;
 
 		/////////////
 		// Calculate height of reference line
-		let startxAfterFlow, endxAfterFlow;
+		let startxAfterFlow;
 		let commentxy = null;
 		let comment = null;
 		let topOfRefBox = null;
 		let callLineY = null;
 		let callTextY = null;
+		let rettextwh = null;
+		let retLineY = null;
+		let retTextY = null;
+		let retLineDrawn = false;
+		let retTextPresent = false;
+		let retLineXStart = null;
+		let retLineXEnd = null;
 		startxAfterFlow = this._startx + this._actorFromClass.flowWidth / 2;
-		endxAfterFlow = this._endx;
 		if (this._line.comment != null) {
 			comment = new Comment(ctx, this._line.comment);
 			commentxy = comment.draw(
 				working,
 				startxAfterFlow + working.globalSpacing,
 				starty + working.globalSpacing,
-				textheight,
+				textheight, //Calculated text height on the call line
 				working.globalSpacing,
 				true
 			);
@@ -211,11 +240,27 @@ module.exports = class Reference {
 		} else {
 			topOfRefBox = starty + working.globalSpacing;
 		}
-		//const refBoxHeight = Utilities.getBoxHeight(extraLines.concat(reference), referencetmd.fontSizePx, referencetmd.spacing, referencetmd.padding);
 		const refwh = Utilities.getTextWidthAndHeight(ctx, referencetmd, extraLines.concat(reference), working.tags);
-		const refBoxHeight = refwh.h;
+		let refBoxHeight = refwh.h;
 		callLineY = topOfRefBox + refBoxHeight / 2;
 		callTextY = callLineY - textheight;
+
+		if (this._actorToClass != null) {
+			if (Utilities.isString(retTextToPrint) || Utilities.isAllStrings(retTextToPrint)) {
+				rettextwh = Utilities.getTextWidthAndHeight(ctx, calltmd, retTextToPrint, working.tags);
+				refBoxHeight += rettextwh.h;
+			}
+			refBoxHeight += working.globalSpacing / 2;
+			callLineY = topOfRefBox + working.globalSpacing / 2;
+			callTextY = callLineY - textheight;
+			retLineY = topOfRefBox + (refBoxHeight - working.globalSpacing / 2);
+			retTextY = retLineY - rettextheight;
+			retLineXStart = refBoxLeft;
+			retLineXEnd = this._endretx + this._actorToClass.flowWidth / 2;
+			retLineDrawn = true;
+			retTextPresent = true; // Text will always be present if there is a return line (to add call count number)
+		}
+
 		let xy = Actor.drawTimelines(working, ctx, starty, topOfRefBox + refBoxHeight - starty + 1, true);
 		let finalHeightOfAllLine = xy.y - starty;
 
@@ -234,23 +279,27 @@ module.exports = class Reference {
 
 		///////////////////////////////////
 		// 2. Time lines
-		if (!breakFromFlow) {
-			this._actorFromClass.flowStartYPos = topOfRefBox + refBoxHeight / 2 - arrowSizeY;
-			this._actorFromClass.flowEndYPos = null;
-		} else {
+		if (this._line.breakFromFlow === true || this._line.bff === true) {
 			this._actorFromClass.flowStartYPos = topOfRefBox + refBoxHeight / 2 - arrowSizeY;
 			this._actorFromClass.flowEndYPos = callLineY + arrowSizeY;
+		} else {
+			this._actorFromClass.flowStartYPos = callLineY - arrowSizeY;
+			this._actorFromClass.flowEndYPos = null;
+		}
+		if (this._line.breakToFlow === true || this._line.btf === true) {
+			this._actorToClass.flowEndYPos = retLineY + working.globalSpacing / 3;
 		}
 		xy = Actor.drawTimelines(working, ctx, starty, finalHeightOfAllLine, mimic);
 
 		///////////////////////////////////
 		// 3. Comment
 		if (comment != null) {
+			// callLineY
 			commentxy = comment.draw(
 				working,
 				startxAfterFlow + working.globalSpacing,
 				starty + working.globalSpacing,
-				textheight + refBoxHeight / 2,
+				retLineDrawn ? textheight + working.globalSpacing / 2 : textheight + refBoxHeight / 2,
 				working.globalSpacing,
 				mimic
 			);
@@ -270,6 +319,22 @@ module.exports = class Reference {
 		);
 		working.manageMaxWidthXy(calltextxy);
 
+		////////////////////////////////////////////////////////////////////////////
+		// 4a Draw the return line text
+		if (retTextPresent && retLineDrawn) {
+			let rettextxy = Utilities.drawTextRectangleNoBorderOrBg(
+				ctx,
+				retTextToPrint,
+				calltmd,
+				retTextY,
+				retLineXEnd + gapToText,
+				null,
+				null,
+				mimic
+			);
+			working.manageMaxWidthXy(rettextxy);
+		}
+
 		///////////////////////////////////
 		// 5a. Draw the call line
 		ctx.lineWidth = lineWidth;
@@ -277,23 +342,45 @@ module.exports = class Reference {
 		ctx.setLineDash(lineDash);
 		ctx.beginPath();
 		ctx.moveTo(startxAfterFlow, callLineY);
-		Utilities.drawOrMovePath(ctx, endxAfterFlow, callLineY, mimic);
+		Utilities.drawOrMovePath(ctx, refBoxLeft, callLineY, mimic);
 		ctx.stroke();
+
+		///////////////////////////////////////////////////////////////////////////
+		// 5b Draw the return line
+		if (retLineDrawn) {
+			ctx.lineWidth = lineWidth;
+			ctx.strokeStyle = lineColour;
+			ctx.setLineDash([6, 3]);
+			ctx.beginPath();
+			ctx.moveTo(retLineXStart, retLineY);
+			Utilities.drawOrMovePath(ctx, retLineXEnd, retLineY, mimic);
+			ctx.stroke();
+			// Now the arrow at retLineXEnd
+			ctx.beginPath();
+			ctx.moveTo(retLineXEnd, retLineY);
+			ctx.setLineDash([]);
+			Utilities.drawOrMovePath(ctx, retLineXEnd + arrowSizeY * 2, retLineY, false);
+			ctx.moveTo(retLineXEnd, retLineY);
+			Utilities.drawOrMovePath(ctx, retLineXEnd + arrowSizeY * 2, retLineY - arrowSizeY, false);
+			ctx.moveTo(retLineXEnd, retLineY);
+			Utilities.drawOrMovePath(ctx, retLineXEnd + arrowSizeY * 2, retLineY + arrowSizeY, false);
+			ctx.stroke();
+		}
 
 		//////////////////////
 		// 5a. Draw the call arrow
 		ctx.beginPath();
-		ctx.moveTo(endxAfterFlow, callLineY);
+		ctx.moveTo(refBoxLeft, callLineY);
 		if (this._line.async != true) {
-			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callLineY - arrowSizeY, false);
-			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callLineY + arrowSizeY, false);
-			Utilities.drawOrMovePath(ctx, endxAfterFlow, callLineY, false);
+			Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY - arrowSizeY, false);
+			Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY + arrowSizeY, false);
+			Utilities.drawOrMovePath(ctx, refBoxLeft, callLineY, false);
 			ctx.fillStyle = lineColour;
 			ctx.fill();
 		} else {
-			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callLineY - arrowSizeY, false);
-			Utilities.drawOrMovePath(ctx, endxAfterFlow, callLineY, false);
-			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callLineY + arrowSizeY, false);
+			Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY - arrowSizeY, false);
+			Utilities.drawOrMovePath(ctx, refBoxLeft, callLineY, false);
+			Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY + arrowSizeY, false);
 			ctx.strokeStyle = lineColour;
 			ctx.stroke();
 		}
@@ -305,9 +392,9 @@ module.exports = class Reference {
 			extraLines.concat(reference),
 			referencetmd,
 			topOfRefBox,
-			endxAfterFlow,
+			refBoxLeft,
 			null,
-			null,
+			refBoxHeight,
 			0,
 			true,
 			true,
@@ -339,7 +426,7 @@ module.exports = class Reference {
 			align: "left",
 			borderColour: "rgba(255,255,255,0)",
 			borderWidth: 0,
-			borderDash: []
+			borderDash: [],
 		};
 		return defaultCallTmd;
 	}
@@ -363,7 +450,7 @@ module.exports = class Reference {
 			borderColour: "rgb(0,0,0)",
 			borderWidth: 1,
 			borderDash: [],
-			bold: false
+			bold: false,
 		};
 		return defaultRefTmd;
 	}
