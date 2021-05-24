@@ -85,6 +85,8 @@ module.exports = class Blank {
 			});
 			if (commentleft == null) {
 				commentleft = blankleft + 2 * working.globalSpacing;
+			} else if (commentleft <= working.globalSpacing) {
+				commentleft = 1.5 * working.globalSpacing;
 			}
 			comment = new Comment(ctx, this._line.comment);
 			commentxy = comment.draw(working, commentleft, blankTop + working.globalSpacing, 0, 0, true);
