@@ -45,6 +45,12 @@ const optionDefinitions = [
 		multiple: false,
 	},
 	{
+		name: "targetDir",
+		type: String,
+		alias: "t",
+		multiple: false,
+	},
+	{
 		name: "verbose",
 		type: Boolean,
 		alias: "v",
@@ -117,6 +123,12 @@ const sections = [
 					"If set, the file to write the processed flie to. If not set, write to from <stdout>. If set but with no " +
 					"filename then the name of the file is built from the title and version of the sequence description. If " +
 					"the input is YAML, and there is no outputFile set, then the tool will write a formatted JSON and YAML file as well as the PNG or PDF.",
+			},
+			{
+				name: "targetDir",
+				type: String,
+				alias: "t",
+				description: "If set, the target directory to write output files to",
 			},
 			{
 				name: "force",
@@ -213,6 +225,10 @@ function processJsonDescription(jsondescription) {
 	var ofile = sanitize(title.split(" ").join("_")) + (options.pdf ? ".pdf" : ".png");
 	var jfile = sanitize(title.split(" ").join("_")) + ".json";
 	var yfile = sanitize(title.split(" ").join("_")) + ".yaml";
+
+	if (options.targetDir != undefined && options.targetDir != null) jfile = options.targetDir + "/" + jfile;
+	if (options.targetDir != undefined && options.targetDir != null) yfile = options.targetDir + "/" + yfile;
+	if (options.targetDir != undefined && options.targetDir != null) ofile = options.targetDir + "/" + ofile;
 
 	let cs = new CanvasStart();
 	try {
