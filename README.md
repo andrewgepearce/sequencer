@@ -2,7 +2,7 @@
 
 A Node JS tool for building UML sequence diagrams from a JSON or YAML definition.
 
-There is a requirement to be able to define sequence diagrams used in system architecture definitions using a text based language that can be easily managed via source code repository schemes like GIT. Many applications that acheive this are expensive and require significant effort and overhead to maintain. Many online tools are available but are opioniated.
+There is a requirement to be able to define sequence diagrams used in system architecture definitions using a text based language that can be easily managed via source code repository schemes like GIT. Many applications that acheive this are expensive and require significant effort and overhead to maintain. Many online tools are available but are opinionated.
 
 This tool was written to be able to define sequence diagrams in an entirely textual format, like JSON or YAML, but also provide considerable control over look and feel using metadata within the file.
 
@@ -18,7 +18,7 @@ The main sections of the sequence diagram metadata description are:
 - Params. Entities within the diagram itself are assigned presentation metadata from one of 3 sources:
   - The entitiy definition itself, or (if not provided)
   - the Params provided presentation metadata for the entity, or (if not provided)
-  - The default built-in opioninated presentation metadata
+  - The default built-in opinionated presentation metadata
 - The "actors" involved in the sequence diagram. There will be one actor per lifeline.
 - The "lines" of the sequence diagram, ordered from the top of the flow to the bottom. Each line is defined with a type:
   - A **call** to define a flow from one actor to another (or itself)
