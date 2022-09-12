@@ -75,6 +75,12 @@ const optionDefinitions = [
 		multiple: false,
 	},
 	{
+		name: "nocovertext",
+		type: Boolean,
+		alias: "c",
+		multiple: false,
+	},
+	{
 		name: "help",
 		alias: "?",
 		type: Boolean,
@@ -143,6 +149,12 @@ const sections = [
 				description: "If set, then the output document will be in PDF format. Otherwise it will be in PNG format.",
 			},
 			{
+				name: "nocovertext",
+				type: Boolean,
+				alias: "c",
+				description: "If set, then no title or description or version will cover text box will be added to the diagram.",
+			},
+			{
 				name: "help",
 				alias: "?",
 				type: Boolean,
@@ -176,6 +188,9 @@ if (options == undefined || options.yaml == undefined || options.yaml == null) {
 }
 if (options == undefined || options.force == undefined || options.force == null) {
 	options.force = false;
+}
+if (options == undefined || options.nocovertext == undefined || options.nocovertext == null) {
+	options.nocovertext = false;
 }
 if (options != undefined && typeof options.help == "boolean" && options.help) {
 	const usage = commandLineUsage(sections);
@@ -234,9 +249,9 @@ function processJsonDescription(jsondescription) {
 	try {
 		let cb = null;
 		if (options.pdf == false) {
-			cb = cs.draw(Canvas.createCanvas(100, 100), jsondescription, null, options.verbose, options.id);
+			cb = cs.draw(Canvas.createCanvas(100, 100), jsondescription, null, options.verbose, options.id, options.nocovertext);
 		} else {
-			cb = cs.draw(Canvas.createCanvas(100, 100, "pdf"), jsondescription, null, options.verbose, options.id);
+			cb = cs.draw(Canvas.createCanvas(100, 100, "pdf"), jsondescription, null, options.verbose, options.id, options.nocovertext);
 		}
 		if (options.outputFile === undefined) {
 			process.stdout.write(cb);
