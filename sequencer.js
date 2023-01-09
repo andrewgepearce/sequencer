@@ -274,7 +274,7 @@ function processJsonDescription(jsondescription) {
 			fs.writeFileSync(jfile, jsonstr);
 		}
 		if (options.yaml && options.outputFile === null) {
-			yamlstr = "## https://github.com/markthepage/sequencer\n" + yamlstr;
+			yamlstr = "## https://github.com/andrewgepearce/sequencer\n" + yamlstr;
 			fs.writeFileSync(yfile, yamlstr);
 		}
 	} catch (error) {
