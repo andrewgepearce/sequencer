@@ -129,6 +129,10 @@ module.exports = class Reference {
 				? working.postdata.params.reference.arrowSize
 				: 5;
 
+		///////////////////////
+		// Get reverse indicator
+		let reverseFromArrow = Utilities.isBoolean(this._line.reverseFromArrow) ? this._line.reverseFromArrow : false;
+
 		////////////////////////////////
 		// Get startx and endx for the call
 		working.postdata.actors.forEach((actor) => {
@@ -372,17 +376,35 @@ module.exports = class Reference {
 		ctx.beginPath();
 		ctx.moveTo(refBoxLeft, callLineY);
 		if (this._line.async != true) {
-			Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY - arrowSizeY, false);
-			Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY + arrowSizeY, false);
-			Utilities.drawOrMovePath(ctx, refBoxLeft, callLineY, false);
-			ctx.fillStyle = lineColour;
-			ctx.fill();
+			if (!reverseFromArrow) {
+				Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY - arrowSizeY, false);
+				Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY + arrowSizeY, false);
+				Utilities.drawOrMovePath(ctx, refBoxLeft, callLineY, false);
+				ctx.fillStyle = lineColour;
+				ctx.fill();
+			} else {
+				ctx.moveTo(startxAfterFlow, callLineY);
+				Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callLineY - arrowSizeY, false);
+				Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callLineY + arrowSizeY, false);
+				Utilities.drawOrMovePath(ctx, startxAfterFlow, callLineY, false);
+				ctx.fillStyle = lineColour;
+				ctx.fill();
+			}
 		} else {
-			Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY - arrowSizeY, false);
-			Utilities.drawOrMovePath(ctx, refBoxLeft, callLineY, false);
-			Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY + arrowSizeY, false);
-			ctx.strokeStyle = lineColour;
-			ctx.stroke();
+			if (!reverseFromArrow) {
+				Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY - arrowSizeY, false);
+				Utilities.drawOrMovePath(ctx, refBoxLeft, callLineY, false);
+				Utilities.drawOrMovePath(ctx, refBoxLeft - arrowSizeY * 2, callLineY + arrowSizeY, false);
+				ctx.strokeStyle = lineColour;
+				ctx.stroke();
+			} else {
+				ctx.moveTo(startxAfterFlow, callLineY);
+				Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callLineY - arrowSizeY, false);
+				Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callLineY + arrowSizeY, false);
+				Utilities.drawOrMovePath(ctx, startxAfterFlow, callLineY, false);
+				ctx.fillStyle = lineColour;
+				ctx.stroke();
+			}
 		}
 
 		//////////////////////
