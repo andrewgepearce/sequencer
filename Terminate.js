@@ -47,7 +47,7 @@ module.exports = class Terminate {
 		if (this._line == null || typeof this._line != "object" || typeof this._line.from != "string") {
 			return {
 				x: 0,
-				y: starty + working.globalSpacing
+				y: starty + working.globalSpacing,
 			};
 		}
 
@@ -161,7 +161,9 @@ module.exports = class Terminate {
 			}
 		});
 		if (!Utilities.isNumberGtEq0(this._startx)) {
-			throw new Error('There is no matching actor "alias" for the string indciated in the "from" field');
+			throw new Error(
+				`Terminate line: There is no matching actor "alias" for the string indicated in the "from" field (${JSON.stringify(this._line)})`
+			);
 		}
 		this._endx = this._startx + gapToText + textlen + 3 * arrowSizeY;
 
@@ -326,7 +328,7 @@ module.exports = class Terminate {
 			align: "left",
 			borderColour: "rgba(255,255,255,0)",
 			borderWidth: 0,
-			borderDash: []
+			borderDash: [],
 		};
 		return defaultCallTmd;
 	}
@@ -350,7 +352,7 @@ module.exports = class Terminate {
 			borderColour: "rgb(0,0,0)",
 			borderWidth: 1,
 			borderDash: [],
-			bold: false
+			bold: false,
 		};
 		return defaultTermTmd;
 	}

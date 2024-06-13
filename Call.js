@@ -66,16 +66,30 @@ module.exports = class Call {
 		}
 		////////////////////////////////
 		// Get startx and endx for the call
+		let foundFrom = false;
+		let foundTo = false;
 		working.postdata.actors.forEach((actor) => {
 			if (actor.alias === this._line.from) {
 				this._startx = actor.clinstance.middle;
 				this._actorFromClass = actor.clinstance;
+				foundFrom = true;
 			}
 			if (actor.alias === this._line.to) {
 				this._endx = actor.clinstance.middle;
 				this._actorToClass = actor.clinstance;
+				foundTo = true;
 			}
 		});
+
+		if (!foundFrom)
+			throw new Error(
+				`Call line: There is no matching actor "alias" for the string indicated in the "from" field (${JSON.stringify(this._line)})`
+			);
+		if (!foundTo)
+			throw new Error(
+				`Call line: There is no matching actor "alias" for the string indicated in the "to" field (${JSON.stringify(this._line)})`
+			);
+
 		if (typeof this._startx != "number" || typeof this._endx != "number") {
 			return {
 				x: 0,
