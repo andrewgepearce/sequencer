@@ -79,6 +79,18 @@ module.exports = class Comment {
 			};
 		}
 
+		///////////////////////
+		// Get Comment Code Indicator
+		let commentIsCode = Utilities.isBoolean(this._line.commentIsCode) ? this._line.commentIsCode : false;
+		if (commentIsCode && Array.isArray(this._line.text)) {
+			for (let i = 0; i < this._line.text.length; i++) {
+				this._line.text[i] = `<code>${this._line.text[i]}`;
+			}
+		}
+		if (commentIsCode && Utilities.isString(this._line.text)) {
+			this._line.text = `<code>${this._line.text}`;
+		}
+
 		if (Utilities.isAllStrings(this._line) || Utilities.isString(this._line)) {
 			let val = this._line;
 			this._line = {};
