@@ -36,16 +36,53 @@ module.exports = class ReturnCall {
 	}
 
 	/**
+	 * Draws a return call line on a canvas context based on the provided parameters.
 	 *
+	 * @param {Object} working - The working object containing various parameters and settings for drawing.
+	 * @param {number} starty - The starting y-coordinate for the drawing.
+	 * @param {boolean} mimic - A flag indicating whether to mimic the drawing without actually rendering it.
+	 * @returns {Object} An object containing the final x and y coordinates after drawing.
 	 *
-	 * @param {*} starty
-	 * @param {*} mimic
-	 * @returns
-	 * @memberof ReturnCall
+	 * @description
+	 * This function draws a return call line on a canvas context. It handles various aspects of the drawing process, including:
+	 * - Drawing a blank line if there is no line object.
+	 * - Initializing postdata parameters if they are not present.
+	 * - Retrieving text metadata for the return call.
+	 * - Determining line dash, width, color, and arrow size based on the line object or default values.
+	 * - Calculating the start and end x-coordinates for the call based on actor positions.
+	 * - Handling flow continuation and breaking for the actors involved.
+	 * - Ignoring the line if the start and end x-coordinates are not numbers or if the return is to the same actor.
+	 * - Calculating the height of the fragment condition line.
+	 * - Drawing background fragments, timelines, comments, call text, call line, and call line arrow in order.
+	 *
+	 * The function uses various utility functions to perform tasks such as validating colors, calculating text width and height, and drawing text rectangles.
+	 * It also manages the maximum width of the drawing area based on the drawn elements.
+	 *
+	 * @example
+	 * const working = {
+	 *   postdata: {
+	 *     params: {
+	 *       return: {
+	 *         lineDash: [5, 5],
+	 *         lineWidth: 2,
+	 *         lineColour: 'rgb(255, 0, 0)',
+	 *         arrowSize: 10
+	 *       }
+	 *     },
+	 *     actors: [
+	 *       { alias: 'actor1', clinstance: { middle: 50, flowWidth: 10 } },
+	 *       { alias: 'actor2', clinstance: { middle: 150, flowWidth: 10 } }
+	 *     ]
+	 *   },
+	 *   globalSpacing: 10,
+	 *   tags: []
+	 * };
+	 * const starty = 100;
+	 * const mimic = false;
+	 * const result = draw(working, starty, mimic);
+	 * console.log(result); // { x: 0, y: 200 }
 	 */
 	draw(working, starty, mimic) {
-		// TODO: Add support for "break to flow" if a ret line is added
-
 		////////////////////////////////
 		// Draw blank line (without timelines) if there is no line object
 		if (this._line == null || typeof this._line != "object") {
@@ -315,23 +352,97 @@ module.exports = class ReturnCall {
 		//////////////////////
 		// 5a. Draw the call arrow
 		ctx.beginPath();
-		ctx.moveTo(endxAfterFlow, callliney);
-		ctx.setLineDash([]);
-		if (this._startx < this._endx) {
-			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callliney, false);
-			ctx.moveTo(endxAfterFlow, callliney);
-			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callliney - arrowSizeY, false);
-			ctx.moveTo(endxAfterFlow, callliney);
-			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callliney + arrowSizeY, false);
+		if (Utilities.isString(this._line.arrow)) this._line.arrow = this._line.arrow.toLowerCase();
+		const arrowType =
+			this._line.arrow === "cross"
+				? "cross"
+				: this._line.arrow === "fill"
+				? "fill"
+				: this._line.arrow === "open"
+				? "open"
+				: this._line.arrow === "empty"
+				? "empty"
+				: this._line.async === true
+				? "open"
+				: "open";
+		const goingLeft = this._startx > this._endx;
+		const goingRight = !goingLeft;
+		const x = endxAfterFlow;
+		const y = callliney;
+
+		////////////////////////////////////////////////////////////////////////////
+		// Going right with a cross
+		if (goingRight && arrowType === "cross") {
+			ctx.moveTo(x, y);
+			ctx.setLineDash([]);
+			ctx.lineWidth = lineWidth + 1;
+			ctx.moveTo(x - arrowSizeY * 2, y - arrowSizeY);
+			ctx.lineTo(x, y + arrowSizeY);
+			ctx.moveTo(x - arrowSizeY * 2, y + arrowSizeY);
+			ctx.lineTo(x, y - arrowSizeY);
 			ctx.stroke();
-		} else if (this._startx > this._endx) {
-			Utilities.drawOrMovePath(ctx, endxAfterFlow + arrowSizeY * 2, callliney, false);
-			ctx.moveTo(endxAfterFlow, callliney);
-			Utilities.drawOrMovePath(ctx, endxAfterFlow + arrowSizeY * 2, callliney - arrowSizeY, false);
-			ctx.moveTo(endxAfterFlow, callliney);
-			Utilities.drawOrMovePath(ctx, endxAfterFlow + arrowSizeY * 2, callliney + arrowSizeY, false);
+			ctx.lineWidth = lineWidth;
+		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going left with a cross
+		else if (goingLeft && arrowType === "cross") {
+			ctx.moveTo(x, y);
+			ctx.setLineDash([]);
+			ctx.lineWidth = lineWidth + 1;
+			ctx.moveTo(x + arrowSizeY * 2, y - arrowSizeY);
+			ctx.lineTo(x, y + arrowSizeY);
+			ctx.moveTo(x + arrowSizeY * 2, y + arrowSizeY);
+			ctx.lineTo(x, y - arrowSizeY);
+			ctx.stroke();
+			ctx.lineWidth = lineWidth;
+		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going right with a filled arrow
+		else if (goingRight && arrowType === "fill") {
+			ctx.moveTo(x, y);
+			ctx.setLineDash([]);
+			ctx.lineTo(x - arrowSizeY * 2, y - arrowSizeY);
+			ctx.lineTo(x - arrowSizeY * 2, y + arrowSizeY);
+			ctx.lineTo(x, y);
+			ctx.fillStyle = lineColour;
+			ctx.fill();
+		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going left with a filled arrow
+		else if (goingLeft && arrowType === "fill") {
+			ctx.moveTo(x, y);
+			ctx.setLineDash([]);
+			ctx.lineTo(x + arrowSizeY * 2, y - arrowSizeY);
+			ctx.lineTo(x + arrowSizeY * 2, y + arrowSizeY);
+			ctx.lineTo(x, y);
+			ctx.fillStyle = lineColour;
+			ctx.fill();
+		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going right with a open arrow
+		else if (goingRight && arrowType === "open") {
+			ctx.moveTo(x, y);
+			ctx.setLineDash([]);
+			ctx.lineTo(x - arrowSizeY * 2, y);
+			ctx.moveTo(x, y);
+			ctx.lineTo(x - arrowSizeY * 2, y - arrowSizeY);
+			ctx.moveTo(x, y);
+			ctx.lineTo(x - arrowSizeY * 2, y + arrowSizeY);
 			ctx.stroke();
 		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going left with a open arrow sd
+		else if (goingLeft && arrowType === "open") {
+			ctx.moveTo(x, y);
+			ctx.setLineDash([]);
+			ctx.lineTo(x + arrowSizeY * 2, y);
+			ctx.moveTo(x, y);
+			ctx.lineTo(x + arrowSizeY * 2, y - arrowSizeY);
+			ctx.moveTo(x, y);
+			ctx.lineTo(x + arrowSizeY * 2, y + arrowSizeY);
+			ctx.stroke();
+		}
+
 		return working.manageMaxWidth(0, starty + finalHeightOfAllLine);
 	}
 
