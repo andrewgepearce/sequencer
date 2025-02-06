@@ -346,7 +346,7 @@ module.exports = class Fragment {
 		xy = Fragment.drawLines(working, ctx, xy.y, this._line.lines);
 
 		// Draw a final blank line to make sure we have width
-		let blank = new Blank(ctx, {type: "blank", width: blankWidth, height: 0});
+		let blank = new Blank(ctx, { type: "blank", width: blankWidth, height: 0 });
 		xy = blank.draw(working, xy.y, false);
 
 		///////////////
@@ -467,7 +467,7 @@ module.exports = class Fragment {
 			align: "left",
 			borderColour: "rgba(255,255,255,0)",
 			borderWidth: 0,
-			borderDash: []
+			borderDash: [],
 		};
 		return defaultFragTitleTmd;
 	}
@@ -490,7 +490,7 @@ module.exports = class Fragment {
 			align: "left",
 			borderColour: "rgba(255,255,255,0)",
 			borderWidth: 0,
-			borderDash: []
+			borderDash: [],
 		};
 		return defaultFragConditionTmd;
 	}
@@ -507,7 +507,7 @@ module.exports = class Fragment {
 	static drawLines(working, ctx, starty, lines) {
 		let xy = {
 			x: 0,
-			y: starty
+			y: starty,
 		};
 		if (!Array.isArray(lines) || lines.length == 0) {
 			return xy;
@@ -521,7 +521,7 @@ module.exports = class Fragment {
 					type: "state",
 					text: "<b>ERROR IN LINE - NO TYPE IDENTIFIER:</b> " + JSON.stringify(line),
 					borderWidth: 3,
-					borderColour: "rgb(255,0,0)"
+					borderColour: "rgb(255,0,0)",
 				};
 				let statecl = new State(ctx, errorState);
 				xy = statecl.draw(working, xy.y, false);
@@ -552,7 +552,7 @@ module.exports = class Fragment {
 						type: "state",
 						text: "<b>ERROR IN LINE:</b> " + JSON.stringify(line),
 						borderWidth: 3,
-						borderColour: "rgb(255,0,0)"
+						borderColour: "rgb(255,0,0)",
 					};
 					let statecl = new State(ctx, errorState);
 					xy = statecl.draw(working, origXY.y, false);
@@ -568,7 +568,7 @@ module.exports = class Fragment {
 						type: "state",
 						text: "<b>ERROR IN LINE:</b> " + JSON.stringify(line),
 						borderWidth: 3,
-						borderColour: "rgb(255,0,0)"
+						borderColour: "rgb(255,0,0)",
 					};
 					let statecl = new State(ctx, errorState);
 					xy = statecl.draw(working, origXY.y, false);
@@ -584,7 +584,7 @@ module.exports = class Fragment {
 						type: "state",
 						text: "<b>ERROR IN LINE:</b> " + JSON.stringify(line),
 						borderWidth: 3,
-						borderColour: "rgb(255,0,0)"
+						borderColour: "rgb(255,0,0)",
 					};
 					let statecl = new State(ctx, errorState);
 					xy = statecl.draw(working, origXY.y, false);
@@ -600,7 +600,7 @@ module.exports = class Fragment {
 						type: "state",
 						text: "<b>ERROR IN LINE:</b> " + JSON.stringify(line),
 						borderWidth: 3,
-						borderColour: "rgb(255,0,0)"
+						borderColour: "rgb(255,0,0)",
 					};
 					let statecl = new State(ctx, errorState);
 					xy = statecl.draw(working, origXY.y, false);
@@ -611,7 +611,7 @@ module.exports = class Fragment {
 					type: "state",
 					text: "<b>ERROR IN LINE - NO RECOGNISED TYPE IDENTIFIER:</b> " + Utilities.objToString(line),
 					borderWidth: 3,
-					borderColour: "rgb(255,0,0)"
+					borderColour: "rgb(255,0,0)",
 				};
 				let statecl = new State(ctx, errorState);
 				xy = statecl.draw(working, xy.y, false);
