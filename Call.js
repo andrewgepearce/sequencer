@@ -273,21 +273,47 @@ module.exports = class Call {
 		ctx.stroke();
 
 		///////////////////////////////////
-		// 4. Draw the line arrow
+		// 5. Draw the line arrow
 		ctx.beginPath();
 		ctx.moveTo(startxAfterFlow, callliney + working.globalSpacing);
-		if (this._line.async === true) {
+		if (Utilities.isString(this._line.arrow)) this._line.arrow = this._line.arrow.toLowerCase();
+		const arrowType =
+			this._line.arrow === "cross"
+				? "cross"
+				: this._line.arrow === "fill"
+				? "fill"
+				: this._line.arrow === "open"
+				? "open"
+				: this._line.arrow === "empty"
+				? "empty"
+				: this._line.async === true
+				? "open"
+				: "fill";
+		if (arrowType === "open") {
 			Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callliney + working.globalSpacing - arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, startxAfterFlow, callliney + working.globalSpacing, false);
 			Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callliney + working.globalSpacing + arrowSizeY, false);
 			ctx.strokeStyle = lineColour;
 			ctx.stroke();
-		} else {
+		} else if (arrowType === "open") {
 			Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callliney + working.globalSpacing - arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callliney + working.globalSpacing + arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, startxAfterFlow, callliney + working.globalSpacing, false);
 			ctx.fillStyle = lineColour;
 			ctx.fill();
+		} else if (arrowType === "cross") {
+			ctx.setLineDash([]);
+			ctx.lineWidth = lineWidth + 1;
+			const x = startxAfterFlow;
+			const y = callliney + working.globalSpacing;
+			ctx.moveTo(x + arrowSizeY * 2, y - arrowSizeY);
+			ctx.lineTo(x, y + arrowSizeY);
+			ctx.moveTo(x + arrowSizeY * 2, y + arrowSizeY);
+			ctx.lineTo(x, y - arrowSizeY);
+			ctx.stroke();
+			ctx.lineWidth = lineWidth;
+		} else if (arrowType === "empty") {
+			// Do nothing
 		}
 
 		///////////////////////////////////
@@ -325,7 +351,10 @@ module.exports = class Call {
 
 		///////////////////////
 		// Get the line dash
-		let lineDash = [];
+		let lineDash = Array.isArray(this._line.lineDash) && Utilities.isAllNumber(this._line.lineDash) ? this._line.lineDash : [];
+
+		///////////////////////
+		const cross = Utilities.isBoolean(this._line.cross) && this._line.cross === true ? true : false;
 
 		///////////////////////
 		// Get the line width
@@ -516,31 +545,89 @@ module.exports = class Call {
 		// 5a. Draw the call arrow
 		ctx.beginPath();
 		ctx.moveTo(endxAfterFlow, callliney);
-		if (this._startx < this._endx && this._line.async != true) {
+
+		const goingLeft = this._startx > this._endx;
+		const goingRight = !goingLeft;
+		if (Utilities.isString(this._line.arrow)) this._line.arrow = this._line.arrow.toLowerCase();
+		const arrowType =
+			this._line.arrow === "cross"
+				? "cross"
+				: this._line.arrow === "fill"
+				? "fill"
+				: this._line.arrow === "open"
+				? "open"
+				: this._line.arrow === "empty"
+				? "empty"
+				: this._line.async === true
+				? "open"
+				: "fill";
+
+		////////////////////////////////////////////////////////////////////////////
+		// Going right with a cross
+		if (goingRight && arrowType === "cross") {
+			ctx.setLineDash([]);
+			ctx.lineWidth = lineWidth + 1;
+			ctx.moveTo(endxAfterFlow - arrowSizeY * 2, callliney - arrowSizeY);
+			ctx.lineTo(endxAfterFlow, callliney + arrowSizeY);
+			ctx.moveTo(endxAfterFlow - arrowSizeY * 2, callliney + arrowSizeY);
+			ctx.lineTo(endxAfterFlow, callliney - arrowSizeY);
+			ctx.stroke();
+			ctx.lineWidth = lineWidth;
+		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going left with a cross
+		else if (goingLeft && arrowType === "cross") {
+			ctx.setLineDash([]);
+			ctx.lineWidth = lineWidth + 1;
+			ctx.moveTo(endxAfterFlow + arrowSizeY * 2, callliney - arrowSizeY);
+			ctx.lineTo(endxAfterFlow, callliney + arrowSizeY);
+			ctx.moveTo(endxAfterFlow + arrowSizeY * 2, callliney + arrowSizeY);
+			ctx.lineTo(endxAfterFlow, callliney - arrowSizeY);
+			ctx.stroke();
+			ctx.lineWidth = lineWidth;
+		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going right with a filled arrow
+		else if (goingRight && arrowType === "fill") {
+			ctx.setLineDash([]);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callliney - arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callliney + arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow, callliney, false);
 			ctx.fillStyle = lineColour;
 			ctx.fill();
-		} else if (this._startx > this._endx && this._line.async != true) {
+		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going left with a filled arrow
+		else if (goingLeft && arrowType === "fill") {
+			ctx.setLineDash([]);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow + arrowSizeY * 2, callliney - arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow + arrowSizeY * 2, callliney + arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow, callliney, false);
 			ctx.fillStyle = lineColour;
 			ctx.fill();
-		} else if (this._startx < this._endx && this._line.async === true) {
+		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going right with a empty arrow
+		else if (goingRight && arrowType === "open") {
+			ctx.setLineDash([]);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callliney - arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow, callliney, false);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow - arrowSizeY * 2, callliney + arrowSizeY, false);
 			ctx.strokeStyle = lineColour;
 			ctx.stroke();
-		} else if (this._startx > this._endx && this._line.async === true) {
+		}
+		////////////////////////////////////////////////////////////////////////////
+		// Going left with a empty arrow
+		else if (goingLeft && arrowType === "open") {
+			ctx.setLineDash([]);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow + arrowSizeY * 2, callliney - arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow, callliney, false);
 			Utilities.drawOrMovePath(ctx, endxAfterFlow + arrowSizeY * 2, callliney + arrowSizeY, false);
 			ctx.strokeStyle = lineColour;
 			ctx.stroke();
 		}
+		// Do nothing with empty arrow type
+
 		return working.manageMaxWidth(0, starty + finalHeightOfAllLine);
 	}
 
