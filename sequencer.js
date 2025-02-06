@@ -69,6 +69,18 @@ const optionDefinitions = [
 		multiple: false,
 	},
 	{
+		name: "outjson",
+		type: Boolean,
+		alias: "J",
+		multiple: false,
+	},
+	{
+		name: "outyaml",
+		type: Boolean,
+		alias: "Y",
+		multiple: false,
+	},
+	{
 		name: "yaml",
 		type: Boolean,
 		alias: "y",
@@ -149,6 +161,18 @@ const sections = [
 				description: "If set, then the output document will be in PDF format. Otherwise it will be in PNG format.",
 			},
 			{
+				name: "outjson",
+				type: Boolean,
+				alias: "J",
+				description: "If set, the the sequence is also written to a formatted JSON file.",
+			},
+			{
+				name: "outyaml",
+				type: Boolean,
+				alias: "Y",
+				description: "If set, the the sequence is also written to a formatted YAML file.",
+			},
+			{
 				name: "nocovertext",
 				type: Boolean,
 				alias: "c",
@@ -182,6 +206,12 @@ if (options == undefined || options.help == undefined || options.help == null) {
 }
 if (options == undefined || options.pdf == undefined || options.pdf == null) {
 	options.pdf = false;
+}
+if (options == undefined || options.outjson == undefined || options.outjson == null) {
+	options.outjson = false;
+}
+if (options == undefined || options.outyaml == undefined || options.outyaml == null) {
+	options.outyaml = false;
 }
 if (options == undefined || options.yaml == undefined || options.yaml == null) {
 	options.yaml = false;
@@ -270,11 +300,13 @@ function processJsonDescription(jsondescription) {
 		} else if (options.outputFile != null && options.force != true) {
 			fs.writeFileSync(options.outputFile, cb);
 		}
-		if (options.yaml && options.outputFile === null) {
+		if (options.outjson) {
+			console.log(`+ Writing JSON outfile to ${jfile}`);
 			fs.writeFileSync(jfile, jsonstr);
 		}
-		if (options.yaml && options.outputFile === null) {
+		if (options.outyaml) {
 			yamlstr = "## https://github.com/andrewgepearce/sequencer\n" + yamlstr;
+			console.log(`+ Writing YAML outfile to ${yfile}`);
 			fs.writeFileSync(yfile, yamlstr);
 		}
 	} catch (error) {
