@@ -1,5 +1,6 @@
 // npm install --save-dev jsdoc-to-markdown
 // npx jsdoc2md SvgBuilder.js > SvgBuilder.md
+// https://editsvgcode.com/
 
 const fs = require("fs");
 const { create } = require("xmlbuilder2");
@@ -194,6 +195,115 @@ class SVGBuilder {
 			attributes: { points, class: className, fill, stroke, "stroke-width": strokeWidth },
 		};
 		this.primitives.set(key, polygon);
+	}
+
+	//////////////////////////////////////////////////////////////////////////////
+	/**
+	 * Adds a path to the SVG with the specified attributes.
+	 *
+	 * This function allows you to add a path element to the SVG. The path is defined by its "d" attribute,
+	 * which contains SVG path commands, and style properties (fill, stroke, strokeWidth, className).
+	 *
+	 * ### Usage with Simple Path Data:
+	 * ```javascript
+	 * const svgBuilder = new SVGBuilder();
+	 * svgBuilder.addPath('path1', { d: 'M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80', stroke: 'red', strokeWidth: 2 });
+	 * // Adds a curved path with cubic Bézier curves
+	 * ```
+	 *
+	 * ### Using Path Builder Functions:
+	 * ```javascript
+	 * const pathD = [
+	 *   svgBuilder.moveTo(100, 100),          // Move to (100, 100)
+	 *   svgBuilder.lineTo(150, 50),           // Draw a line to (150, 50)
+	 *   svgBuilder.lineTo(200, 100),          // Draw another line to (200, 100)
+	 *   svgBuilder.closePath()                // Close the path
+	 * ].join(' ');
+	 *
+	 * svgBuilder.addPath('triangle', { d: pathD, stroke: 'blue', fill: 'none' });
+	 * // Adds a triangle shape to the SVG
+	 * ```
+	 *
+	 * @param {string} key - The unique key to identify the path in the SVG.
+	 * @param {Object} options - An object containing the attributes of the path.
+	 * @param {string} options.d - The path data string (SVG path commands).
+	 * @param {string} [options.fill="none"] - The fill color of the path.
+	 * @param {string} [options.stroke="black"] - The stroke color of the path.
+	 * @param {number} [options.strokeWidth=1] - The width of the stroke.
+	 * @param {string} [options.className=""] - The CSS class name to apply to the path.
+	 * @param {string} [options.strokeDashArray=[]] - The dash array for the stroke.
+	 */
+
+	addPath(key, { d, className = null, fill = "none", stroke = "black", strokeWidth = 1, strokeDashArray = [] }) {
+		const path = {
+			name: "path",
+			attributes: { d, class: className, fill, stroke, "stroke-width": strokeWidth, "stroke-dasharray": strokeDashArray },
+		};
+		this.primitives.set(key, path);
+	}
+
+	//////////////////////////////////////////////////////////////////////////////
+	/**
+	 * Creates a Move To (M) command for the SVG path 'd' attribute.
+	 *
+	 * @param {number} x - The x-coordinate to move to.
+	 * @param {number} y - The y-coordinate to move to.
+	 * @returns {string} The Move To command string.
+	 */
+	moveTo(x, y) {
+		return `M ${x} ${y}`;
+	}
+
+	//////////////////////////////////////////////////////////////////////////////
+	/**
+	 * Creates a Line To (L) command for the SVG path 'd' attribute.
+	 *
+	 * @param {number} x - The x-coordinate to draw the line to.
+	 * @param {number} y - The y-coordinate to draw the line to.
+	 * @returns {string} The Line To command string.
+	 */
+	lineTo(x, y) {
+		return `L ${x} ${y}`;
+	}
+
+	//////////////////////////////////////////////////////////////////////////////
+	/**
+	 * Creates a Cubic Bezier Curve (C) command for the SVG path 'd' attribute.
+	 *
+	 * @param {number} x1 - The x-coordinate of the first control point.
+	 * @param {number} y1 - The y-coordinate of the first control point.
+	 * @param {number} x2 - The x-coordinate of the second control point.
+	 * @param {number} y2 - The y-coordinate of the second control point.
+	 * @param {number} x - The x-coordinate of the end point.
+	 * @param {number} y - The y-coordinate of the end point.
+	 * @returns {string} The Cubic Bezier Curve command string.
+	 */
+	cubicBezierCurveTo(x1, y1, x2, y2, x, y) {
+		return `C ${x1} ${y1}, ${x2} ${y2}, ${x} ${y}`;
+	}
+
+	//////////////////////////////////////////////////////////////////////////////
+	/**
+	 * Creates a Quadratic Bezier Curve (Q) command for the SVG path 'd' attribute.
+	 *
+	 * @param {number} x1 - The x-coordinate of the control point.
+	 * @param {number} y1 - The y-coordinate of the control point.
+	 * @param {number} x - The x-coordinate of the end point.
+	 * @param {number} y - The y-coordinate of the end point.
+	 * @returns {string} The Quadratic Bezier Curve command string.
+	 */
+	quadraticBezierCurveTo(x1, y1, x, y) {
+		return `Q ${x1} ${y1}, ${x} ${y}`;
+	}
+
+	//////////////////////////////////////////////////////////////////////////////
+	/**
+	 * Creates a Close Path (Z) command for the SVG path 'd' attribute.
+	 *
+	 * @returns {string} The Close Path command string.
+	 */
+	closePath() {
+		return `Z`;
 	}
 
 	//////////////////////////////////////////////////////////////////////////////
@@ -492,4 +602,5 @@ class SVGBuilder {
 	}
 }
 
-module.exports = SVGBuilder;
+module.exports.svg = new SVGBuilder(10, -1, -1);
+module.exports.SVGBuilder = SVGBuilder;
