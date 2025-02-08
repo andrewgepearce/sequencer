@@ -708,12 +708,97 @@ module.exports = class Utilities {
 				}
 			}
 		}
+		// Utilities.drawRectangeSvg(
+		// 	borderWidth,
+		// 	borderColour,
+		// 	borderDash,
+		// 	fillColour,
+		// 	top,
+		// 	left,
+		// 	width,
+		// 	height,
+		// 	cornerRadius,
+		// 	drawTopBorder,
+		// 	drawRightBorder,
+		// 	drawBottomBorder,
+		// 	drawLeftBorder
+		// );
 
 		return {
 			x: left + width,
 			y: top + height,
 		};
 	}
+
+	// static drawRectangeSvg({
+	// 	borderWidth = 1,
+	// 	borderColor = "black",
+	// 	borderDash = [],
+	// 	fillColor = "none",
+	// 	top = 0,
+	// 	left = 0,
+	// 	width = 100,
+	// 	height = 100,
+	// 	cornerRadius = 0,
+	// 	drawTopBorder = true,
+	// 	drawRightBorder = true,
+	// 	drawBottomBorder = true,
+	// 	drawLeftBorder = true,
+	// } = {}) {
+	// 	////////////////////////////////////////////////////////////////////////////
+	// 	// Ensure cornerRadius does not exceed half of width or height
+	// 	const radius = Math.min(cornerRadius, width / 2, height / 2);
+	// 	////////////////////////////////////////////////////////////////////////////
+	// 	// Starting point
+	// 	let d = `M ${left + radius}, ${top}`;
+	// 	////////////////////////////////////////////////////////////////////////////
+	// 	// Top border
+	// 	if (drawTopBorder) {
+	// 		d += ` H ${left + width - radius}`;
+	// 		if (radius > 0) {
+	// 			d += ` A ${radius},${radius} 0 0 1 ${left + width},${top + radius}`;
+	// 		}
+	// 	} else {
+	// 		d += ` M ${left + width}, ${top}`;
+	// 	}
+	// 	////////////////////////////////////////////////////////////////////////////
+	// 	// Right border
+	// 	if (drawRightBorder) {
+	// 		d += ` V ${top + height - radius}`;
+	// 		if (radius > 0) {
+	// 			d += ` A ${radius},${radius} 0 0 1 ${left + width - radius},${top + height}`;
+	// 		}
+	// 	} else {
+	// 		d += ` M ${left + width}, ${top + height}`;
+	// 	}
+	// 	////////////////////////////////////////////////////////////////////////////
+	// 	// Bottom border
+	// 	if (drawBottomBorder) {
+	// 		d += ` H ${left + radius}`;
+	// 		if (radius > 0) {
+	// 			d += ` A ${radius},${radius} 0 0 1 ${left},${top + height - radius}`;
+	// 		}
+	// 	} else {
+	// 		d += ` M ${left}, ${top + height}`;
+	// 	}
+	// 	////////////////////////////////////////////////////////////////////////////
+	// 	// Left border
+	// 	if (drawLeftBorder) {
+	// 		d += ` V ${top + radius}`;
+	// 		if (radius > 0) {
+	// 			d += ` A ${radius},${radius} 0 0 1 ${left + radius},${top}`;
+	// 		}
+	// 	} else {
+	// 		d += ` M ${left}, ${top}`;
+	// 	}
+	// 	////////////////////////////////////////////////////////////////////////////
+	// 	d += " Z"; // Close path
+	// 	////////////////////////////////////////////////////////////////////////////
+	// 	// Create the SVG path element as a string
+	// 	const pathObject = { d, className: null, fill: "none", stroke: borderColor, strokeWidth: borderWidth, strokeDashArray: borderDash };
+	// 	svg.addPath(`${process.hrtime.bigint()}`, pathObject);
+	// 	svg.toSVG(`./test3.svg`);
+	// }
 
 	/**
 	 * So we can mimic the draw a utility function to draw or only move the path
