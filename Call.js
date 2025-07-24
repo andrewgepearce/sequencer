@@ -295,7 +295,7 @@ module.exports = class Call {
 			Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callliney + working.globalSpacing + arrowSizeY, false);
 			ctx.strokeStyle = lineColour;
 			ctx.stroke();
-		} else if (arrowType === "open") {
+		} else if (arrowType === "fill") {
 			Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callliney + working.globalSpacing - arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, startxAfterFlow + arrowSizeY * 2, callliney + working.globalSpacing + arrowSizeY, false);
 			Utilities.drawOrMovePath(ctx, startxAfterFlow, callliney + working.globalSpacing, false);
