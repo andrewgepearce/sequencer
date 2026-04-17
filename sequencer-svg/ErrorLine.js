@@ -57,15 +57,18 @@ module.exports = class ErrorLine {
 		const wh = Utilities.getTextWidthAndHeight(ctx, tmd, textLines, working.tags);
 		const boxHeight = wh.h;
 		const errBoxBottom = top + boxHeight;
-
-		let xy = Actor.drawTimelines(working, ctx, starty, errBoxBottom - starty + 1, true);
-		const finalHeightOfAllLine = xy.y - starty;
+		const hasActorTimelines =
+			Array.isArray(working.postdata && working.postdata.actors) &&
+			working.postdata.actors.some((actor) => actor && actor.clinstance && Utilities.isNumber(actor.clinstance.middle));
+		const finalHeightOfAllLine = hasActorTimelines ? Actor.drawTimelines(working, ctx, starty, errBoxBottom - starty + 1, true).y - starty : errBoxBottom - starty;
 
 		// 1. Background fragments (if any)
 		Utilities.drawActiveFragments(working, ctx, starty, finalHeightOfAllLine, mimic);
 
 		// 2. Time lines through the error line's vertical span
-		Actor.drawTimelines(working, ctx, starty, finalHeightOfAllLine, mimic);
+		if (hasActorTimelines) {
+			Actor.drawTimelines(working, ctx, starty, finalHeightOfAllLine, mimic);
+		}
 
 		// 3. Error box — borders on all sides, red.
 		const textxy = Utilities.drawTextRectangle(
@@ -120,7 +123,7 @@ module.exports = class ErrorLine {
 		const out = [headerLabel];
 		ErrorLine._softWrap(ErrorLine._escape(reason), 90).forEach((w) => out.push("  " + w));
 		out.push("");
-		out.push("Offending line:");
+		out.push("Offending object:");
 		if (offendingLine && typeof offendingLine === "object") {
 			Object.keys(offendingLine).forEach((k) => {
 				const v = offendingLine[k];

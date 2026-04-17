@@ -18,6 +18,7 @@ let Actor = require("./Actor.js");
 let TextMetadata = require("./TextMetadata.js");
 let Fragment = require("./Fragment.js");
 let Comment = require("./Comment.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 
 
@@ -28,19 +29,27 @@ module.exports = class FragmentCondition {
       this._line = line;
    }
 
-   draw(working, starty, mimic) {
-      const ctx = this._ctx;
-      let activeFrag = null;
-      if (Array.isArray(working.activeFragments) && working.activeFragments.length > 0) {
-         activeFrag = working.activeFragments[working.activeFragments.length - 1];
-      } else {
-         let xy = Actor.drawTimelines(working, ctx, starty, working.globalSpacing, mimic);
-         return working.manageMaxWidth(xy.x, xy.y);
-      }
-      if (!Utilities.isNumber(activeFrag.fragmentStartX) || !Utilities.isNumber(activeFrag.fragmentEndX)) {
-         let xy = Actor.drawTimelines(working, ctx, starty, working.globalSpacing, mimic);
-         return working.manageMaxWidth(xy.x, xy.y);
-      }
+	   draw(working, starty, mimic) {
+	      if (!Utilities.isObject(this._line)) {
+	         throw new InputDocumentError("'condition' line must be an object", this._line);
+	      }
+	      const ctx = this._ctx;
+	      let activeFrag = null;
+	      if (Array.isArray(working.activeFragments) && working.activeFragments.length > 0) {
+	         activeFrag = working.activeFragments[working.activeFragments.length - 1];
+	      } else {
+	         throw new InputDocumentError("'condition' line can only be used inside an active fragment", this._line);
+	      }
+	      if (!Utilities.isNumber(activeFrag.fragmentStartX) || !Utilities.isNumber(activeFrag.fragmentEndX)) {
+	         throw new InputDocumentError("'condition' line could not resolve the active fragment bounds", this._line);
+	      }
+	      if (
+	         !Utilities.isString(this._line.condition) &&
+	         !(Utilities.isObject(this._line.condition) && Utilities.isString(this._line.condition.text)) &&
+	         !(Array.isArray(this._line.condition) && Utilities.isString(this._line.condition[0]))
+	      ) {
+	         throw new InputDocumentError("'condition' line must define condition text", this._line);
+	      }
 
       const conditionTmd =
          Utilities.isObject(this._line.condition) ?

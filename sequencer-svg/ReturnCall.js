@@ -17,6 +17,7 @@ let Utilities = require("./Utilities.js");
 let TextMetadata = require("./TextMetadata.js");
 let Actor = require("./Actor.js");
 let Comment = require("./Comment.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 module.exports = class ReturnCall {
 	constructor(ctx, line, working) {
@@ -33,10 +34,13 @@ module.exports = class ReturnCall {
 		////////////////////////////////
 		// Draw blank line (without timelines) if there is no line object
 		if (this._line == null || typeof this._line != "object") {
-			return {
-				x: 0,
-				y: starty,
-			};
+			throw new InputDocumentError("'return' line must be an object", this._line);
+		}
+		if (!Utilities.isString(this._line.from)) {
+			throw new InputDocumentError("'return' line must define a string 'from' actor alias", this._line);
+		}
+		if (!Utilities.isString(this._line.to)) {
+			throw new InputDocumentError("'return' line must define a string 'to' actor alias", this._line);
 		}
 
 		if (!working.postdata) {
@@ -110,6 +114,12 @@ module.exports = class ReturnCall {
 				this._actorToClass = actor.clinstance;
 			}
 		});
+		if (typeof this._startx != "number") {
+			throw new InputDocumentError(`'return' line 'from' alias "${this._line.from}" does not match any actor`, this._line);
+		}
+		if (typeof this._endx != "number") {
+			throw new InputDocumentError(`'return' line 'to' alias "${this._line.to}" does not match any actor`, this._line);
+		}
 
 		////////////////////////////////
 		// Should we break the to or from flows
@@ -128,10 +138,7 @@ module.exports = class ReturnCall {
 		////////////////////////////////
 		// Ignore line if the return is to the same actor
 		if (this._endx == this._startx) {
-			return {
-				x: 0,
-				y: starty,
-			};
+			throw new InputDocumentError("'return' line cannot target the same actor as its source", this._line);
 		}
 
 		/////////////

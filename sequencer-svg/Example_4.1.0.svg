@@ -115,7 +115,7 @@
   <text x="35" y="604" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 42:</text>
   <text x="35" y="618.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  unrecognised line type 'call_error' (expected blank, fragment, state, condition, call,</text>
   <text x="35" y="632.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  return, reference or terminate)</text>
-  <text x="35" y="661.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending line:</text>
+  <text x="35" y="661.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
   <text x="35" y="676" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "call_error"</text>
   <text x="35" y="690.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "server"</text>
   <text x="35" y="704.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "server"</text>

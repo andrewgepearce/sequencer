@@ -18,6 +18,7 @@ let TextMetadata = require("./TextMetadata.js");
 let Actor = require("./Actor.js");
 let Comment = require("./Comment.js");
 const schema = require("./schema.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 module.exports = class Call {
 	constructor(ctx, line, working) {
@@ -34,10 +35,13 @@ module.exports = class Call {
 		////////////////////////////////
 		// Draw blank line (without timelines) if there is no line object
 		if (this._line == null || typeof this._line != "object") {
-			return {
-				x: 0,
-				y: starty,
-			};
+			throw new InputDocumentError("'call' line must be an object", this._line);
+		}
+		if (!Utilities.isString(this._line.from)) {
+			throw new InputDocumentError("'call' line must define a string 'from' actor alias", this._line);
+		}
+		if (!Utilities.isString(this._line.to)) {
+			throw new InputDocumentError("'call' line must define a string 'to' actor alias", this._line);
 		}
 
 		if (!working.postdata) {
@@ -67,13 +71,9 @@ module.exports = class Call {
 		});
 
 		if (!foundFrom)
-			throw new Error(
-				`Call line: There is no matching actor "alias" for the string indicated in the "from" field (${JSON.stringify(this._line)})`
-			);
+			throw new InputDocumentError(`'call' line 'from' alias "${this._line.from}" does not match any actor`, this._line);
 		if (!foundTo)
-			throw new Error(
-				`Call line: There is no matching actor "alias" for the string indicated in the "to" field (${JSON.stringify(this._line)})`
-			);
+			throw new InputDocumentError(`'call' line 'to' alias "${this._line.to}" does not match any actor`, this._line);
 
 		if (typeof this._startx != "number" || typeof this._endx != "number") {
 			return {

@@ -15,6 +15,7 @@
 
 let Utilities = require("./Utilities.js");
 let TextMetadata = require("./TextMetadata.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 module.exports = class Comment {
 	constructor(ctx, line) {
@@ -77,11 +78,8 @@ module.exports = class Comment {
 			this._line.text = val;
 		}
 
-		if (!Utilities.isObject(this._line) && !Utilities.isString(this._line.text) && !Array.isArray(this._line.text)) {
-			return {
-				x: startx,
-				y: starty,
-			};
+		if (!Utilities.isObject(this._line) || (!Utilities.isString(this._line.text) && !Utilities.isAllStrings(this._line.text))) {
+			throw new InputDocumentError("comment must be a string or an object with 'text' as a string or array of strings", this._line);
 		}
 
 		///////////////////////

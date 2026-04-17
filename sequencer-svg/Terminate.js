@@ -17,6 +17,7 @@ let Utilities = require("./Utilities.js");
 let TextMetadata = require("./TextMetadata.js");
 let Actor = require("./Actor.js");
 let Comment = require("./Comment.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 module.exports = class Terminate {
 	constructor(ctx, line, working) {
@@ -32,10 +33,7 @@ module.exports = class Terminate {
 		////////////////////////////////
 		// Draw blank line (without timelines) if there is no line object
 		if (this._line == null || typeof this._line != "object" || typeof this._line.from != "string") {
-			return {
-				x: 0,
-				y: starty + working.globalSpacing,
-			};
+			throw new InputDocumentError("'terminate' line must be an object with a string 'from' actor alias", this._line);
 		}
 
 		if (!working.postdata) {
@@ -148,9 +146,7 @@ module.exports = class Terminate {
 			}
 		});
 		if (!Utilities.isNumberGtEq0(this._startx)) {
-			throw new Error(
-				`Terminate line: There is no matching actor "alias" for the string indicated in the "from" field (${JSON.stringify(this._line)})`
-			);
+			throw new InputDocumentError(`'terminate' line 'from' alias "${this._line.from}" does not match any actor`, this._line);
 		}
 		this._endx = this._startx + gapToText + textlen + 3 * arrowSizeY;
 

@@ -17,6 +17,7 @@ let Utilities = require("./Utilities.js");
 let TextMetadata = require("./TextMetadata.js");
 let Actor = require("./Actor.js");
 let Comment = require("./Comment.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 module.exports = class Reference {
 	constructor(ctx, line, working) {
@@ -34,17 +35,14 @@ module.exports = class Reference {
 		////////////////////////////////
 		// Draw blank line (without timelines) if there is no line object
 		if (this._line == null || typeof this._line != "object" || typeof this._line.from != "string") {
-			return {
-				x: 0,
-				y: starty,
-			};
+			throw new InputDocumentError("'reference' line must be an object with a string 'from' actor alias", this._line);
 		}
 
 		if (!Utilities.isAllStrings(this._line.reference) && !Utilities.isString(this._line.reference)) {
-			return {
-				x: 0,
-				y: starty,
-			};
+			throw new InputDocumentError("'reference' line must define 'reference' text as a string or array of strings", this._line);
+		}
+		if (this._line.to != null && !Utilities.isString(this._line.to)) {
+			throw new InputDocumentError("'reference' line 'to' must be a string actor alias when provided", this._line);
 		}
 
 		if (!working.postdata) {
@@ -133,10 +131,13 @@ module.exports = class Reference {
 			}
 		});
 		if (!Utilities.isNumberGtEq0(this._startx)) {
-			return {
-				x: 0,
-				y: starty,
-			};
+			throw new InputDocumentError(`'reference' line 'from' alias "${this._line.from}" does not match any actor`, this._line);
+		}
+		if (Utilities.isString(this._line.to) && this._actorToClass == null) {
+			throw new InputDocumentError(`'reference' line 'to' alias "${this._line.to}" does not match any actor`, this._line);
+		}
+		if ((this._line.breakToFlow === true || this._line.btf === true || this._line.rettext != null) && this._actorToClass == null) {
+			throw new InputDocumentError("'reference' line uses return-flow fields but has no valid 'to' actor alias", this._line);
 		}
 
 		//////////////////////////

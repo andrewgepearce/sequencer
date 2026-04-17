@@ -16,6 +16,7 @@
 let Utilities = require("./Utilities.js");
 let TextMetadata = require("./TextMetadata.js");
 const schema = require("./schema.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 module.exports = class Actor {
 	constructor(ctx, actorObj) {
@@ -145,27 +146,15 @@ module.exports = class Actor {
 
 	draw(working, startx, starty, mimic) {
 		if (!Utilities.isObject(this._actorObj)) {
-			throw new Error("Actor.draw: actor is not a valid JS object");
-			// return {
-			// 	x: 0,
-			// 	y: 0
-			// };
+			throw new InputDocumentError("actor entry is not a valid object", this._actorObj);
 		}
 		if (!Utilities.isString(this._actorObj.name) && !Array.isArray(this.actorObj.name)) {
-			throw new Error("Actor.draw: no name defined for actor");
-			// return {
-			// 	x: 0,
-			// 	y: 0
-			// };
+			throw new InputDocumentError("actor is missing a valid 'name'", this._actorObj);
 		} else {
 			this._name = this.actorObj.name;
 		}
 		if (!Utilities.isString(this.actorObj.alias)) {
-			throw new Error("Actor.draw: no alias defined for actor: " + JSON.stringify(this._name, undefined, 3));
-			// return {
-			//    x: 0,
-			//    y: 0
-			// };
+			throw new InputDocumentError("actor is missing a valid 'alias'", this._actorObj);
 		} else {
 			this._alias = this.actorObj.alias;
 		}
@@ -280,7 +269,7 @@ module.exports = class Actor {
 		let maxy = 0;
 
 		if (!Array.isArray(working.postdata.actors) || working.postdata.actors.length == 0) {
-			throw new Error("Actor.js: no actors in the posted data");
+			throw new InputDocumentError("document must define at least one actor in the top-level 'actors' array", working.postdata);
 		}
 
 		/////////////////////////
@@ -306,6 +295,9 @@ module.exports = class Actor {
 	}
 
 	static clearAllFlows(working, starty) {
+		if (!Array.isArray(working.postdata && working.postdata.actors)) {
+			return;
+		}
 		working.postdata.actors.forEach((actor) => {
 			if (actor.clinstance && actor.clinstance.isFlowStateContinue()) actor.clinstance.flowEndYPos = starty;
 		});
@@ -318,7 +310,14 @@ module.exports = class Actor {
 	static drawTimelinesWithBreak(working, ctx, starty, minimumHeight, breakAtYPos, breakAtYPosForActor, gapForBreak, mimic) {
 		let maxx = 0;
 		let maxy = 0;
-		working.postdata.actors.forEach((actor) => {
+		if (!Array.isArray(working.postdata && working.postdata.actors)) {
+			return working.manageMaxWidth(working.startX, starty + minimumHeight);
+		}
+		const drawableActors = working.postdata.actors.filter((actor) => actor && actor.clinstance);
+		if (drawableActors.length === 0) {
+			return working.manageMaxWidth(working.startX, starty + minimumHeight);
+		}
+		drawableActors.forEach((actor) => {
 			const actorcl = actor.clinstance;
 			let extra = actorcl.getExtraYToMeetTimeLineDash(minimumHeight);
 			let actualHeight = minimumHeight + extra;

@@ -17,6 +17,7 @@ let Utilities = require("./Utilities.js");
 let TextMetadata = require("./TextMetadata.js");
 let Actor = require("./Actor.js");
 let Comment = require("./Comment.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 module.exports = class State {
 	constructor(ctx, line) {
@@ -25,6 +26,15 @@ module.exports = class State {
 	}
 
 	draw(working, starty, mimic) {
+		if (!Utilities.isObject(this._line)) {
+			throw new InputDocumentError("'state' line must be an object", this._line);
+		}
+		if (!Utilities.isString(this._line.actor)) {
+			throw new InputDocumentError("'state' line must define a string 'actor' alias", this._line);
+		}
+		if (!Utilities.isString(this._line.text) && !Utilities.isAllStrings(this._line.text)) {
+			throw new InputDocumentError("'state' line must define 'text' as a string or array of strings", this._line);
+		}
 		if (!working.postdata) {
 			working.postdata = {};
 		}
@@ -59,13 +69,7 @@ module.exports = class State {
 			}
 		});
 		if (amiddle == null) {
-			amiddle = working.maxWidth / 2;
-		}
-		if (!Utilities.isNumber(amiddle) || amiddle < 0) {
-			return {
-				x: 0,
-				y: 0
-			};
+			throw new InputDocumentError(`'state' line actor alias "${this._line.actor}" does not match any actor`, this._line);
 		}
 		let stateStartX = amiddle - swidth / 2;
 

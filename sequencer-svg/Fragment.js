@@ -25,6 +25,7 @@ let Reference = require("./Reference.js");
 let Terminate = require("./Terminate.js");
 let Blank = require("./Blank.js");
 let ErrorLine = require("./ErrorLine.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 module.exports = class Fragment {
 	constructor(ctx, line) {
@@ -60,6 +61,15 @@ module.exports = class Fragment {
 	}
 
 	draw(working, starty, mimic) {
+		if (!Utilities.isObject(this._line)) {
+			throw new InputDocumentError("'fragment' line must be an object", this._line);
+		}
+		if (!Utilities.isString(this._line.fragmentType)) {
+			throw new InputDocumentError("'fragment' line must define a string 'fragmentType'", this._line);
+		}
+		if (!Array.isArray(this._line.lines)) {
+			throw new InputDocumentError("'fragment' line must define 'lines' as an array", this._line);
+		}
 		let currentActiveAboveThisFragment = 0;
 		if (Array.isArray(working.activeFragments)) {
 			currentActiveAboveThisFragment = working.activeFragments.length;
@@ -474,65 +484,62 @@ module.exports = class Fragment {
 
 		lines.forEach((line) => {
 			let linetop = xy.y;
-			if (line.type == undefined) {
-				xy = ErrorLine.draw(working, ctx, xy.y, "line has no 'type' identifier", line, false);
-			} else if (line.type.toLowerCase() == "blank" && Utilities.isNumberGtEq0(line.height)) {
-				working.logDebug("Processing Blank line at y:" + xy.y + " - " + Utilities.objToString(line));
-				let blank = new Blank(ctx, line);
-				xy = blank.draw(working, xy.y, false);
-			} else if (line.type.toLowerCase() == "fragment") {
-				working.logDebug("Processing Fragment line at y:" + xy.y + " - " + Utilities.objToString(line));
-				let frag = new Fragment(ctx, line);
-				xy = frag.draw(working, xy.y, false);
-			} else if (line.type.toLowerCase() == "state") {
-				working.logDebug("Processing State line at y:" + xy.y + " - " + Utilities.objToString(line));
-				let statecl = new State(ctx, line);
-				xy = statecl.draw(working, xy.y, false);
-			} else if (line.type.toLowerCase() == "condition") {
-				working.logDebug("Processing Condition line at y:" + xy.y + " - " + Utilities.objToString(line));
-				let fragmentCondition = new FragmentCondition(ctx, line);
-				xy = fragmentCondition.draw(working, xy.y, false);
-			} else if (line.type.toLowerCase() == "call") {
-				working.logDebug("Processing Call line at y:" + xy.y + " - " + Utilities.objToString(line));
-				let origXY = xy;
-				let call = new Call(ctx, line, working);
-				xy = call.draw(working, xy.y, false);
-				if (xy.y == origXY.y) {
-					xy = ErrorLine.draw(working, ctx, origXY.y, "'call' line produced no output (check 'from'/'to' aliases)", line, false);
+			try {
+				if (line.type == undefined) {
+					xy = ErrorLine.draw(working, ctx, xy.y, "line has no 'type' identifier", line, false);
+				} else if (!Utilities.isString(line.type)) {
+					xy = ErrorLine.draw(working, ctx, xy.y, "line 'type' identifier must be a string", line, false);
+				} else if (line.type.toLowerCase() == "blank") {
+					if (!Utilities.isNumberGtEq0(line.height)) {
+						throw new InputDocumentError("'blank' line must define 'height' as a number >= 0", line);
+					}
+					working.logDebug("Processing Blank line at y:" + xy.y + " - " + Utilities.objToString(line));
+					let blank = new Blank(ctx, line);
+					xy = blank.draw(working, xy.y, false);
+				} else if (line.type.toLowerCase() == "fragment") {
+					working.logDebug("Processing Fragment line at y:" + xy.y + " - " + Utilities.objToString(line));
+					let frag = new Fragment(ctx, line);
+					xy = frag.draw(working, xy.y, false);
+				} else if (line.type.toLowerCase() == "state") {
+					working.logDebug("Processing State line at y:" + xy.y + " - " + Utilities.objToString(line));
+					let statecl = new State(ctx, line);
+					xy = statecl.draw(working, xy.y, false);
+				} else if (line.type.toLowerCase() == "condition") {
+					working.logDebug("Processing Condition line at y:" + xy.y + " - " + Utilities.objToString(line));
+					let fragmentCondition = new FragmentCondition(ctx, line);
+					xy = fragmentCondition.draw(working, xy.y, false);
+				} else if (line.type.toLowerCase() == "call") {
+					working.logDebug("Processing Call line at y:" + xy.y + " - " + Utilities.objToString(line));
+					let call = new Call(ctx, line, working);
+					xy = call.draw(working, xy.y, false);
+				} else if (line.type.toLowerCase() == "return") {
+					working.logDebug("Processing Return line at y:" + xy.y + " - " + Utilities.objToString(line));
+					let rcall = new ReturnCall(ctx, line, working);
+					xy = rcall.draw(working, xy.y, false);
+				} else if (line.type.toLowerCase() == "reference") {
+					working.logDebug("Processing Reference line at y:" + xy.y + " - " + Utilities.objToString(line));
+					let ref = new Reference(ctx, line, working);
+					xy = ref.draw(working, xy.y, false);
+				} else if (line.type.toLowerCase() == "terminate") {
+					working.logDebug("Processing Terminate line at y:" + xy.y + " - " + Utilities.objToString(line));
+					let term = new Terminate(ctx, line, working);
+					xy = term.draw(working, xy.y, false);
+				} else {
+					xy = ErrorLine.draw(
+						working,
+						ctx,
+						xy.y,
+						"unrecognised line type '" + line.type + "' (expected blank, fragment, state, condition, call, return, reference or terminate)",
+						line,
+						false
+					);
 				}
-			} else if (line.type.toLowerCase() == "return") {
-				working.logDebug("Processing Return line at y:" + xy.y + " - " + Utilities.objToString(line));
-				let origXY = xy;
-				let rcall = new ReturnCall(ctx, line, working);
-				xy = rcall.draw(working, xy.y, false);
-				if (xy.y == origXY.y) {
-					xy = ErrorLine.draw(working, ctx, origXY.y, "'return' line produced no output (check 'from'/'to' aliases)", line, false);
+			} catch (error) {
+				if (error instanceof InputDocumentError) {
+					xy = ErrorLine.draw(working, ctx, xy.y, error.reason, error.offendingObject != null ? error.offendingObject : line, false);
+				} else {
+					throw error;
 				}
-			} else if (line.type.toLowerCase() == "reference") {
-				working.logDebug("Processing Reference line at y:" + xy.y + " - " + Utilities.objToString(line));
-				let origXY = xy;
-				let ref = new Reference(ctx, line, working);
-				xy = ref.draw(working, xy.y, false);
-				if (xy.y == origXY.y) {
-					xy = ErrorLine.draw(working, ctx, origXY.y, "'reference' line produced no output (check required fields)", line, false);
-				}
-			} else if (line.type.toLowerCase() == "terminate") {
-				working.logDebug("Processing Terminate line at y:" + xy.y + " - " + Utilities.objToString(line));
-				let origXY = xy;
-				let term = new Terminate(ctx, line, working);
-				xy = term.draw(working, xy.y, false);
-				if (xy.y == origXY.y) {
-					xy = ErrorLine.draw(working, ctx, origXY.y, "'terminate' line produced no output (check 'actor' alias)", line, false);
-				}
-			} else {
-				xy = ErrorLine.draw(
-					working,
-					ctx,
-					xy.y,
-					"unrecognised line type '" + line.type + "' (expected blank, fragment, state, condition, call, return, reference or terminate)",
-					line,
-					false
-				);
 			}
 
 			if (working.debug) {

@@ -20,6 +20,8 @@ const Actor = require("./Actor.js");
 const Fragment = require("./Fragment.js");
 const SvgContext = require("./SvgContext.js");
 const FontManager = require("./FontManager.js");
+const ErrorLine = require("./ErrorLine.js");
+const InputDocumentError = require("./InputDocumentError.js");
 
 const MARGIN = 10;
 const MAX_ITERATIONS = 5;
@@ -250,10 +252,18 @@ module.exports = class SvgStart {
 		}
 
 		// Actors, lines, timelines
-		xy = Actor.drawAllActors(this.working, ctx, starty);
-		xy = Fragment.drawLines(this.working, ctx, xy.y, this.working.postdata.lines);
-		Actor.clearAllFlows(this.working, xy.y);
-		xy = Actor.drawTimelines(this.working, ctx, xy.y, 20, false);
+		try {
+			xy = Actor.drawAllActors(this.working, ctx, starty);
+			xy = Fragment.drawLines(this.working, ctx, xy.y, this.working.postdata.lines);
+			Actor.clearAllFlows(this.working, xy.y);
+			xy = Actor.drawTimelines(this.working, ctx, xy.y, 20, false);
+		} catch (error) {
+			if (error instanceof InputDocumentError) {
+				xy = this._drawInputDocumentError(ctx, starty, xy, error);
+			} else {
+				throw error;
+			}
+		}
 
 		// Optional pretty-printed source dump
 		if (Utilities.isString(stringpostdata)) {
@@ -280,5 +290,11 @@ module.exports = class SvgStart {
 			);
 			this.working.manageMaxWidthXy(xy);
 		}
+	}
+
+	_drawInputDocumentError(ctx, starty, xy, error) {
+		const errorTop = xy && Utilities.isNumber(xy.y) ? xy.y : starty;
+		const offendingObject = error.offendingObject != null ? error.offendingObject : this.working.postdata;
+		return ErrorLine.draw(this.working, ctx, errorTop, error.reason || error.message, offendingObject, false);
 	}
 };
