@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1309" height="3741" viewBox="0 0 1309 3741">
+  <rect width="100%" height="100%" fill="white"/>
+  <path d="M 0 0 L 0 3731 L 1299 3731 L 1299 0 L 0 0" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 60 30 L 60 57 L 175 57 L 175 30 L 60 30" fill="rgba(0,0,0,0)" stroke="none"/>
+  <text x="65" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Title:</text>
+  <text x="98.44" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
+  <text x="102.33" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Example 5</text>
+  <path d="M 60 57 L 60 84 L 150 84 L 150 57 L 60 57" fill="rgba(0,0,0,0)" stroke="none"/>
+  <text x="65" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Version:</text>
+  <text x="121.01" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
+  <text x="124.9" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">1.0</text>
+  <path d="M 60 84 L 60 111 L 1149 111 L 1149 84 L 60 84" fill="rgba(0,0,0,0)" stroke="none"/>
+  <text x="65" y="103" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Description:</text>
+  <text x="146.68" y="103" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
+  <text x="150.57" y="103" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Comprehensive demonstration of semantic input-document errors that are now rendered consistently into the SVG output. Every broken line below is intentional.</text>
+  <path d="M 63 149 L 63 177 L 63 177 A 5 5 0 0 0 68 182 L 123 182 L 123 182 A 5 5 0 0 0 128 177 L 128 149 L 128 149 A 5 5 0 0 0 123 144 L 68 144 L 68 144 A 5 5 0 0 0 63 149" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 60 146 L 60 174 L 60 174 A 5 5 0 0 0 65 179 L 120 179 L 120 179 A 5 5 0 0 0 125 174 L 125 146 L 125 146 A 5 5 0 0 0 120 141 L 65 141 L 65 141 A 5 5 0 0 0 60 146" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 146 L 60 174 L 60 174 A 5 5 0 0 0 65 179 L 120 179 L 120 179 A 5 5 0 0 0 125 174 L 125 146 L 125 146 A 5 5 0 0 0 120 141 L 65 141 L 65 141 A 5 5 0 0 0 60 146" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="69" y="168" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Client</text>
+  <path d="M 328 149 L 328 177 L 328 177 A 5 5 0 0 0 333 182 L 395 182 L 395 182 A 5 5 0 0 0 400 177 L 400 149 L 400 149 A 5 5 0 0 0 395 144 L 333 144 L 333 144 A 5 5 0 0 0 328 149" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 325 146 L 325 174 L 325 174 A 5 5 0 0 0 330 179 L 392 179 L 392 179 A 5 5 0 0 0 397 174 L 397 146 L 397 146 A 5 5 0 0 0 392 141 L 330 141 L 330 141 A 5 5 0 0 0 325 146" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 325 146 L 325 174 L 325 174 A 5 5 0 0 0 330 179 L 392 179 L 392 179 A 5 5 0 0 0 397 174 L 397 146 L 397 146 A 5 5 0 0 0 392 141 L 330 141 L 330 141 A 5 5 0 0 0 325 146" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="334" y="168" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Server</text>
+  <path d="M 600 149 L 600 177 L 600 177 A 5 5 0 0 0 605 182 L 691 182 L 691 182 A 5 5 0 0 0 696 177 L 696 149 L 696 149 A 5 5 0 0 0 691 144 L 605 144 L 605 144 A 5 5 0 0 0 600 149" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 597 146 L 597 174 L 597 174 A 5 5 0 0 0 602 179 L 688 179 L 688 179 A 5 5 0 0 0 693 174 L 693 146 L 693 146 A 5 5 0 0 0 688 141 L 602 141 L 602 141 A 5 5 0 0 0 597 146" fill="rgb(100,0,255)" stroke="none"/>
+  <path d="M 597 146 L 597 174 L 597 174 A 5 5 0 0 0 602 179 L 688 179 L 688 179 A 5 5 0 0 0 693 174 L 693 146 L 693 146 A 5 5 0 0 0 688 141 L 602 141 L 602 141 A 5 5 0 0 0 597 146" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="606" y="168" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Database</text>
+  <path d="M 158 212 M 432 212 M 440 220 M 440 244 M 158 244 M 158 212" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 155 209 M 429 209 M 429 217 M 437 217 M 437 241 M 155 241 M 155 209" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 155 209 M 429 209 M 429 217 M 437 217 M 429 209 M 437 217 M 437 241 M 155 241 M 155 209" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 155 225 M 130 225 M 125 230 M 125 275" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 92.5 179 M 92.5 293" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 179 M 361 293" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 179 M 645 293" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 179 L 92.5 293" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 275 L 90 293 L 95 293 L 95 275 L 90 275" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 275 L 90 293 M 95 293 L 95 275 L 90 275" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 179 L 361 293" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 275 L 358.5 293 L 363.5 293 L 363.5 275 L 358.5 275" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 275 L 358.5 293 M 363.5 293 L 363.5 275 L 358.5 275" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 179 L 645 293" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 158 212 L 432 212 L 440 220 L 440 244 L 158 244 L 158 212" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 155 209 L 429 209 L 429 217 L 437 217 L 437 241 L 155 241 L 155 209" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 155 209 L 429 209 L 429 217 L 437 217 M 429 209 L 437 217 L 437 241 L 155 241 L 155 209" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 155 209 M 155 241 M 437 241 M 437 209 M 155 209" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="162.5" y="230.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Every subsequent broken line is intentional</text>
+  <path d="M 155 225 L 130 225 L 130 225 A 5 5 0 0 0 125 230 L 125 275" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="165" y="265" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">1. </text>
+  <text x="180.57" y="265" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">A valid opening call so recovery after errors is obvious</text>
+  <path d="M 95 275 L 358.5 275" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 358.5 275 L 348.5 270 L 348.5 280 L 358.5 275" fill="rgb(0, 0, 0)" stroke="none"/>
+  <path d="M 92.5 293 M 92.5 437" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 293 M 361 437" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 293 M 645 437" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 293 L 92.5 437" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 293 L 90 437 L 95 437 L 95 293 L 90 293" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 293 L 90 437 M 95 437 L 95 293 M 90 293" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 293 L 361 437" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 293 L 358.5 437 L 363.5 437 L 363.5 293 L 358.5 293" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 293 L 358.5 437 M 363.5 437 L 363.5 293 M 358.5 293" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 293 L 645 437" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 328 L 60 429 L 60 429 A 5 5 0 0 0 65 434 L 1264 434 L 1264 434 A 5 5 0 0 0 1269 429 L 1269 328 L 1269 328 A 5 5 0 0 0 1264 323 L 65 323 L 65 323 A 5 5 0 0 0 60 328" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 328 L 60 429 L 60 429 A 5 5 0 0 0 65 434 L 1264 434 L 1264 434 A 5 5 0 0 0 1269 429 L 1269 328 L 1269 328 A 5 5 0 0 0 1264 323 L 65 323 L 65 323 A 5 5 0 0 0 60 328" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="340" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 35:</text>
+  <text x="65" y="354.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  line has no 'type' identifier</text>
+  <text x="65" y="383.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="397.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "client"</text>
+  <text x="65" y="412" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "server"</text>
+  <text x="65" y="426.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Missing type identifier"]</text>
+  <path d="M 92.5 437 M 92.5 599" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 437 M 361 599" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 437 M 645 599" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 437 L 92.5 599" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 437 L 90 599 L 95 599 L 95 437 L 90 437" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 437 L 90 599 M 95 599 L 95 437 M 90 437" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 437 L 361 599" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 437 L 358.5 599 L 363.5 599 L 363.5 437 L 358.5 437" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 437 L 358.5 599 M 363.5 599 L 363.5 437 M 358.5 437" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 437 L 645 599" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 472 L 60 588 L 60 588 A 5 5 0 0 0 65 593 L 1264 593 L 1264 593 A 5 5 0 0 0 1269 588 L 1269 472 L 1269 472 A 5 5 0 0 0 1264 467 L 65 467 L 65 467 A 5 5 0 0 0 60 472" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 472 L 60 588 L 60 588 A 5 5 0 0 0 65 593 L 1264 593 L 1264 593 A 5 5 0 0 0 1269 588 L 1269 472 L 1269 472 A 5 5 0 0 0 1264 467 L 65 467 L 65 467 A 5 5 0 0 0 60 472" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="484" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 41:</text>
+  <text x="65" y="498.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  line 'type' identifier must be a string</text>
+  <text x="65" y="527.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="541.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: ["call"]</text>
+  <text x="65" y="556" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "client"</text>
+  <text x="65" y="570.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "server"</text>
+  <text x="65" y="584.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Non-string type field"]</text>
+  <path d="M 92.5 599 M 92.5 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 599 M 361 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 599 M 645 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 599 L 92.5 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 599 L 90 731 L 95 731 L 95 599 L 90 599" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 599 L 90 731 M 95 731 L 95 599 M 90 599" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 599 L 361 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 599 L 358.5 731 L 363.5 731 L 363.5 599 L 358.5 599" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 599 L 358.5 731 M 363.5 731 L 363.5 599 M 358.5 599" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 599 L 645 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 634 L 60 721 L 60 721 A 5 5 0 0 0 65 726 L 1264 726 L 1264 726 A 5 5 0 0 0 1269 721 L 1269 634 L 1269 634 A 5 5 0 0 0 1264 629 L 65 629 L 65 629 A 5 5 0 0 0 60 634" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 634 L 60 721 L 60 721 A 5 5 0 0 0 65 726 L 1264 726 L 1264 726 A 5 5 0 0 0 1269 721 L 1269 634 L 1269 634 A 5 5 0 0 0 1264 629 L 65 629 L 65 629 A 5 5 0 0 0 60 634" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="646" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 49:</text>
+  <text x="65" y="660.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'blank' line must define 'height' as a number &gt;= 0</text>
+  <text x="65" y="689.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="703.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "blank"</text>
+  <text x="65" y="718" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  width: 120</text>
+  <path d="M 92.5 731 M 92.5 875" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 731 M 361 875" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 731 M 645 875" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 731 L 92.5 875" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 731 L 90 875 L 95 875 L 95 731 L 90 731" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 731 L 90 875 M 95 875 L 95 731 M 90 731" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 731 L 361 875" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 731 L 358.5 875 L 363.5 875 L 363.5 731 L 358.5 731" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 731 L 358.5 875 M 363.5 875 L 363.5 731 M 358.5 731" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 731 L 645 875" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 766 L 60 867 L 60 867 A 5 5 0 0 0 65 872 L 1264 872 L 1264 872 A 5 5 0 0 0 1269 867 L 1269 766 L 1269 766 A 5 5 0 0 0 1264 761 L 65 761 L 65 761 A 5 5 0 0 0 60 766" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 766 L 60 867 L 60 867 A 5 5 0 0 0 65 872 L 1264 872 L 1264 872 A 5 5 0 0 0 1269 867 L 1269 766 L 1269 766 A 5 5 0 0 0 1264 761 L 65 761 L 65 761 A 5 5 0 0 0 60 766" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="778" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 53:</text>
+  <text x="65" y="792.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'call' line must define a string 'from' actor alias</text>
+  <text x="65" y="821.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="835.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "call"</text>
+  <text x="65" y="850" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "server"</text>
+  <text x="65" y="864.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Missing from alias"]</text>
+  <path d="M 92.5 875 M 92.5 1037" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 875 M 361 1037" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 875 M 645 1037" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 875 L 92.5 1037" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 875 L 90 1037 L 95 1037 L 95 875 L 90 875" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 875 L 90 1037 M 95 1037 L 95 875 M 90 875" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 875 L 361 1037" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 875 L 358.5 1037 L 363.5 1037 L 363.5 875 L 358.5 875" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 875 L 358.5 1037 M 363.5 1037 L 363.5 875 M 358.5 875" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 875 L 645 1037" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 910 L 60 1026 L 60 1026 A 5 5 0 0 0 65 1031 L 1264 1031 L 1264 1031 A 5 5 0 0 0 1269 1026 L 1269 910 L 1269 910 A 5 5 0 0 0 1264 905 L 65 905 L 65 905 A 5 5 0 0 0 60 910" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 910 L 60 1026 L 60 1026 A 5 5 0 0 0 65 1031 L 1264 1031 L 1264 1031 A 5 5 0 0 0 1269 1026 L 1269 910 L 1269 910 A 5 5 0 0 0 1264 905 L 65 905 L 65 905 A 5 5 0 0 0 60 910" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="922" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 59:</text>
+  <text x="65" y="936.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'call' line 'to' alias "ghost" does not match any actor</text>
+  <text x="65" y="965.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="979.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "call"</text>
+  <text x="65" y="994" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "client"</text>
+  <text x="65" y="1008.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "ghost"</text>
+  <text x="65" y="1022.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Unknown to alias"]</text>
+  <path d="M 92.5 1037 M 92.5 1199" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 1037 M 361 1199" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 1037 M 645 1199" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 1037 L 92.5 1199" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 1037 L 90 1199 L 95 1199 L 95 1037 L 90 1037" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 1037 L 90 1199 M 95 1199 L 95 1037 M 90 1037" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 1037 L 361 1199" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 1037 L 358.5 1199 L 363.5 1199 L 363.5 1037 L 358.5 1037" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 1037 L 358.5 1199 M 363.5 1199 L 363.5 1037 M 358.5 1037" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 1037 L 645 1199" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 1072 L 60 1188 L 60 1188 A 5 5 0 0 0 65 1193 L 1264 1193 L 1264 1193 A 5 5 0 0 0 1269 1188 L 1269 1072 L 1269 1072 A 5 5 0 0 0 1264 1067 L 65 1067 L 65 1067 A 5 5 0 0 0 60 1072" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 1072 L 60 1188 L 60 1188 A 5 5 0 0 0 65 1193 L 1264 1193 L 1264 1193 A 5 5 0 0 0 1269 1188 L 1269 1072 L 1269 1072 A 5 5 0 0 0 1264 1067 L 65 1067 L 65 1067 A 5 5 0 0 0 60 1072" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="1084" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 66:</text>
+  <text x="65" y="1098.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'return' line cannot target the same actor as its source</text>
+  <text x="65" y="1127.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="1141.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "return"</text>
+  <text x="65" y="1156" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "server"</text>
+  <text x="65" y="1170.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "server"</text>
+  <text x="65" y="1184.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Invalid return to the same actor"]</text>
+  <path d="M 92.5 1199 M 92.5 1343" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 1199 M 361 1343" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 1199 M 645 1343" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 1199 L 92.5 1343" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 1199 L 90 1343 L 95 1343 L 95 1199 L 90 1199" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 1199 L 90 1343 M 95 1343 L 95 1199 M 90 1199" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 1199 L 361 1343" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 1199 L 358.5 1343 L 363.5 1343 L 363.5 1199 L 358.5 1199" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 1199 L 358.5 1343 M 363.5 1343 L 363.5 1199 M 358.5 1199" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 1199 L 645 1343" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 1234 L 60 1335 L 60 1335 A 5 5 0 0 0 65 1340 L 1264 1340 L 1264 1340 A 5 5 0 0 0 1269 1335 L 1269 1234 L 1269 1234 A 5 5 0 0 0 1264 1229 L 65 1229 L 65 1229 A 5 5 0 0 0 60 1234" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 1234 L 60 1335 L 60 1335 A 5 5 0 0 0 65 1340 L 1264 1340 L 1264 1340 A 5 5 0 0 0 1269 1335 L 1269 1234 L 1269 1234 A 5 5 0 0 0 1264 1229 L 65 1229 L 65 1229 A 5 5 0 0 0 60 1234" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="1246" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 73:</text>
+  <text x="65" y="1260.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'state' line actor alias "ghost" does not match any actor</text>
+  <text x="65" y="1289.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="1303.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "state"</text>
+  <text x="65" y="1318" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  actor: "ghost"</text>
+  <text x="65" y="1332.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Unknown actor on state line"]</text>
+  <path d="M 92.5 1343 M 92.5 1487" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 1343 M 361 1487" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 1343 M 645 1487" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 1343 L 92.5 1487" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 1343 L 90 1487 L 95 1487 L 95 1343 L 90 1343" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 1343 L 90 1487 M 95 1487 L 95 1343 M 90 1343" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 1343 L 361 1487" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 1343 L 358.5 1487 L 363.5 1487 L 363.5 1343 L 358.5 1343" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 1343 L 358.5 1487 M 363.5 1487 L 363.5 1343 M 358.5 1343" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 1343 L 645 1487" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 1378 L 60 1479 L 60 1479 A 5 5 0 0 0 65 1484 L 1264 1484 L 1264 1484 A 5 5 0 0 0 1269 1479 L 1269 1378 L 1269 1378 A 5 5 0 0 0 1264 1373 L 65 1373 L 65 1373 A 5 5 0 0 0 60 1378" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 1378 L 60 1479 L 60 1479 A 5 5 0 0 0 65 1484 L 1264 1484 L 1264 1484 A 5 5 0 0 0 1269 1479 L 1269 1378 L 1269 1378 A 5 5 0 0 0 1264 1373 L 65 1373 L 65 1373 A 5 5 0 0 0 60 1378" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="1390" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 79:</text>
+  <text x="65" y="1404.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'state' line must define 'text' as a string or array of strings</text>
+  <text x="65" y="1433.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="1447.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "state"</text>
+  <text x="65" y="1462" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  actor: "server"</text>
+  <text x="65" y="1476.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: {"invalid":"payload"}</text>
+  <path d="M 92.5 1487 M 92.5 1619" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 1487 M 361 1619" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 1487 M 645 1619" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 1487 L 92.5 1619" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 1487 L 90 1619 L 95 1619 L 95 1487 L 90 1487" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 1487 L 90 1619 M 95 1619 L 95 1487 M 90 1487" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 1487 L 361 1619" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 1487 L 358.5 1619 L 363.5 1619 L 363.5 1487 L 358.5 1487" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 1487 L 358.5 1619 M 363.5 1619 L 363.5 1487 M 358.5 1487" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 1487 L 645 1619" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 1522 L 60 1609 L 60 1609 A 5 5 0 0 0 65 1614 L 1264 1614 L 1264 1614 A 5 5 0 0 0 1269 1609 L 1269 1522 L 1269 1522 A 5 5 0 0 0 1264 1517 L 65 1517 L 65 1517 A 5 5 0 0 0 60 1522" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 1522 L 60 1609 L 60 1609 A 5 5 0 0 0 65 1614 L 1264 1614 L 1264 1614 A 5 5 0 0 0 1269 1609 L 1269 1522 L 1269 1522 A 5 5 0 0 0 1264 1517 L 65 1517 L 65 1517 A 5 5 0 0 0 60 1522" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="1534" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 85:</text>
+  <text x="65" y="1548.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'condition' line can only be used inside an active fragment</text>
+  <text x="65" y="1577.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="1591.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "condition"</text>
+  <text x="65" y="1606" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  condition: "ELSE"</text>
+  <path d="M 92.5 1619 M 92.5 1763" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 1619 M 361 1763" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 1619 M 645 1763" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 1619 L 92.5 1763" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 1619 L 90 1763 L 95 1763 L 95 1619 L 90 1619" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 1619 L 90 1763 M 95 1763 L 95 1619 M 90 1619" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 1619 L 361 1763" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 1619 L 358.5 1763 L 363.5 1763 L 363.5 1619 L 358.5 1619" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 1619 L 358.5 1763 M 363.5 1763 L 363.5 1619 M 358.5 1619" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 1619 L 645 1763" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 1654 L 60 1755 L 60 1755 A 5 5 0 0 0 65 1760 L 1264 1760 L 1264 1760 A 5 5 0 0 0 1269 1755 L 1269 1654 L 1269 1654 A 5 5 0 0 0 1264 1649 L 65 1649 L 65 1649 A 5 5 0 0 0 60 1654" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 1654 L 60 1755 L 60 1755 A 5 5 0 0 0 65 1760 L 1264 1760 L 1264 1760 A 5 5 0 0 0 1269 1755 L 1269 1654 L 1269 1654 A 5 5 0 0 0 1264 1649 L 65 1649 L 65 1649 A 5 5 0 0 0 60 1654" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="1666" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 89:</text>
+  <text x="65" y="1680.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'reference' line must define 'reference' text as a string or array of strings</text>
+  <text x="65" y="1709.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="1723.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "reference"</text>
+  <text x="65" y="1738" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "server"</text>
+  <text x="65" y="1752.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Missing reference payload"]</text>
+  <path d="M 92.5 1763 M 92.5 1925" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 1763 M 361 1925" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 1763 M 645 1925" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 1763 L 92.5 1925" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 1763 L 90 1925 L 95 1925 L 95 1763 L 90 1763" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 1763 L 90 1925 M 95 1925 L 95 1763 M 90 1763" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 1763 L 361 1925" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 1763 L 358.5 1925 L 363.5 1925 L 363.5 1763 L 358.5 1763" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 1763 L 358.5 1925 M 363.5 1925 L 363.5 1763 M 358.5 1763" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 1763 L 645 1925" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 1798 L 60 1914 L 60 1914 A 5 5 0 0 0 65 1919 L 1264 1919 L 1264 1919 A 5 5 0 0 0 1269 1914 L 1269 1798 L 1269 1798 A 5 5 0 0 0 1264 1793 L 65 1793 L 65 1793 A 5 5 0 0 0 60 1798" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 1798 L 60 1914 L 60 1914 A 5 5 0 0 0 65 1919 L 1264 1919 L 1264 1919 A 5 5 0 0 0 1269 1914 L 1269 1798 L 1269 1798 A 5 5 0 0 0 1264 1793 L 65 1793 L 65 1793 A 5 5 0 0 0 60 1798" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="1810" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 95:</text>
+  <text x="65" y="1824.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'reference' line uses return-flow fields but has no valid 'to' actor alias</text>
+  <text x="65" y="1853.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="1867.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "reference"</text>
+  <text x="65" y="1882" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "server"</text>
+  <text x="65" y="1896.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  breakToFlow: true</text>
+  <text x="65" y="1910.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  reference: ["Return-flow mismatch"]</text>
+  <path d="M 92.5 1925 M 92.5 2069" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 1925 M 361 2069" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 1925 M 645 2069" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 1925 L 92.5 2069" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 1925 L 90 2069 L 95 2069 L 95 1925 L 90 1925" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 1925 L 90 2069 M 95 2069 L 95 1925 M 90 1925" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 1925 L 361 2069" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 1925 L 358.5 2069 L 363.5 2069 L 363.5 1925 L 358.5 1925" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 1925 L 358.5 2069 M 363.5 2069 L 363.5 1925 M 358.5 1925" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 1925 L 645 2069" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 1960 L 60 2061 L 60 2061 A 5 5 0 0 0 65 2066 L 1264 2066 L 1264 2066 A 5 5 0 0 0 1269 2061 L 1269 1960 L 1269 1960 A 5 5 0 0 0 1264 1955 L 65 1955 L 65 1955 A 5 5 0 0 0 60 1960" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 1960 L 60 2061 L 60 2061 A 5 5 0 0 0 65 2066 L 1264 2066 L 1264 2066 A 5 5 0 0 0 1269 2061 L 1269 1960 L 1269 1960 A 5 5 0 0 0 1264 1955 L 65 1955 L 65 1955 A 5 5 0 0 0 60 1960" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="1972" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 102:</text>
+  <text x="65" y="1986.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'terminate' line 'from' alias "ghost" does not match any actor</text>
+  <text x="65" y="2015.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="2029.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "terminate"</text>
+  <text x="65" y="2044" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "ghost"</text>
+  <text x="65" y="2058.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Invalid terminate actor"]</text>
+  <path d="M 92.5 2069 M 92.5 2243" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 2069 M 361 2243" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 2069 M 645 2243" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 2069 L 92.5 2243" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 2069 L 90 2243 L 95 2243 L 95 2069 L 90 2069" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 2069 L 90 2243 M 95 2243 L 95 2069 M 90 2069" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 2069 L 361 2243" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 2069 L 358.5 2243 L 363.5 2243 L 363.5 2069 L 358.5 2069" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 2069 L 358.5 2243 M 363.5 2243 L 363.5 2069 M 358.5 2069" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 2069 L 645 2243" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 2104 L 60 2234 L 60 2234 A 5 5 0 0 0 65 2239 L 1264 2239 L 1264 2239 A 5 5 0 0 0 1269 2234 L 1269 2104 L 1269 2104 A 5 5 0 0 0 1264 2099 L 65 2099 L 65 2099 A 5 5 0 0 0 60 2104" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 2104 L 60 2234 L 60 2234 A 5 5 0 0 0 65 2239 L 1264 2239 L 1264 2239 A 5 5 0 0 0 1269 2234 L 1269 2104 L 1269 2104 A 5 5 0 0 0 1264 2099 L 65 2099 L 65 2099 A 5 5 0 0 0 60 2104" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="2116" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 108:</text>
+  <text x="65" y="2130.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'fragment' line must define a string 'fragmentType'</text>
+  <text x="65" y="2159.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="2173.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "fragment"</text>
+  <text x="65" y="2188" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  title: "Missing fragmentType"</text>
+  <text x="65" y="2202.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  condition: "IF fragmentType absent"</text>
+  <text x="65" y="2216.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  lines: [{"type":"call","from":"client","to":"server","text":["This nested line should</text>
+  <text x="65" y="2231.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">         never render"]}]</text>
+  <path d="M 92.5 2243 M 92.5 2405" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 2243 M 361 2405" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 2243 M 645 2405" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 2243 L 92.5 2405" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 2243 L 90 2405 L 95 2405 L 95 2243 L 90 2243" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 2243 L 90 2405 M 95 2405 L 95 2243 M 90 2243" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 2243 L 361 2405" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 2243 L 358.5 2405 L 363.5 2405 L 363.5 2243 L 358.5 2243" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 2243 L 358.5 2405 M 363.5 2405 L 363.5 2243 M 358.5 2243" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 2243 L 645 2405" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 2278 L 60 2394 L 60 2394 A 5 5 0 0 0 65 2399 L 1264 2399 L 1264 2399 A 5 5 0 0 0 1269 2394 L 1269 2278 L 1269 2278 A 5 5 0 0 0 1264 2273 L 65 2273 L 65 2273 A 5 5 0 0 0 60 2278" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 2278 L 60 2394 L 60 2394 A 5 5 0 0 0 65 2399 L 1264 2399 L 1264 2399 A 5 5 0 0 0 1269 2394 L 1269 2278 L 1269 2278 A 5 5 0 0 0 1264 2273 L 65 2273 L 65 2273 A 5 5 0 0 0 60 2278" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="2290" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 119:</text>
+  <text x="65" y="2304.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'fragment' line must define 'lines' as an array</text>
+  <text x="65" y="2333.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="2347.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "fragment"</text>
+  <text x="65" y="2362" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  fragmentType: "alt"</text>
+  <text x="65" y="2376.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  title: "Missing lines array"</text>
+  <text x="65" y="2390.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  condition: "IF lines are absent"</text>
+  <path d="M 92.5 2405 M 92.5 2579" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 2405 M 361 2579" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 2405 M 645 2579" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 2405 L 92.5 2579" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 2405 L 90 2579 L 95 2579 L 95 2405 L 90 2405" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 2405 L 90 2579 M 95 2579 L 95 2405 M 90 2405" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 2405 L 361 2579" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 2405 L 358.5 2579 L 363.5 2579 L 363.5 2405 L 358.5 2405" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 2405 L 358.5 2579 M 363.5 2579 L 363.5 2405 M 358.5 2405" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 2405 L 645 2579" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 2440 L 60 2570 L 60 2570 A 5 5 0 0 0 65 2575 L 1264 2575 L 1264 2575 A 5 5 0 0 0 1269 2570 L 1269 2440 L 1269 2440 A 5 5 0 0 0 1264 2435 L 65 2435 L 65 2435 A 5 5 0 0 0 60 2440" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 2440 L 60 2570 L 60 2570 A 5 5 0 0 0 65 2575 L 1264 2575 L 1264 2575 A 5 5 0 0 0 1269 2570 L 1269 2440 L 1269 2440 A 5 5 0 0 0 1264 2435 L 65 2435 L 65 2435 A 5 5 0 0 0 60 2440" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="2452" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 125:</text>
+  <text x="65" y="2466.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  unrecognised line type 'call_error' (expected blank, fragment, state, condition, call,</text>
+  <text x="65" y="2480.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  return, reference or terminate)</text>
+  <text x="65" y="2509.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="2524" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "call_error"</text>
+  <text x="65" y="2538.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "server"</text>
+  <text x="65" y="2552.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "server"</text>
+  <text x="65" y="2567.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Deliberately unknown line type"]</text>
+  <path d="M 108 2612 M 466 2612 M 474 2620 M 474 2644 M 108 2644 M 108 2612" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 105 2609 M 463 2609 M 463 2617 M 471 2617 M 471 2641 M 105 2641 M 105 2609" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 105 2609 M 463 2609 M 463 2617 M 471 2617 M 463 2609 M 471 2617 M 471 2641 M 105 2641 M 105 2609" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 105 2625 M 65 2625 M 60 2630 M 60 2671" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 92.5 2579 L 92.5 2717" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 2579 L 90 2717 L 95 2717 L 95 2579 L 90 2579" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 2579 L 90 2717 M 95 2717 L 95 2579 M 90 2579" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 2579 L 361 2717" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 2579 L 358.5 2717 L 363.5 2717 L 363.5 2579 L 358.5 2579" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 2579 L 358.5 2717 M 363.5 2717 L 363.5 2579 M 358.5 2579" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 2579 L 645 2717" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 2671 L 30 2717 L 1269 2717 L 1269 2671 L 30 2671" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 2671 L 30 2717 M 1269 2717 L 1269 2671 L 30 2671" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 92.5 2579 L 92.5 2717" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 2579 L 90 2717 L 95 2717 L 95 2579 L 90 2579" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 2579 L 90 2717 M 95 2717 L 95 2579 M 90 2579" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 2579 L 361 2717" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 2579 L 358.5 2717 L 363.5 2717 L 363.5 2579 L 358.5 2579" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 2579 L 358.5 2717 M 363.5 2717 L 363.5 2579 M 358.5 2579" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 2579 L 645 2717" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 2671 L 30 2695 L 212 2695 L 222 2685 L 222 2671 L 30 2671" fill="rgba(200,200,0,0.8)" stroke="none"/>
+  <path d="M 30 2671 L 30 2695 L 212 2695 L 222 2685 L 222 2671 L 30 2671" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="35" y="2690" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">alt Nested semantic failures</text>
+  <text x="35" y="2712" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="12" xml:space="preserve" dominant-baseline="auto">IF exploring nested validation</text>
+  <path d="M 108 2612 L 466 2612 L 474 2620 L 474 2644 L 108 2644 L 108 2612" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 105 2609 L 463 2609 L 463 2617 L 471 2617 L 471 2641 L 105 2641 L 105 2609" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 105 2609 L 463 2609 L 463 2617 L 471 2617 M 463 2609 L 471 2617 L 471 2641 L 105 2641 L 105 2609" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 105 2609 M 105 2641 M 471 2641 M 471 2609 M 105 2609" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="112.5" y="2630.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Errors inside this fragment should still render one by one</text>
+  <path d="M 105 2625 L 65 2625 L 65 2625 A 5 5 0 0 0 60 2630 L 60 2671" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 92.5 2717 M 92.5 2831" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 2717 M 361 2831" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 2717 M 645 2831" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 2717 L 30 2831 L 1269 2831 L 1269 2717 L 30 2717" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 2717 L 30 2831 M 1269 2831 L 1269 2717 M 30 2717" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 92.5 2717 L 92.5 2831" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 2717 L 90 2831 L 95 2831 L 95 2717 L 90 2717" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 2717 L 90 2831 M 95 2831 L 95 2717 M 90 2717" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 2717 L 361 2831" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 2717 L 358.5 2831 L 363.5 2831 L 363.5 2717 L 358.5 2717" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 2717 L 358.5 2831 M 363.5 2831 L 363.5 2717 M 358.5 2717" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 2717 L 645 2831" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 2752 L 60 2824 L 60 2824 A 5 5 0 0 0 65 2829 L 1264 2829 L 1264 2829 A 5 5 0 0 0 1269 2824 L 1269 2752 L 1269 2752 A 5 5 0 0 0 1264 2747 L 65 2747 L 65 2747 A 5 5 0 0 0 60 2752" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 2752 L 60 2824 L 60 2824 A 5 5 0 0 0 65 2829 L 1264 2829 L 1264 2829 A 5 5 0 0 0 1269 2824 L 1269 2752 L 1269 2752 A 5 5 0 0 0 1264 2747 L 65 2747 L 65 2747 A 5 5 0 0 0 60 2752" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="2764" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 139:</text>
+  <text x="65" y="2778.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'condition' line must define condition text</text>
+  <text x="65" y="2807.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="2821.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "condition"</text>
+  <path d="M 92.5 2831 M 92.5 2993" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 2831 M 361 2993" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 2831 M 645 2993" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 2831 L 30 2993 L 1269 2993 L 1269 2831 L 30 2831" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 2831 L 30 2993 M 1269 2993 L 1269 2831 M 30 2831" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 92.5 2831 L 92.5 2993" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 2831 L 90 2993 L 95 2993 L 95 2831 L 90 2831" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 2831 L 90 2993 M 95 2993 L 95 2831 M 90 2831" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 2831 L 361 2993" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 2831 L 358.5 2993 L 363.5 2993 L 363.5 2831 L 358.5 2831" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 2831 L 358.5 2993 M 363.5 2993 L 363.5 2831 M 358.5 2831" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 2831 L 645 2993" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 2866 L 60 2982 L 60 2982 A 5 5 0 0 0 65 2987 L 1264 2987 L 1264 2987 A 5 5 0 0 0 1269 2982 L 1269 2866 L 1269 2866 A 5 5 0 0 0 1264 2861 L 65 2861 L 65 2861 A 5 5 0 0 0 60 2866" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 2866 L 60 2982 L 60 2982 A 5 5 0 0 0 65 2987 L 1264 2987 L 1264 2987 A 5 5 0 0 0 1269 2982 L 1269 2866 L 1269 2866 A 5 5 0 0 0 1264 2861 L 65 2861 L 65 2861 A 5 5 0 0 0 60 2866" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="2878" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 140:</text>
+  <text x="65" y="2892.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'call' line 'from' alias "missing_actor" does not match any actor</text>
+  <text x="65" y="2921.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="2935.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "call"</text>
+  <text x="65" y="2950" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "missing_actor"</text>
+  <text x="65" y="2964.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "server"</text>
+  <text x="65" y="2978.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Nested bad from alias"]</text>
+  <path d="M 92.5 2993 M 92.5 3107" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 2993 M 361 3107" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 2993 M 645 3107" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 2993 L 30 3107 L 1269 3107 L 1269 2993 L 30 2993" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 2993 L 30 3107 M 1269 3107 L 1269 2993 M 30 2993" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 92.5 2993 L 92.5 3107" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 2993 L 90 3107 L 95 3107 L 95 2993 L 90 2993" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 2993 L 90 3107 M 95 3107 L 95 2993 M 90 2993" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 2993 L 361 3107" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 2993 L 358.5 3107 L 363.5 3107 L 363.5 2993 L 358.5 2993" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 2993 L 358.5 3107 M 363.5 3107 L 363.5 2993 M 358.5 2993" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 2993 L 645 3107" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 3028 L 60 3100 L 60 3100 A 5 5 0 0 0 65 3105 L 1264 3105 L 1264 3105 A 5 5 0 0 0 1269 3100 L 1269 3028 L 1269 3028 A 5 5 0 0 0 1264 3023 L 65 3023 L 65 3023 A 5 5 0 0 0 60 3028" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 3028 L 60 3100 L 60 3100 A 5 5 0 0 0 65 3105 L 1264 3105 L 1264 3105 A 5 5 0 0 0 1269 3100 L 1269 3028 L 1269 3028 A 5 5 0 0 0 1264 3023 L 65 3023 L 65 3023 A 5 5 0 0 0 60 3028" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="3040" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 149:</text>
+  <text x="65" y="3054.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  comment must be a string or an object with 'text' as a string or array of strings</text>
+  <text x="65" y="3083.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="3097.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  invalid: "comment"</text>
+  <path d="M 92.5 3107 M 92.5 3269" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 3107 M 361 3269" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 3107 M 645 3269" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 3107 L 30 3269 L 1269 3269 L 1269 3107 L 30 3107" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 3107 L 30 3269 M 1269 3269 L 1269 3107 M 30 3107" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 92.5 3107 L 92.5 3269" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 3107 L 90 3269 L 95 3269 L 95 3107 L 90 3107" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 3107 L 90 3269 M 95 3269 L 95 3107 M 90 3107" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 3107 L 361 3269" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 3107 L 358.5 3269 L 363.5 3269 L 363.5 3107 L 358.5 3107" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 3107 L 358.5 3269 M 363.5 3269 L 363.5 3107 M 358.5 3107" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 3107 L 645 3269" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 3142 L 60 3258 L 60 3258 A 5 5 0 0 0 65 3263 L 1264 3263 L 1264 3263 A 5 5 0 0 0 1269 3258 L 1269 3142 L 1269 3142 A 5 5 0 0 0 1264 3137 L 65 3137 L 65 3137 A 5 5 0 0 0 60 3142" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 3142 L 60 3258 L 60 3258 A 5 5 0 0 0 65 3263 L 1264 3263 L 1264 3263 A 5 5 0 0 0 1269 3258 L 1269 3142 L 1269 3142 A 5 5 0 0 0 1264 3137 L 65 3137 L 65 3137 A 5 5 0 0 0 60 3142" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="3154" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 151:</text>
+  <text x="65" y="3168.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'reference' line 'to' alias "ghost" does not match any actor</text>
+  <text x="65" y="3197.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="3211.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "reference"</text>
+  <text x="65" y="3226" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "server"</text>
+  <text x="65" y="3240.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "ghost"</text>
+  <text x="65" y="3254.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  reference: ["Nested unknown to alias"]</text>
+  <path d="M 92.5 3269 M 92.5 3413" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 3269 M 361 3413" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 3269 M 645 3413" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 3269 L 30 3413 L 1269 3413 L 1269 3269 L 30 3269" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 3269 L 30 3413 M 1269 3413 L 1269 3269 M 30 3269" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 92.5 3269 L 92.5 3413" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 3269 L 90 3413 L 95 3413 L 95 3269 L 90 3269" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 3269 L 90 3413 M 95 3413 L 95 3269 M 90 3269" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 3269 L 361 3413" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 3269 L 358.5 3413 L 363.5 3413 L 363.5 3269 L 358.5 3269" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 3269 L 358.5 3413 M 363.5 3413 L 363.5 3269 M 358.5 3269" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 3269 L 645 3413" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 3304 L 60 3405 L 60 3405 A 5 5 0 0 0 65 3410 L 1264 3410 L 1264 3410 A 5 5 0 0 0 1269 3405 L 1269 3304 L 1269 3304 A 5 5 0 0 0 1264 3299 L 65 3299 L 65 3299 A 5 5 0 0 0 60 3304" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 3304 L 60 3405 L 60 3405 A 5 5 0 0 0 65 3410 L 1264 3410 L 1264 3410 A 5 5 0 0 0 1269 3405 L 1269 3304 L 1269 3304 A 5 5 0 0 0 1264 3299 L 65 3299 L 65 3299 A 5 5 0 0 0 60 3304" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="3316" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 156:</text>
+  <text x="65" y="3330.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  'terminate' line 'from' alias "gone" does not match any actor</text>
+  <text x="65" y="3359.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="3373.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "terminate"</text>
+  <text x="65" y="3388" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "gone"</text>
+  <text x="65" y="3402.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Nested terminate alias error"]</text>
+  <path d="M 92.5 3413 M 92.5 3527" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 3413 M 361 3527" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 3413 M 645 3527" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 3413 L 30 3527 L 1269 3527 L 1269 3413 L 30 3413" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 3413 L 30 3527 M 1269 3527 L 1269 3413 M 30 3413" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 92.5 3413 L 92.5 3527" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 3413 L 90 3527 L 95 3527 L 95 3413 L 90 3413" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 3413 L 90 3527 M 95 3527 L 95 3413 M 90 3413" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 3413 L 361 3527" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 3413 L 358.5 3527 L 363.5 3527 L 363.5 3413 L 358.5 3413" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 3413 L 358.5 3527 M 363.5 3527 L 363.5 3413 M 358.5 3413" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 3413 L 645 3527" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 3448 L 60 3520 L 60 3520 A 5 5 0 0 0 65 3525 L 1264 3525 L 1264 3525 A 5 5 0 0 0 1269 3520 L 1269 3448 L 1269 3448 A 5 5 0 0 0 1264 3443 L 65 3443 L 65 3443 A 5 5 0 0 0 60 3448" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 60 3448 L 60 3520 L 60 3520 A 5 5 0 0 0 65 3525 L 1264 3525 L 1264 3525 A 5 5 0 0 0 1269 3520 L 1269 3448 L 1269 3448 A 5 5 0 0 0 1264 3443 L 65 3443 L 65 3443 A 5 5 0 0 0 60 3448" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="65" y="3460" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 162:</text>
+  <text x="65" y="3474.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  comment must be a string or an object with 'text' as a string or array of strings</text>
+  <text x="65" y="3503.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending object:</text>
+  <text x="65" y="3517.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  invalid: "comment"</text>
+  <path d="M 92.5 3527 M 92.5 3533" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 3527 M 361 3533" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 3527 M 645 3533" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 3527 L 30 3533 L 1269 3533 L 1269 3527 L 30 3527" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 3527 L 30 3533 M 1269 3533 L 1269 3527 M 30 3527" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 92.5 3527 L 92.5 3533" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 3527 L 90 3533 L 95 3533 L 95 3527 L 90 3527" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 3527 L 90 3533 M 95 3533 L 95 3527 M 90 3527" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 3527 L 361 3533" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 3527 L 358.5 3533 L 363.5 3533 L 363.5 3527 L 358.5 3527" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 3527 L 358.5 3533 M 363.5 3533 L 363.5 3527 M 358.5 3527" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 3527 L 645 3533" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 3533 M 92.5 3593" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 3533 M 361 3593" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 3533 M 645 3593" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 3533 L 30 3563 L 1269 3563 L 1269 3533 L 30 3533" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 3533 L 30 3563 L 1269 3563 L 1269 3533 M 30 3533" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 92.5 3533 L 92.5 3593" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 3533 L 90 3593 L 95 3593 L 95 3533 L 90 3533" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 3533 L 90 3593 M 95 3593 L 95 3533 M 90 3533" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 3533 L 361 3593" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 3533 L 358.5 3593 L 363.5 3593 L 363.5 3533 L 358.5 3533" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 3533 L 358.5 3593 M 363.5 3593 L 363.5 3533 M 358.5 3533" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 3533 L 645 3593" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 3593 M 92.5 3677" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 361 3593 M 361 3677" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 645 3593 M 645 3677" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 92.5 3593 L 92.5 3677" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 3593 L 90 3677 L 95 3677 L 95 3593 L 90 3593" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 3593 L 90 3677 M 95 3677 L 95 3593 M 90 3593" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 3593 L 361 3677" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 3593 L 358.5 3677 L 363.5 3677 L 363.5 3593 L 358.5 3593" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 3593 L 358.5 3677 M 363.5 3677 L 363.5 3593 M 358.5 3593" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 3593 L 645 3677" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="145" y="3647" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">11. </text>
+  <text x="168.35" y="3647" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">A valid closing call to show rendering continues afterwards</text>
+  <path d="M 358.5 3657 L 95 3657" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 95 3657 L 105 3652 L 105 3662 L 95 3657" fill="rgb(0, 0, 0)" stroke="none"/>
+  <path d="M 92.5 3677 L 92.5 3701" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 90 3677 L 90 3677 L 95 3677 L 95 3677 L 90 3677" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 90 3677 L 90 3677 L 95 3677 L 95 3677 M 90 3677" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 361 3677 L 361 3701" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 358.5 3677 L 358.5 3677 L 363.5 3677 L 363.5 3677 L 358.5 3677" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 358.5 3677 L 358.5 3677 L 363.5 3677 L 363.5 3677 M 358.5 3677" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 645 3677 L 645 3701" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+</svg>

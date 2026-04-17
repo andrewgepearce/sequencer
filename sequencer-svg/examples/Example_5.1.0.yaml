@@ -1,0 +1,169 @@
+## https://github.com/andrewgepearce/sequencer
+title: Example 5
+version: '1.0'
+description: >-
+  Comprehensive demonstration of semantic input-document errors that are now
+  rendered consistently into the SVG output. Every broken line below is
+  intentional.
+actors:
+  - name: Client
+    alias: client
+    bgColour: 'rgb(255,126,121)'
+  - name: Server
+    alias: server
+  - name: Database
+    alias: db
+    bgColour: 'rgb(100,0,255)'
+params:
+  comment:
+    bgColour: 'rgb(0,253,144)'
+    spacing: 1.2
+  globalSpacing: 30
+  tags:
+    - '<code>=<rgb(0,0,180)><font=monospace>'
+    - </code>=</font></rgb>
+lines:
+  - type: call
+    from: client
+    to: server
+    text:
+      - A valid opening call so recovery after errors is obvious
+    comment:
+      - Every subsequent broken line is intentional
+
+  # Missing line type entirely.
+  - from: client
+    to: server
+    text:
+      - Missing type identifier
+
+  # Line type exists but is not a string.
+  - type:
+      - call
+    from: client
+    to: server
+    text:
+      - Non-string type field
+
+  # Blank lines must provide a numeric height.
+  - type: blank
+    width: 120
+
+  # Call missing the required from alias.
+  - type: call
+    to: server
+    text:
+      - Missing from alias
+
+  # Call pointing at an unknown actor alias.
+  - type: call
+    from: client
+    to: ghost
+    text:
+      - Unknown to alias
+
+  # Return to self is invalid.
+  - type: return
+    from: server
+    to: server
+    text:
+      - Invalid return to the same actor
+
+  # State line targeting an unknown actor.
+  - type: state
+    actor: ghost
+    text:
+      - Unknown actor on state line
+
+  # State line with invalid text payload.
+  - type: state
+    actor: server
+    text:
+      invalid: payload
+
+  # Condition outside any fragment.
+  - type: condition
+    condition: ELSE
+
+  # Reference with missing reference text.
+  - type: reference
+    from: server
+    text:
+      - Missing reference payload
+
+  # Reference using return-flow fields without a valid to actor.
+  - type: reference
+    from: server
+    breakToFlow: true
+    reference:
+      - Return-flow mismatch
+
+  # Terminate with an unknown actor alias.
+  - type: terminate
+    from: ghost
+    text:
+      - Invalid terminate actor
+
+  # Fragment missing fragmentType.
+  - type: fragment
+    title: Missing fragmentType
+    condition: IF fragmentType absent
+    lines:
+      - type: call
+        from: client
+        to: server
+        text:
+          - This nested line should never render
+
+  # Fragment missing the lines array.
+  - type: fragment
+    fragmentType: alt
+    title: Missing lines array
+    condition: IF lines are absent
+
+  # Explicitly unrecognised type retained as a regression check.
+  - type: call_error
+    from: server
+    to: server
+    text:
+      - Deliberately unknown line type
+
+  # Valid fragment containing several nested semantic errors.
+  - type: fragment
+    fragmentType: alt
+    title: Nested semantic failures
+    condition: IF exploring nested validation
+    comment:
+      - Errors inside this fragment should still render one by one
+    lines:
+      - type: condition
+      - type: call
+        from: missing_actor
+        to: server
+        text:
+          - Nested bad from alias
+      - type: state
+        actor: server
+        text:
+          - Nested invalid comment payload
+        comment:
+          invalid: comment
+      - type: reference
+        from: server
+        to: ghost
+        reference:
+          - Nested unknown to alias
+      - type: terminate
+        from: gone
+        text:
+          - Nested terminate alias error
+      - type: blank
+        height: 20
+        comment:
+          invalid: comment
+
+  - type: call
+    from: server
+    to: client
+    text:
+      - A valid closing call to show rendering continues afterwards
