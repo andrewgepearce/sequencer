@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="863" height="882" viewBox="0 0 863 882">
+  <rect width="100%" height="100%" fill="white"/>
+  <path d="M 0 0 L 0 872 L 853 872 L 853 0 L 0 0" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 30 L 30 57 L 145 57 L 145 30 L 30 30" fill="rgba(0,0,0,0)" stroke="none"/>
+  <text x="35" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Title:</text>
+  <text x="68.44" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
+  <text x="72.33" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Example 2</text>
+  <path d="M 30 57 L 30 84 L 120 84 L 120 57 L 30 57" fill="rgba(0,0,0,0)" stroke="none"/>
+  <text x="35" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Version:</text>
+  <text x="91.01" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
+  <text x="94.9" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">1.0</text>
+  <path d="M 33 122 L 33 150 L 33 150 A 5 5 0 0 0 38 155 L 93 155 L 93 155 A 5 5 0 0 0 98 150 L 98 122 L 98 122 A 5 5 0 0 0 93 117 L 38 117 L 38 117 A 5 5 0 0 0 33 122" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 30 119 L 30 147 L 30 147 A 5 5 0 0 0 35 152 L 90 152 L 90 152 A 5 5 0 0 0 95 147 L 95 119 L 95 119 A 5 5 0 0 0 90 114 L 35 114 L 35 114 A 5 5 0 0 0 30 119" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 30 119 L 30 147 L 30 147 A 5 5 0 0 0 35 152 L 90 152 L 90 152 A 5 5 0 0 0 95 147 L 95 119 L 95 119 A 5 5 0 0 0 90 114 L 35 114 L 35 114 A 5 5 0 0 0 30 119" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="39" y="141" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Client</text>
+  <path d="M 298 122 L 298 150 L 298 150 A 5 5 0 0 0 303 155 L 365 155 L 365 155 A 5 5 0 0 0 370 150 L 370 122 L 370 122 A 5 5 0 0 0 365 117 L 303 117 L 303 117 A 5 5 0 0 0 298 122" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 295 119 L 295 147 L 295 147 A 5 5 0 0 0 300 152 L 362 152 L 362 152 A 5 5 0 0 0 367 147 L 367 119 L 367 119 A 5 5 0 0 0 362 114 L 300 114 L 300 114 A 5 5 0 0 0 295 119" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 295 119 L 295 147 L 295 147 A 5 5 0 0 0 300 152 L 362 152 L 362 152 A 5 5 0 0 0 367 147 L 367 119 L 367 119 A 5 5 0 0 0 362 114 L 300 114 L 300 114 A 5 5 0 0 0 295 119" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="304" y="141" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Server</text>
+  <path d="M 570 122 L 570 150 L 570 150 A 5 5 0 0 0 575 155 L 661 155 L 661 155 A 5 5 0 0 0 666 150 L 666 122 L 666 122 A 5 5 0 0 0 661 117 L 575 117 L 575 117 A 5 5 0 0 0 570 122" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 567 119 L 567 147 L 567 147 A 5 5 0 0 0 572 152 L 658 152 L 658 152 A 5 5 0 0 0 663 147 L 663 119 L 663 119 A 5 5 0 0 0 658 114 L 572 114 L 572 114 A 5 5 0 0 0 567 119" fill="rgb(100,0,255)" stroke="none"/>
+  <path d="M 567 119 L 567 147 L 567 147 A 5 5 0 0 0 572 152 L 658 152 L 658 152 A 5 5 0 0 0 663 147 L 663 119 L 663 119 A 5 5 0 0 0 658 114 L 572 114 L 572 114 A 5 5 0 0 0 567 119" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="576" y="141" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Database</text>
+  <path d="M 128 185 M 448 185 M 456 193 M 456 217 M 128 217 M 128 185" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 125 182 M 445 182 M 445 190 M 453 190 M 453 214 M 125 214 M 125 182" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 125 182 M 445 182 M 445 190 M 453 190 M 445 182 M 453 190 M 453 214 M 125 214 M 125 182" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 125 198 M 100 198 M 95 203 M 95 244" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 62.5 152 M 62.5 284" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 152 M 331 284" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 152 M 615 284" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 152 L 62.5 284" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 244 L 60 251.5 L 65 251.5 L 65 244 L 60 244" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 244 L 60 251.5 L 65 251.5 L 65 244 L 60 244" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 60 266.5 L 60 284 L 65 284 L 65 266.5 L 60 266.5" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 266.5 L 60 284 M 65 284 L 65 266.5 L 60 266.5" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 152 L 331 284" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 152 L 615 284" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 128 185 L 448 185 L 456 193 L 456 217 L 128 217 L 128 185" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 125 182 L 445 182 L 445 190 L 453 190 L 453 214 L 125 214 L 125 182" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 125 182 L 445 182 L 445 190 L 453 190 M 445 182 L 453 190 L 453 214 L 125 214 L 125 182" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 125 182 M 125 214 M 453 214 M 453 182 M 125 182" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="132.5" y="203.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">An asyncronous call to from and to the same actor</text>
+  <path d="M 125 198 L 100 198 L 100 198 A 5 5 0 0 0 95 203 L 95 244" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 65 244 L 120 244 L 120 244 A 5 5 0 0 1 125 249 L 125 269 L 125 269 A 5 5 0 0 1 120 274 L 65 274" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 65 274 L 75 269 L 65 274 L 75 279" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="135" y="261.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">1. Some async process</text>
+  <path d="M 128 317 M 406 317 M 414 325 M 414 349 M 128 349 M 128 317" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 125 314 M 403 314 M 403 322 M 411 322 M 411 346 M 125 346 M 125 314" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 125 314 M 403 314 M 403 322 M 411 322 M 403 314 M 411 322 M 411 346 M 125 346 M 125 314" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 125 330 M 100 330 M 95 335 M 95 380" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 62.5 284 M 62.5 398" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 284 M 331 398" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 284 M 615 398" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 284 L 62.5 398" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 284 L 60 398 L 65 398 L 65 284 L 60 284" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 284 L 60 398 M 65 398 L 65 284 M 60 284" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 284 L 331 398" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 328.5 380 L 328.5 398 L 333.5 398 L 333.5 380 L 328.5 380" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 328.5 380 L 328.5 398 M 333.5 398 L 333.5 380 L 328.5 380" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 615 284 L 615 398" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 128 317 L 406 317 L 414 325 L 414 349 L 128 349 L 128 317" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 125 314 L 403 314 L 403 322 L 411 322 L 411 346 L 125 346 L 125 314" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 125 314 L 403 314 L 403 322 L 411 322 M 403 314 L 411 322 L 411 346 L 125 346 L 125 314" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 125 314 M 125 346 M 411 346 M 411 314 M 125 314" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="132.5" y="335.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">This is a line of type "call" with a "comment"</text>
+  <path d="M 125 330 L 100 330 L 100 330 A 5 5 0 0 0 95 335 L 95 380" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="135" y="370" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">2. </text>
+  <text x="150.57" y="370" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">someCall(param1, param2)</text>
+  <path d="M 65 380 L 328.5 380" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 328.5 380 L 318.5 375 L 318.5 385 L 328.5 380" fill="rgb(0, 0, 0)" stroke="none"/>
+  <path d="M 396.5 431 M 682.5 431 M 692.5 441 M 692.5 480 M 396.5 480 M 396.5 431" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 393.5 428 M 679.5 428 M 679.5 438 M 689.5 438 M 689.5 477 M 393.5 477 M 393.5 428" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 393.5 428 M 679.5 428 M 679.5 438 M 689.5 438 M 679.5 428 M 689.5 438 M 689.5 477 M 393.5 477 M 393.5 428" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 393.5 452.5 M 368.5 452.5 M 363.5 457.5 M 363.5 511" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 62.5 398 M 62.5 530" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 398 M 331 530" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 398 M 615 530" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 398 L 62.5 530" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 398 L 60 530 L 65 530 L 65 398 L 60 398" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 398 L 60 530 M 65 530 L 65 398 M 60 398" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 398 L 331 530" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 328.5 398 L 328.5 530 L 333.5 530 L 333.5 398 L 328.5 398" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 328.5 398 L 328.5 530 M 333.5 530 L 333.5 398 M 328.5 398" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 615 398 L 615 530" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 612.5 511 L 612.5 521 L 617.5 521 L 617.5 511 L 612.5 511" fill="rgb(100,0,255)" stroke="none"/>
+  <path d="M 612.5 511 L 612.5 521 L 617.5 521 L 617.5 511 L 612.5 511" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 396.5 431 L 682.5 431 L 692.5 441 L 692.5 480 L 396.5 480 L 396.5 431" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 393.5 428 L 679.5 428 L 679.5 438 L 689.5 438 L 689.5 477 L 393.5 477 L 393.5 428" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 393.5 428 L 679.5 428 L 679.5 438 L 689.5 438 M 679.5 428 L 689.5 438 L 689.5 477 L 393.5 477 L 393.5 428" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 393.5 428 M 393.5 477 M 689.5 477 M 689.5 428 M 393.5 428" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="401" y="449.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">someCall the returns immediately, i.e. breaks</text>
+  <text x="401" y="466.3" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">the lifeline in the called actor</text>
+  <path d="M 393.5 452.5 L 368.5 452.5 L 368.5 452.5 A 5 5 0 0 0 363.5 457.5 L 363.5 511" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="403.5" y="501" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">3. </text>
+  <text x="419.07" y="501" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">someDbCall() : dbResponse</text>
+  <path d="M 333.5 511 L 612.5 511" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 612.5 511 L 602.5 506 L 602.5 516 L 612.5 511" fill="rgb(0, 0, 0)" stroke="none"/>
+  <path d="M 396.5 563 M 693.5 563 M 703.5 573 M 703.5 646 M 396.5 646 M 396.5 563" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 393.5 560 M 690.5 560 M 690.5 570 M 700.5 570 M 700.5 643 M 393.5 643 M 393.5 560" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 393.5 560 M 690.5 560 M 690.5 570 M 700.5 570 M 690.5 560 M 700.5 570 M 700.5 643 M 393.5 643 M 393.5 560" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 393.5 601.5 M 368.5 601.5 M 363.5 606.5 M 363.5 673" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 62.5 530 M 62.5 716" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 530 M 331 716" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 530 M 615 716" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 530 L 62.5 716" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 530 L 60 716 L 65 716 L 65 530 L 60 530" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 530 L 60 716 M 65 716 L 65 530 M 60 530" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 530 L 331 716" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 328.5 530 L 328.5 716 L 333.5 716 L 333.5 530 L 328.5 530" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 328.5 530 L 328.5 716 M 333.5 716 L 333.5 530 M 328.5 530" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 615 530 L 615 716" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 396.5 563 L 693.5 563 L 703.5 573 L 703.5 646 L 396.5 646 L 396.5 563" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 393.5 560 L 690.5 560 L 690.5 570 L 700.5 570 L 700.5 643 L 393.5 643 L 393.5 560" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 393.5 560 L 690.5 560 L 690.5 570 L 700.5 570 M 690.5 560 L 700.5 570 L 700.5 643 L 393.5 643 L 393.5 560" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 393.5 560 M 393.5 643 M 700.5 643 M 700.5 560 M 393.5 560" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="401" y="581.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">... And a call from and to the same actor.</text>
+  <text x="401" y="598.3" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">In this example the author wishes to highlight</text>
+  <text x="401" y="615.1" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">this call by changing the width and colour</text>
+  <text x="401" y="631.9" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">overriding </text>
+  <text x="466.37" y="631.9" fill="rgb(0,0,180)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="14" xml:space="preserve" dominant-baseline="auto">.params</text>
+  <text x="525.17" y="631.9" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> defaults or built-in defaults</text>
+  <path d="M 393.5 601.5 L 368.5 601.5 L 368.5 601.5 A 5 5 0 0 0 363.5 606.5 L 363.5 673" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 333.5 673 L 388.5 673 L 388.5 673 A 5 5 0 0 1 393.5 678 L 393.5 698 L 393.5 698 A 5 5 0 0 1 388.5 703 L 333.5 703" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <path d="M 333.5 703 L 343.5 698 L 343.5 708 L 333.5 703" fill="rgb(255,0,0)" stroke="none"/>
+  <text x="403.5" y="690.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">4. Do some internal processing(dbResponse) :  some return value</text>
+  <path d="M 138 749 M 243 749 M 251 757 M 251 781 M 138 781 M 138 749" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 135 746 M 240 746 M 240 754 M 248 754 M 248 778 M 135 778 M 135 746" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 135 746 M 240 746 M 240 754 M 248 754 M 240 746 M 248 754 M 248 778 M 135 778 M 135 746" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 135 762 M 110 762 M 105 767 M 105 807" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 62.5 716 M 62.5 818" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 716 M 331 818" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 716 M 615 818" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 716 L 62.5 818" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 716 L 60 812 L 65 812 L 65 716 L 60 716" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 716 L 60 812 L 65 812 L 65 716 M 60 716" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 716 L 331 818" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 328.5 716 L 328.5 812 L 333.5 812 L 333.5 716 L 328.5 716" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 328.5 716 L 328.5 812 L 333.5 812 L 333.5 716 M 328.5 716" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 615 716 L 615 818" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 138 749 L 243 749 L 251 757 L 251 781 L 138 781 L 138 749" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 135 746 L 240 746 L 240 754 L 248 754 L 248 778 L 135 778 L 135 746" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 135 746 L 240 746 L 240 754 L 248 754 M 240 746 L 248 754 L 248 778 L 135 778 L 135 746" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 135 746 M 135 778 M 248 778 M 248 746 M 135 746" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="142.5" y="767.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Return call type</text>
+  <path d="M 135 762 L 110 762 L 110 762 A 5 5 0 0 0 105 767 L 105 807" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="142.5" y="799.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">5. </text>
+  <text x="158.07" y="799.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">:some return value</text>
+  <path d="M 328.5 807 L 65 807" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="6,3"/>
+  <path d="M 65 807 L 75 807 M 65 807 L 75 802 M 65 807 L 75 812" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 62.5 818 L 62.5 842" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 818 L 331 842" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 818 L 615 842" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+</svg>

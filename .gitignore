@@ -113,3 +113,5 @@ test.svg
 test.js
 test2.svg
 scratch
+.claude/settings.local.json
+.claude/session.md
