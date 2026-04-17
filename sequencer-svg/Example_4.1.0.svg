@@ -1,144 +1,150 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1043" height="783" viewBox="0 0 1043 783">
+<svg xmlns="http://www.w3.org/2000/svg" width="733" height="897" viewBox="0 0 733 897">
   <rect width="100%" height="100%" fill="white"/>
-  <path d="M 0 0 L 0 773 L 1033 773 L 1033 0 L 0 0" fill="rgb(255, 255, 255)" stroke="none"/>
-  <path d="M 263.25 30 L 263.25 57 L 378.25 57 L 378.25 30 L 263.25 30" fill="rgba(0,0,0,0)" stroke="none"/>
-  <text x="268.25" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Title:</text>
-  <text x="301.69" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
-  <text x="305.58" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Example 4</text>
-  <path d="M 263.25 57 L 263.25 84 L 353.25 84 L 353.25 57 L 263.25 57" fill="rgba(0,0,0,0)" stroke="none"/>
-  <text x="268.25" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Version:</text>
-  <text x="324.26" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
-  <text x="328.15" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">1.0</text>
-  <path d="M 263.25 84 L 263.25 111 L 891.25 111 L 891.25 84 L 263.25 84" fill="rgba(0,0,0,0)" stroke="none"/>
-  <text x="268.25" y="103" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Description:</text>
-  <text x="349.93" y="103" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
-  <text x="353.82" y="103" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Shows a detected error and how presented in the diagram. Extended from example 2.</text>
-  <path d="M 266.25 149 L 266.25 177 L 266.25 177 A 5 5 0 0 0 271.25 182 L 326.25 182 L 326.25 182 A 5 5 0 0 0 331.25 177 L 331.25 149 L 331.25 149 A 5 5 0 0 0 326.25 144 L 271.25 144 L 271.25 144 A 5 5 0 0 0 266.25 149" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 263.25 146 L 263.25 174 L 263.25 174 A 5 5 0 0 0 268.25 179 L 323.25 179 L 323.25 179 A 5 5 0 0 0 328.25 174 L 328.25 146 L 328.25 146 A 5 5 0 0 0 323.25 141 L 268.25 141 L 268.25 141 A 5 5 0 0 0 263.25 146" fill="rgb(255,126,121)" stroke="none"/>
-  <path d="M 263.25 146 L 263.25 174 L 263.25 174 A 5 5 0 0 0 268.25 179 L 323.25 179 L 323.25 179 A 5 5 0 0 0 328.25 174 L 328.25 146 L 328.25 146 A 5 5 0 0 0 323.25 141 L 268.25 141 L 268.25 141 A 5 5 0 0 0 263.25 146" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <text x="272.25" y="168" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Client</text>
-  <path d="M 531.25 149 L 531.25 177 L 531.25 177 A 5 5 0 0 0 536.25 182 L 598.25 182 L 598.25 182 A 5 5 0 0 0 603.25 177 L 603.25 149 L 603.25 149 A 5 5 0 0 0 598.25 144 L 536.25 144 L 536.25 144 A 5 5 0 0 0 531.25 149" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 528.25 146 L 528.25 174 L 528.25 174 A 5 5 0 0 0 533.25 179 L 595.25 179 L 595.25 179 A 5 5 0 0 0 600.25 174 L 600.25 146 L 600.25 146 A 5 5 0 0 0 595.25 141 L 533.25 141 L 533.25 141 A 5 5 0 0 0 528.25 146" fill="rgb(204,255,153)" stroke="none"/>
-  <path d="M 528.25 146 L 528.25 174 L 528.25 174 A 5 5 0 0 0 533.25 179 L 595.25 179 L 595.25 179 A 5 5 0 0 0 600.25 174 L 600.25 146 L 600.25 146 A 5 5 0 0 0 595.25 141 L 533.25 141 L 533.25 141 A 5 5 0 0 0 528.25 146" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <text x="537.25" y="168" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Server</text>
-  <path d="M 803.25 149 L 803.25 177 L 803.25 177 A 5 5 0 0 0 808.25 182 L 894.25 182 L 894.25 182 A 5 5 0 0 0 899.25 177 L 899.25 149 L 899.25 149 A 5 5 0 0 0 894.25 144 L 808.25 144 L 808.25 144 A 5 5 0 0 0 803.25 149" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 800.25 146 L 800.25 174 L 800.25 174 A 5 5 0 0 0 805.25 179 L 891.25 179 L 891.25 179 A 5 5 0 0 0 896.25 174 L 896.25 146 L 896.25 146 A 5 5 0 0 0 891.25 141 L 805.25 141 L 805.25 141 A 5 5 0 0 0 800.25 146" fill="rgb(100,0,255)" stroke="none"/>
-  <path d="M 800.25 146 L 800.25 174 L 800.25 174 A 5 5 0 0 0 805.25 179 L 891.25 179 L 891.25 179 A 5 5 0 0 0 896.25 174 L 896.25 146 L 896.25 146 A 5 5 0 0 0 891.25 141 L 805.25 141 L 805.25 141 A 5 5 0 0 0 800.25 146" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <text x="809.25" y="168" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Database</text>
-  <path d="M 361.25 212 M 681.25 212 M 689.25 220 M 689.25 244 M 361.25 244 M 361.25 212" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 358.25 209 M 678.25 209 M 678.25 217 M 686.25 217 M 686.25 241 M 358.25 241 M 358.25 209" fill="rgb(0,253,144)" stroke="none"/>
-  <path d="M 358.25 209 M 678.25 209 M 678.25 217 M 686.25 217 M 678.25 209 M 686.25 217 M 686.25 241 M 358.25 241 M 358.25 209" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 358.25 225 M 333.25 225 M 328.25 230 M 328.25 271" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
-  <path d="M 295.75 179 M 295.75 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 564.25 179 M 564.25 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 848.25 179 M 848.25 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 295.75 179 L 295.75 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 293.25 271 L 293.25 278.5 L 298.25 278.5 L 298.25 271 L 293.25 271" fill="rgb(255,126,121)" stroke="none"/>
-  <path d="M 293.25 271 L 293.25 278.5 L 298.25 278.5 L 298.25 271 L 293.25 271" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 293.25 293.5 L 293.25 311 L 298.25 311 L 298.25 293.5 L 293.25 293.5" fill="rgb(255,126,121)" stroke="none"/>
-  <path d="M 293.25 293.5 L 293.25 311 M 298.25 311 L 298.25 293.5 L 293.25 293.5" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 564.25 179 L 564.25 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 848.25 179 L 848.25 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 361.25 212 L 681.25 212 L 689.25 220 L 689.25 244 L 361.25 244 L 361.25 212" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 358.25 209 L 678.25 209 L 678.25 217 L 686.25 217 L 686.25 241 L 358.25 241 L 358.25 209" fill="rgb(0,253,144)" stroke="none"/>
-  <path d="M 358.25 209 L 678.25 209 L 678.25 217 L 686.25 217 M 678.25 209 L 686.25 217 L 686.25 241 L 358.25 241 L 358.25 209" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 358.25 209 M 358.25 241 M 686.25 241 M 686.25 209 M 358.25 209" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <text x="365.75" y="230.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">An asyncronous call to from and to the same actor</text>
-  <path d="M 358.25 225 L 333.25 225 L 333.25 225 A 5 5 0 0 0 328.25 230 L 328.25 271" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
-  <path d="M 298.25 271 L 353.25 271 L 353.25 271 A 5 5 0 0 1 358.25 276 L 358.25 296 L 358.25 296 A 5 5 0 0 1 353.25 301 L 298.25 301" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 298.25 301 L 308.25 296 L 298.25 301 L 308.25 306" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <text x="368.25" y="288.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">1. Some async process</text>
-  <path d="M 361.25 344 M 639.25 344 M 647.25 352 M 647.25 376 M 361.25 376 M 361.25 344" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 358.25 341 M 636.25 341 M 636.25 349 M 644.25 349 M 644.25 373 M 358.25 373 M 358.25 341" fill="rgb(0,253,144)" stroke="none"/>
-  <path d="M 358.25 341 M 636.25 341 M 636.25 349 M 644.25 349 M 636.25 341 M 644.25 349 M 644.25 373 M 358.25 373 M 358.25 341" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 358.25 357 M 333.25 357 M 328.25 362 M 328.25 407" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
-  <path d="M 295.75 311 M 295.75 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 564.25 311 M 564.25 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 848.25 311 M 848.25 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 295.75 311 L 295.75 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 293.25 311 L 293.25 425 L 298.25 425 L 298.25 311 L 293.25 311" fill="rgb(255,126,121)" stroke="none"/>
-  <path d="M 293.25 311 L 293.25 425 M 298.25 425 L 298.25 311 M 293.25 311" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 564.25 311 L 564.25 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 561.75 407 L 561.75 425 L 566.75 425 L 566.75 407 L 561.75 407" fill="rgb(204,255,153)" stroke="none"/>
-  <path d="M 561.75 407 L 561.75 425 M 566.75 425 L 566.75 407 L 561.75 407" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 848.25 311 L 848.25 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 361.25 344 L 639.25 344 L 647.25 352 L 647.25 376 L 361.25 376 L 361.25 344" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 358.25 341 L 636.25 341 L 636.25 349 L 644.25 349 L 644.25 373 L 358.25 373 L 358.25 341" fill="rgb(0,253,144)" stroke="none"/>
-  <path d="M 358.25 341 L 636.25 341 L 636.25 349 L 644.25 349 M 636.25 341 L 644.25 349 L 644.25 373 L 358.25 373 L 358.25 341" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 358.25 341 M 358.25 373 M 644.25 373 M 644.25 341 M 358.25 341" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <text x="365.75" y="362.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">This is a line of type "call" with a "comment"</text>
-  <path d="M 358.25 357 L 333.25 357 L 333.25 357 A 5 5 0 0 0 328.25 362 L 328.25 407" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
-  <text x="368.25" y="397" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">2. </text>
-  <text x="383.82" y="397" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">someCall(param1, param2)</text>
-  <path d="M 298.25 407 L 561.75 407" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 561.75 407 L 551.75 402 L 551.75 412 L 561.75 407" fill="rgb(0, 0, 0)" stroke="none"/>
-  <path d="M 629.75 458 M 915.75 458 M 925.75 468 M 925.75 507 M 629.75 507 M 629.75 458" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 626.75 455 M 912.75 455 M 912.75 465 M 922.75 465 M 922.75 504 M 626.75 504 M 626.75 455" fill="rgb(0,253,144)" stroke="none"/>
-  <path d="M 626.75 455 M 912.75 455 M 912.75 465 M 922.75 465 M 912.75 455 M 922.75 465 M 922.75 504 M 626.75 504 M 626.75 455" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 626.75 479.5 M 601.75 479.5 M 596.75 484.5 M 596.75 538" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
-  <path d="M 295.75 425 M 295.75 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 564.25 425 M 564.25 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 848.25 425 M 848.25 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 295.75 425 L 295.75 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 293.25 425 L 293.25 557 L 298.25 557 L 298.25 425 L 293.25 425" fill="rgb(255,126,121)" stroke="none"/>
-  <path d="M 293.25 425 L 293.25 557 M 298.25 557 L 298.25 425 M 293.25 425" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 564.25 425 L 564.25 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 561.75 425 L 561.75 557 L 566.75 557 L 566.75 425 L 561.75 425" fill="rgb(204,255,153)" stroke="none"/>
-  <path d="M 561.75 425 L 561.75 557 M 566.75 557 L 566.75 425 M 561.75 425" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 848.25 425 L 848.25 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 845.75 538 L 845.75 548 L 850.75 548 L 850.75 538 L 845.75 538" fill="rgb(100,0,255)" stroke="none"/>
-  <path d="M 845.75 538 L 845.75 548 L 850.75 548 L 850.75 538 L 845.75 538" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 629.75 458 L 915.75 458 L 925.75 468 L 925.75 507 L 629.75 507 L 629.75 458" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 626.75 455 L 912.75 455 L 912.75 465 L 922.75 465 L 922.75 504 L 626.75 504 L 626.75 455" fill="rgb(0,253,144)" stroke="none"/>
-  <path d="M 626.75 455 L 912.75 455 L 912.75 465 L 922.75 465 M 912.75 455 L 922.75 465 L 922.75 504 L 626.75 504 L 626.75 455" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 626.75 455 M 626.75 504 M 922.75 504 M 922.75 455 M 626.75 455" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <text x="634.25" y="476.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">someCall the returns immediately, i.e. breaks</text>
-  <text x="634.25" y="493.3" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">the lifeline in the called actor</text>
-  <path d="M 626.75 479.5 L 601.75 479.5 L 601.75 479.5 A 5 5 0 0 0 596.75 484.5 L 596.75 538" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
-  <text x="636.75" y="528" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">3. </text>
-  <text x="652.32" y="528" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">someDbCall() : dbResponse</text>
-  <path d="M 566.75 538 L 845.75 538" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 845.75 538 L 835.75 533 L 835.75 543 L 845.75 538" fill="rgb(0, 0, 0)" stroke="none"/>
-  <path d="M 295.75 557 M 295.75 617" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 564.25 557 M 564.25 617" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 848.25 557 M 848.25 617" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 295.75 557 L 295.75 617" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 293.25 557 L 293.25 617 L 298.25 617 L 298.25 557 L 293.25 557" fill="rgb(255,126,121)" stroke="none"/>
-  <path d="M 293.25 557 L 293.25 617 M 298.25 617 L 298.25 557 M 293.25 557" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 564.25 557 L 564.25 617" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 561.75 557 L 561.75 617 L 566.75 617 L 566.75 557 L 561.75 557" fill="rgb(204,255,153)" stroke="none"/>
-  <path d="M 561.75 557 L 561.75 617 M 566.75 617 L 566.75 557 M 561.75 557" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 848.25 557 L 848.25 617" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M -76.62 592 L -76.62 606 L -76.62 606 A 5 5 0 0 0 -71.62 611 L 997.38 611 L 997.38 611 A 5 5 0 0 0 1002.38 606 L 1002.38 592 L 1002.38 592 A 5 5 0 0 0 997.38 587 L -71.62 587 L -71.62 587 A 5 5 0 0 0 -76.62 592" fill="rgb(255,255,0)" stroke="none"/>
-  <path d="M -76.62 592 L -76.62 606 L -76.62 606 A 5 5 0 0 0 -71.62 611 L 997.38 611 L 997.38 611 A 5 5 0 0 0 1002.38 606 L 1002.38 592 L 1002.38 592 A 5 5 0 0 0 997.38 587 L -71.62 587 L -71.62 587 A 5 5 0 0 0 -76.62 592" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
-  <text x="-71.62" y="606" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR IN LINE - NO RECOGNISED TYPE IDENTIFIER:</text>
-  <text x="290.84" y="606" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> type: "call_error", from: "server", to: "server", text: Do some internal processing(dbResponse) :  some return value</text>
-  <path d="M 371.25 650 M 476.25 650 M 484.25 658 M 484.25 682 M 371.25 682 M 371.25 650" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 368.25 647 M 473.25 647 M 473.25 655 M 481.25 655 M 481.25 679 M 368.25 679 M 368.25 647" fill="rgb(0,253,144)" stroke="none"/>
-  <path d="M 368.25 647 M 473.25 647 M 473.25 655 M 481.25 655 M 473.25 647 M 481.25 655 M 481.25 679 M 368.25 679 M 368.25 647" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 368.25 663 M 343.25 663 M 338.25 668 M 338.25 708" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
-  <path d="M 295.75 617 M 295.75 719" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 564.25 617 M 564.25 719" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 848.25 617 M 848.25 719" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 295.75 617 L 295.75 719" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 293.25 617 L 293.25 713 L 298.25 713 L 298.25 617 L 293.25 617" fill="rgb(255,126,121)" stroke="none"/>
-  <path d="M 293.25 617 L 293.25 713 L 298.25 713 L 298.25 617 M 293.25 617" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 564.25 617 L 564.25 719" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 561.75 617 L 561.75 713 L 566.75 713 L 566.75 617 L 561.75 617" fill="rgb(204,255,153)" stroke="none"/>
-  <path d="M 561.75 617 L 561.75 713 L 566.75 713 L 566.75 617 M 561.75 617" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 848.25 617 L 848.25 719" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 371.25 650 L 476.25 650 L 484.25 658 L 484.25 682 L 371.25 682 L 371.25 650" fill="rgb(210,210,210)" stroke="none"/>
-  <path d="M 368.25 647 L 473.25 647 L 473.25 655 L 481.25 655 L 481.25 679 L 368.25 679 L 368.25 647" fill="rgb(0,253,144)" stroke="none"/>
-  <path d="M 368.25 647 L 473.25 647 L 473.25 655 L 481.25 655 M 473.25 647 L 481.25 655 L 481.25 679 L 368.25 679 L 368.25 647" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 368.25 647 M 368.25 679 M 481.25 679 M 481.25 647 M 368.25 647" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <text x="375.75" y="668.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Return call type</text>
-  <path d="M 368.25 663 L 343.25 663 L 343.25 663 A 5 5 0 0 0 338.25 668 L 338.25 708" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
-  <text x="375.75" y="700.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">4. </text>
-  <text x="391.32" y="700.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">:some return value</text>
-  <path d="M 561.75 708 L 298.25 708" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="6,3"/>
-  <path d="M 298.25 708 L 308.25 708 M 298.25 708 L 308.25 703 M 298.25 708 L 308.25 713" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
-  <path d="M 295.75 719 L 295.75 743" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 564.25 719 L 564.25 743" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
-  <path d="M 848.25 719 L 848.25 743" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 0 0 L 0 887 L 723 887 L 723 0 L 0 0" fill="rgb(255, 255, 255)" stroke="none"/>
+  <path d="M 30 30 L 30 57 L 145 57 L 145 30 L 30 30" fill="rgba(0,0,0,0)" stroke="none"/>
+  <text x="35" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Title:</text>
+  <text x="68.44" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
+  <text x="72.33" y="49" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Example 4</text>
+  <path d="M 30 57 L 30 84 L 120 84 L 120 57 L 30 57" fill="rgba(0,0,0,0)" stroke="none"/>
+  <text x="35" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Version:</text>
+  <text x="91.01" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
+  <text x="94.9" y="76" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">1.0</text>
+  <path d="M 30 84 L 30 111 L 658 111 L 658 84 L 30 84" fill="rgba(0,0,0,0)" stroke="none"/>
+  <text x="35" y="103" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" font-weight="bold" dominant-baseline="auto">Description:</text>
+  <text x="116.68" y="103" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto"> </text>
+  <text x="120.57" y="103" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Shows a detected error and how presented in the diagram. Extended from example 2.</text>
+  <path d="M 33 149 L 33 177 L 33 177 A 5 5 0 0 0 38 182 L 93 182 L 93 182 A 5 5 0 0 0 98 177 L 98 149 L 98 149 A 5 5 0 0 0 93 144 L 38 144 L 38 144 A 5 5 0 0 0 33 149" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 30 146 L 30 174 L 30 174 A 5 5 0 0 0 35 179 L 90 179 L 90 179 A 5 5 0 0 0 95 174 L 95 146 L 95 146 A 5 5 0 0 0 90 141 L 35 141 L 35 141 A 5 5 0 0 0 30 146" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 30 146 L 30 174 L 30 174 A 5 5 0 0 0 35 179 L 90 179 L 90 179 A 5 5 0 0 0 95 174 L 95 146 L 95 146 A 5 5 0 0 0 90 141 L 35 141 L 35 141 A 5 5 0 0 0 30 146" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="39" y="168" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Client</text>
+  <path d="M 298 149 L 298 177 L 298 177 A 5 5 0 0 0 303 182 L 365 182 L 365 182 A 5 5 0 0 0 370 177 L 370 149 L 370 149 A 5 5 0 0 0 365 144 L 303 144 L 303 144 A 5 5 0 0 0 298 149" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 295 146 L 295 174 L 295 174 A 5 5 0 0 0 300 179 L 362 179 L 362 179 A 5 5 0 0 0 367 174 L 367 146 L 367 146 A 5 5 0 0 0 362 141 L 300 141 L 300 141 A 5 5 0 0 0 295 146" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 295 146 L 295 174 L 295 174 A 5 5 0 0 0 300 179 L 362 179 L 362 179 A 5 5 0 0 0 367 174 L 367 146 L 367 146 A 5 5 0 0 0 362 141 L 300 141 L 300 141 A 5 5 0 0 0 295 146" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="304" y="168" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Server</text>
+  <path d="M 570 149 L 570 177 L 570 177 A 5 5 0 0 0 575 182 L 661 182 L 661 182 A 5 5 0 0 0 666 177 L 666 149 L 666 149 A 5 5 0 0 0 661 144 L 575 144 L 575 144 A 5 5 0 0 0 570 149" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 567 146 L 567 174 L 567 174 A 5 5 0 0 0 572 179 L 658 179 L 658 179 A 5 5 0 0 0 663 174 L 663 146 L 663 146 A 5 5 0 0 0 658 141 L 572 141 L 572 141 A 5 5 0 0 0 567 146" fill="rgb(100,0,255)" stroke="none"/>
+  <path d="M 567 146 L 567 174 L 567 174 A 5 5 0 0 0 572 179 L 658 179 L 658 179 A 5 5 0 0 0 663 174 L 663 146 L 663 146 A 5 5 0 0 0 658 141 L 572 141 L 572 141 A 5 5 0 0 0 567 146" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="576" y="168" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" xml:space="preserve" dominant-baseline="auto">Database</text>
+  <path d="M 128 212 M 448 212 M 456 220 M 456 244 M 128 244 M 128 212" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 125 209 M 445 209 M 445 217 M 453 217 M 453 241 M 125 241 M 125 209" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 125 209 M 445 209 M 445 217 M 453 217 M 445 209 M 453 217 M 453 241 M 125 241 M 125 209" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 125 225 M 100 225 M 95 230 M 95 271" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 62.5 179 M 62.5 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 179 M 331 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 179 M 615 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 179 L 62.5 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 271 L 60 278.5 L 65 278.5 L 65 271 L 60 271" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 271 L 60 278.5 L 65 278.5 L 65 271 L 60 271" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 60 293.5 L 60 311 L 65 311 L 65 293.5 L 60 293.5" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 293.5 L 60 311 M 65 311 L 65 293.5 L 60 293.5" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 179 L 331 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 179 L 615 311" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 128 212 L 448 212 L 456 220 L 456 244 L 128 244 L 128 212" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 125 209 L 445 209 L 445 217 L 453 217 L 453 241 L 125 241 L 125 209" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 125 209 L 445 209 L 445 217 L 453 217 M 445 209 L 453 217 L 453 241 L 125 241 L 125 209" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 125 209 M 125 241 M 453 241 M 453 209 M 125 209" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="132.5" y="230.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">An asyncronous call to from and to the same actor</text>
+  <path d="M 125 225 L 100 225 L 100 225 A 5 5 0 0 0 95 230 L 95 271" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 65 271 L 120 271 L 120 271 A 5 5 0 0 1 125 276 L 125 296 L 125 296 A 5 5 0 0 1 120 301 L 65 301" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 65 301 L 75 296 L 65 301 L 75 306" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="135" y="288.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">1. Some async process</text>
+  <path d="M 128 344 M 406 344 M 414 352 M 414 376 M 128 376 M 128 344" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 125 341 M 403 341 M 403 349 M 411 349 M 411 373 M 125 373 M 125 341" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 125 341 M 403 341 M 403 349 M 411 349 M 403 341 M 411 349 M 411 373 M 125 373 M 125 341" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 125 357 M 100 357 M 95 362 M 95 407" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 62.5 311 M 62.5 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 311 M 331 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 311 M 615 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 311 L 62.5 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 311 L 60 425 L 65 425 L 65 311 L 60 311" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 311 L 60 425 M 65 425 L 65 311 M 60 311" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 311 L 331 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 328.5 407 L 328.5 425 L 333.5 425 L 333.5 407 L 328.5 407" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 328.5 407 L 328.5 425 M 333.5 425 L 333.5 407 L 328.5 407" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 615 311 L 615 425" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 128 344 L 406 344 L 414 352 L 414 376 L 128 376 L 128 344" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 125 341 L 403 341 L 403 349 L 411 349 L 411 373 L 125 373 L 125 341" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 125 341 L 403 341 L 403 349 L 411 349 M 403 341 L 411 349 L 411 373 L 125 373 L 125 341" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 125 341 M 125 373 M 411 373 M 411 341 M 125 341" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="132.5" y="362.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">This is a line of type "call" with a "comment"</text>
+  <path d="M 125 357 L 100 357 L 100 357 A 5 5 0 0 0 95 362 L 95 407" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="135" y="397" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">2. </text>
+  <text x="150.57" y="397" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">someCall(param1, param2)</text>
+  <path d="M 65 407 L 328.5 407" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 328.5 407 L 318.5 402 L 318.5 412 L 328.5 407" fill="rgb(0, 0, 0)" stroke="none"/>
+  <path d="M 396.5 458 M 682.5 458 M 692.5 468 M 692.5 507 M 396.5 507 M 396.5 458" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 393.5 455 M 679.5 455 M 679.5 465 M 689.5 465 M 689.5 504 M 393.5 504 M 393.5 455" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 393.5 455 M 679.5 455 M 679.5 465 M 689.5 465 M 679.5 455 M 689.5 465 M 689.5 504 M 393.5 504 M 393.5 455" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 393.5 479.5 M 368.5 479.5 M 363.5 484.5 M 363.5 538" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 62.5 425 M 62.5 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 425 M 331 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 425 M 615 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 425 L 62.5 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 425 L 60 557 L 65 557 L 65 425 L 60 425" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 425 L 60 557 M 65 557 L 65 425 M 60 425" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 425 L 331 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 328.5 425 L 328.5 557 L 333.5 557 L 333.5 425 L 328.5 425" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 328.5 425 L 328.5 557 M 333.5 557 L 333.5 425 M 328.5 425" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 615 425 L 615 557" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 612.5 538 L 612.5 548 L 617.5 548 L 617.5 538 L 612.5 538" fill="rgb(100,0,255)" stroke="none"/>
+  <path d="M 612.5 538 L 612.5 548 L 617.5 548 L 617.5 538 L 612.5 538" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 396.5 458 L 682.5 458 L 692.5 468 L 692.5 507 L 396.5 507 L 396.5 458" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 393.5 455 L 679.5 455 L 679.5 465 L 689.5 465 L 689.5 504 L 393.5 504 L 393.5 455" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 393.5 455 L 679.5 455 L 679.5 465 L 689.5 465 M 679.5 455 L 689.5 465 L 689.5 504 L 393.5 504 L 393.5 455" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 393.5 455 M 393.5 504 M 689.5 504 M 689.5 455 M 393.5 455" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="401" y="476.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">someCall the returns immediately, i.e. breaks</text>
+  <text x="401" y="493.3" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">the lifeline in the called actor</text>
+  <path d="M 393.5 479.5 L 368.5 479.5 L 368.5 479.5 A 5 5 0 0 0 363.5 484.5 L 363.5 538" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="403.5" y="528" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">3. </text>
+  <text x="419.07" y="528" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">someDbCall() : dbResponse</text>
+  <path d="M 333.5 538 L 612.5 538" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 612.5 538 L 602.5 533 L 602.5 543 L 612.5 538" fill="rgb(0, 0, 0)" stroke="none"/>
+  <path d="M 62.5 557 M 62.5 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 557 M 331 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 557 M 615 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 557 L 62.5 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 557 L 60 731 L 65 731 L 65 557 L 60 557" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 557 L 60 731 M 65 731 L 65 557 M 60 557" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 557 L 331 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 328.5 557 L 328.5 731 L 333.5 731 L 333.5 557 L 328.5 557" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 328.5 557 L 328.5 731 M 333.5 731 L 333.5 557 M 328.5 557" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 615 557 L 615 731" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 30 592 L 30 722 L 30 722 A 5 5 0 0 0 35 727 L 688 727 L 688 727 A 5 5 0 0 0 693 722 L 693 592 L 693 592 A 5 5 0 0 0 688 587 L 35 587 L 35 587 A 5 5 0 0 0 30 592" fill="rgb(255,235,235)" stroke="none"/>
+  <path d="M 30 592 L 30 722 L 30 722 A 5 5 0 0 0 35 727 L 688 727 L 688 727 A 5 5 0 0 0 693 722 L 693 592 L 693 592 A 5 5 0 0 0 688 587 L 35 587 L 35 587 A 5 5 0 0 0 30 592" fill="none" stroke="rgb(255,0,0)" stroke-width="3"/>
+  <text x="35" y="604" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" font-weight="bold" dominant-baseline="auto">ERROR at source line 42:</text>
+  <text x="35" y="618.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  unrecognised line type 'call_error' (expected blank, fragment, state, condition, call,</text>
+  <text x="35" y="632.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  return, reference or terminate)</text>
+  <text x="35" y="661.6" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">Offending line:</text>
+  <text x="35" y="676" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  type: "call_error"</text>
+  <text x="35" y="690.4" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  from: "server"</text>
+  <text x="35" y="704.8" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  to: "server"</text>
+  <text x="35" y="719.2" fill="rgb(120,0,0)" font-family="Liberation Mono, Courier New, Courier, monospace" font-size="12" xml:space="preserve" dominant-baseline="auto">  text: ["Do some internal processing(dbResponse) :  some return value"]</text>
+  <path d="M 138 764 M 243 764 M 251 772 M 251 796 M 138 796 M 138 764" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 135 761 M 240 761 M 240 769 M 248 769 M 248 793 M 135 793 M 135 761" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 135 761 M 240 761 M 240 769 M 248 769 M 240 761 M 248 769 M 248 793 M 135 793 M 135 761" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 135 777 M 110 777 M 105 782 M 105 822" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <path d="M 62.5 731 M 62.5 833" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 731 M 331 833" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 731 M 615 833" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 62.5 731 L 62.5 833" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 60 731 L 60 827 L 65 827 L 65 731 L 60 731" fill="rgb(255,126,121)" stroke="none"/>
+  <path d="M 60 731 L 60 827 L 65 827 L 65 731 M 60 731" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 331 731 L 331 833" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 328.5 731 L 328.5 827 L 333.5 827 L 333.5 731 L 328.5 731" fill="rgb(204,255,153)" stroke="none"/>
+  <path d="M 328.5 731 L 328.5 827 L 333.5 827 L 333.5 731 M 328.5 731" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 615 731 L 615 833" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 138 764 L 243 764 L 251 772 L 251 796 L 138 796 L 138 764" fill="rgb(210,210,210)" stroke="none"/>
+  <path d="M 135 761 L 240 761 L 240 769 L 248 769 L 248 793 L 135 793 L 135 761" fill="rgb(0,253,144)" stroke="none"/>
+  <path d="M 135 761 L 240 761 L 240 769 L 248 769 M 240 761 L 248 769 L 248 793 L 135 793 L 135 761" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 135 761 M 135 793 M 248 793 M 248 761 M 135 761" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <text x="142.5" y="782.5" fill="rgb(0, 0, 0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">Return call type</text>
+  <path d="M 135 777 L 110 777 L 110 777 A 5 5 0 0 0 105 782 L 105 822" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="142.5" y="814.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">4. </text>
+  <text x="158.07" y="814.5" fill="rgb(0,0,0)" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="14" xml:space="preserve" dominant-baseline="auto">:some return value</text>
+  <path d="M 328.5 822 L 65 822" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1" stroke-dasharray="6,3"/>
+  <path d="M 65 822 L 75 822 M 65 822 L 75 817 M 65 822 L 75 827" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1"/>
+  <path d="M 62.5 833 L 62.5 857" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 331 833 L 331 857" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 615 833 L 615 857" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-dasharray="3,3"/>
 </svg>

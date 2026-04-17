@@ -216,12 +216,7 @@ function isAllStrings(arr) {
 function getObjectFromData(data, isYaml) {
 	if (isYaml) {
 		try {
-			const jsono = yaml.safeLoad(data, {
-				onWarning: (error) => {
-					console.error("Warning whilst parsing YAML: " + error.message);
-				},
-				json: true,
-			});
+			const jsono = loadWithSourceLines(data, (msg) => console.error("Warning whilst parsing YAML: " + msg));
 			jsonstr = JSON.stringify(jsono, null, 3);
 			yamlstr = yaml.safeDump(jsono);
 			return jsono;
@@ -233,10 +228,76 @@ function getObjectFromData(data, isYaml) {
 		try {
 			const jsono = JSON.parse(data);
 			jsonstr = JSON.stringify(jsono, null, 3);
+			annotateJsonWithSourceLines(jsono, data);
 			return jsono;
 		} catch (error) {
 			console.error("Error whilst parsing JSON: " + error);
 			process.exit(-1);
 		}
+	}
+}
+
+function loadWithSourceLines(data, onWarning) {
+	const opens = [];
+	const jsono = yaml.safeLoad(data, {
+		onWarning: (error) => onWarning(error.message),
+		json: true,
+		listener: function (eventType, state) {
+			if (eventType === "open") {
+				opens.push(state.line);
+			} else if (eventType === "close") {
+				const startLine = opens.pop();
+				if (state.result && typeof state.result === "object") {
+					try {
+						Object.defineProperty(state.result, "__sourceLine", {
+							value: (startLine != null ? startLine : state.line) + 1,
+							enumerable: false,
+							configurable: true,
+							writable: true,
+						});
+					} catch (e) {
+						// Ignore; source-line annotation is best-effort.
+					}
+				}
+			}
+		},
+	});
+	return jsono;
+}
+
+function annotateJsonWithSourceLines(parsed, rawData) {
+	// Use js-yaml with the source-line listener (JSON is valid YAML) to build a parallel
+	// object tree whose mapping/sequence nodes carry __sourceLine. Then walk the two
+	// trees in parallel and copy __sourceLine from the yaml-parsed tree onto the
+	// JSON.parse tree by structural position (array index, object key).
+	let annotated;
+	try {
+		annotated = loadWithSourceLines(rawData, () => {});
+	} catch (e) {
+		return;
+	}
+	copySourceLines(parsed, annotated);
+}
+
+function copySourceLines(target, source) {
+	if (target == null || source == null) return;
+	if (typeof target !== "object" || typeof source !== "object") return;
+	if (source.__sourceLine != null) {
+		try {
+			Object.defineProperty(target, "__sourceLine", {
+				value: source.__sourceLine,
+				enumerable: false,
+				configurable: true,
+				writable: true,
+			});
+		} catch (e) {}
+	}
+	if (Array.isArray(target) && Array.isArray(source)) {
+		const len = Math.min(target.length, source.length);
+		for (let i = 0; i < len; i++) copySourceLines(target[i], source[i]);
+	} else if (!Array.isArray(target) && !Array.isArray(source)) {
+		Object.keys(target).forEach((k) => {
+			if (Object.prototype.hasOwnProperty.call(source, k)) copySourceLines(target[k], source[k]);
+		});
 	}
 }

@@ -5,7 +5,7 @@
 	"main": "sequencer.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"examples": "node sequencer.js -y -i ../examples/example1.yml -o -f; node sequencer.js -y -i ../examples/example2.yml -o -f; node sequencer.js -y -i ../examples/example3.yml -o -f; node sequencer.js -y -i ../examples/example4.yml -o -f"
+		"examples": "node sequencer.js -y -i ./examples/example1.yml -o -f; node sequencer.js -y -i ./examples/example2.yml -o -f; node sequencer.js -y -i ./examples/example3.yml -o -f; node sequencer.js -y -i ./examples/example4.yml -o -f"
 	},
 	"author": "markthepage",
 	"license": "AGPL-3.0-only",

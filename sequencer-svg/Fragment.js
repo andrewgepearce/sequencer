@@ -24,6 +24,7 @@ let FragmentCondition = require("./FragmentCondition.js");
 let Reference = require("./Reference.js");
 let Terminate = require("./Terminate.js");
 let Blank = require("./Blank.js");
+let ErrorLine = require("./ErrorLine.js");
 
 module.exports = class Fragment {
 	constructor(ctx, line) {
@@ -474,15 +475,7 @@ module.exports = class Fragment {
 		lines.forEach((line) => {
 			let linetop = xy.y;
 			if (line.type == undefined) {
-				working.logWarn("Processing undefined line type at y:" + xy.y + " - " + Utilities.objToString(line));
-				let errorState = {
-					type: "state",
-					text: "<b>ERROR IN LINE - NO TYPE IDENTIFIER:</b> " + JSON.stringify(line),
-					borderWidth: 3,
-					borderColour: "rgb(255,0,0)",
-				};
-				let statecl = new State(ctx, errorState);
-				xy = statecl.draw(working, xy.y, false);
+				xy = ErrorLine.draw(working, ctx, xy.y, "line has no 'type' identifier", line, false);
 			} else if (line.type.toLowerCase() == "blank" && Utilities.isNumberGtEq0(line.height)) {
 				working.logDebug("Processing Blank line at y:" + xy.y + " - " + Utilities.objToString(line));
 				let blank = new Blank(ctx, line);
@@ -505,15 +498,7 @@ module.exports = class Fragment {
 				let call = new Call(ctx, line, working);
 				xy = call.draw(working, xy.y, false);
 				if (xy.y == origXY.y) {
-					// Nothing drawn
-					let errorState = {
-						type: "state",
-						text: "<b>ERROR IN LINE:</b> " + JSON.stringify(line),
-						borderWidth: 3,
-						borderColour: "rgb(255,0,0)",
-					};
-					let statecl = new State(ctx, errorState);
-					xy = statecl.draw(working, origXY.y, false);
+					xy = ErrorLine.draw(working, ctx, origXY.y, "'call' line produced no output (check 'from'/'to' aliases)", line, false);
 				}
 			} else if (line.type.toLowerCase() == "return") {
 				working.logDebug("Processing Return line at y:" + xy.y + " - " + Utilities.objToString(line));
@@ -521,15 +506,7 @@ module.exports = class Fragment {
 				let rcall = new ReturnCall(ctx, line, working);
 				xy = rcall.draw(working, xy.y, false);
 				if (xy.y == origXY.y) {
-					// Nothing drawn
-					let errorState = {
-						type: "state",
-						text: "<b>ERROR IN LINE:</b> " + JSON.stringify(line),
-						borderWidth: 3,
-						borderColour: "rgb(255,0,0)",
-					};
-					let statecl = new State(ctx, errorState);
-					xy = statecl.draw(working, origXY.y, false);
+					xy = ErrorLine.draw(working, ctx, origXY.y, "'return' line produced no output (check 'from'/'to' aliases)", line, false);
 				}
 			} else if (line.type.toLowerCase() == "reference") {
 				working.logDebug("Processing Reference line at y:" + xy.y + " - " + Utilities.objToString(line));
@@ -537,15 +514,7 @@ module.exports = class Fragment {
 				let ref = new Reference(ctx, line, working);
 				xy = ref.draw(working, xy.y, false);
 				if (xy.y == origXY.y) {
-					// Nothing drawn
-					let errorState = {
-						type: "state",
-						text: "<b>ERROR IN LINE:</b> " + JSON.stringify(line),
-						borderWidth: 3,
-						borderColour: "rgb(255,0,0)",
-					};
-					let statecl = new State(ctx, errorState);
-					xy = statecl.draw(working, origXY.y, false);
+					xy = ErrorLine.draw(working, ctx, origXY.y, "'reference' line produced no output (check required fields)", line, false);
 				}
 			} else if (line.type.toLowerCase() == "terminate") {
 				working.logDebug("Processing Terminate line at y:" + xy.y + " - " + Utilities.objToString(line));
@@ -553,26 +522,17 @@ module.exports = class Fragment {
 				let term = new Terminate(ctx, line, working);
 				xy = term.draw(working, xy.y, false);
 				if (xy.y == origXY.y) {
-					// Nothing drawn
-					let errorState = {
-						type: "state",
-						text: "<b>ERROR IN LINE:</b> " + JSON.stringify(line),
-						borderWidth: 3,
-						borderColour: "rgb(255,0,0)",
-					};
-					let statecl = new State(ctx, errorState);
-					xy = statecl.draw(working, origXY.y, false);
+					xy = ErrorLine.draw(working, ctx, origXY.y, "'terminate' line produced no output (check 'actor' alias)", line, false);
 				}
 			} else {
-				working.logWarn("Processing unrecognised line type at y:" + xy.y + " - " + Utilities.objToString(line));
-				let errorState = {
-					type: "state",
-					text: "<b>ERROR IN LINE - NO RECOGNISED TYPE IDENTIFIER:</b> " + Utilities.objToString(line),
-					borderWidth: 3,
-					borderColour: "rgb(255,0,0)",
-				};
-				let statecl = new State(ctx, errorState);
-				xy = statecl.draw(working, xy.y, false);
+				xy = ErrorLine.draw(
+					working,
+					ctx,
+					xy.y,
+					"unrecognised line type '" + line.type + "' (expected blank, fragment, state, condition, call, return, reference or terminate)",
+					line,
+					false
+				);
 			}
 
 			if (working.debug) {
